@@ -1,0 +1,11 @@
+---
+- components:
+
+  # influxDB
+  - id: influx-db
+    name: InfluxDB
+    description: InfluxDB is an open-source time series database developed by InfluxData.
+    link: https://www.influxdata.com/time-series-platform/influxdb/
+    logo: influx-data
+    categories:
+      - storage

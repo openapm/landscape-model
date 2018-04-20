@@ -1,0 +1,42 @@
+---
+components:
+
+  # inspectIT agent
+  - id: inspecit-agent
+    name: inspectIT
+    description: inspectIT agent for instrumenting and monitoring Java 6+ applications.
+    link: http://www.inspectit.rocks/
+    logo: inspectit
+    categories:
+      - agent
+    capabilities:
+      - tech:
+        - java
+      - aspects:
+        - tracing
+        - eum
+        - metrics-app
+        - metrics-process
+
+  # inspectIT Central Management Repository
+  - id: inspecit-cmr
+    name: inspectIT CMR
+    description: inspectIT Server component know as Central Measurement Repository (CMR).
+    link: http://www.inspectit.rocks/
+    logo: inspectit
+    categories:
+      - collector
+    connections:
+      - inspectit-agent
+      - influx-db
+
+  # inspectIT user interface
+  - id: inspecit-ui
+    name: inspectIT UI
+    description: inspectIT user interface based on Eclipse RCP.
+    link: http://www.inspectit.rocks/
+    logo: inspectit
+    categories:
+      - visualization
+    connections:
+      - inspectit-cmr
