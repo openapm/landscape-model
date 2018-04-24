@@ -1,1 +1,16 @@
+// use the NodeJS plugin for build
+plugins {
+    id 'com.moowork.node' version '1.2.0'
+}
+
+// base plugin for tasks like clean
 apply plugin: 'base'
+
+task mergeModel(type: NodeTask) {
+    description = 'Merge all YAML model files into one.'
+    group = 'Build'
+
+    script = file('src/merge-all.js')
+}
+mergeModel.dependsOn(npmInstall)
+assemble.dependsOn(mergeModel)
