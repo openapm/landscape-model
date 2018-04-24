@@ -1,5 +1,5 @@
 ---
-- components:
+components:
 
   # influxDB
   - id: influx-db

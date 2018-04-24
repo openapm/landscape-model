@@ -1,0 +1,24 @@
+{
+  "name": "landscape-model",
+  "version": "1.0.0",
+  "description": "Model for the Open APM landscape website.",
+  "scripts": {
+    "merge": "node src/merge-all.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openapm/landscape-model.git"
+  },
+  "author": "NovaTec Consulting GmbH",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/openapm/landscape-model/issues"
+  },
+  "homepage": "https://github.com/openapm/landscape-model#readme",
+  "dependencies": {
+    "glob": "^7.1.2",
+    "js-yaml": "^3.11.0",
+    "mkdirp": "^0.5.1"
+  }
+}
