@@ -1,0 +1,14 @@
+---
+categories:
+
+  - id: agent
+    name: Agent
+
+  - id: collector
+    name: Collector
+
+  - id: visualization
+    name: Visualization
+
+  - id: storage
+    name: Storage

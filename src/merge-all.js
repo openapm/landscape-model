@@ -12,8 +12,8 @@ var all = {
       components: []
 }
 
-// read all files
-var sources = [parentDir + '/model/**/*.yml'];
+// read all component files
+var sources = [parentDir + '/model/components/**/*.yml'];
 var files = [].concat.apply([], sources.map(g => glob.sync(g, { nodir: true })));
 
 files.forEach(file => {
@@ -22,8 +22,28 @@ files.forEach(file => {
             var doc = yaml.safeLoad(fs.readFileSync(file, 'utf8'));
 
             if (doc !== undefined && doc[components] !== undefined) {
-                  all[components] = all[components].concat(doc[components]);
-                  console.info('Merged..');
+                    all[components] = all[components].concat(doc[components]);
+                    console.info('Merged..');
+            } else {
+                    console.warn('Skipping as no components defined..');
+            }
+      }
+});
+
+// add all general files
+var sources = [parentDir + '/model/*.yml'];
+var files = [].concat.apply([], sources.map(g => glob.sync(g, { nodir: true })));
+
+files.forEach(file => {
+      if (file.endsWith('.yml')) {
+            console.log('Trying to merge file: ', file);
+            var doc = yaml.safeLoad(fs.readFileSync(file, 'utf8'));
+
+            if (doc !== undefined) {
+                   for (var property in doc) {
+                        all[property] = doc[property];
+                        console.info('Merged ', property, '..');
+                   }
             } else {
                   console.warn('Skipping as no components defined..');
             }
