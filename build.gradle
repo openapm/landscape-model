@@ -10,6 +10,9 @@ task mergeModel(type: NodeTask) {
     description = 'Merge all YAML model files into one.'
     group = 'Build'
 
+    inputs.dir project.file("${project.rootDir}/model")
+    outputs.file project.file("${project.buildDir}/output/model.json")
+
     script = file('src/merge-all.js')
 }
 mergeModel.dependsOn(npmInstall)
