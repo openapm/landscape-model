@@ -50,10 +50,10 @@ files.forEach(file => {
       }
 });
 
-// dump combined objects
-const result = yaml.safeDump(all);
+// dump combined objects as JSON
+const result = JSON.stringify(all, null, 4);
 
 // write to file
-console.info('Writing to build/output.yml');
+console.info('Writing to build/output.json');
 mkdirp.sync(parentDir + '/build');
-fs.writeFileSync(parentDir + '/build/output.yml', result);
+fs.writeFileSync(parentDir + '/build/output.json', result);
