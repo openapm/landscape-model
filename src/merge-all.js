@@ -54,6 +54,6 @@ files.forEach(file => {
 const result = JSON.stringify(all, null, 4);
 
 // write to file
-console.info('Writing to build/output.json');
+console.info('Writing to build/model.json');
 mkdirp.sync(parentDir + '/build');
-fs.writeFileSync(parentDir + '/build/output.json', result);
+fs.writeFileSync(parentDir + '/build/model.json', result);
