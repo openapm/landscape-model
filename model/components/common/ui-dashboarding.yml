@@ -1,0 +1,19 @@
+---
+components:
+
+  # Grafana
+  - id: grafana
+    name: Grafana
+    description: Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
+    link: https://grafana.com/
+    logo: grafana
+    categories:
+      - dashboarding
+    connections:
+      - graphite
+      - elasticsearch
+      - influx-db
+      - open-tsdb
+      - prometheus
+      - mysql
+      - postgres
