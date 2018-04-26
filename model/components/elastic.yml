@@ -4,7 +4,7 @@ components:
   # Beats
   - id: elastic-beats
     name: Elastic Beats
-    description: Elasticsearch is a search engine based on Lucene. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
+    description: Beats is the platform for single-purpose data shippers. They install as lightweight agents and send data from hundreds or thousands of machines to Logstash or Elasticsearch.
     link: https://www.elastic.co/products/beats
     logo: elastic-beats
     categories:
