@@ -7,8 +7,14 @@ categories:
   - id: collector
     name: Collector
 
-  - id: visualization
-    name: Visualization
+  - id: trasnformation
+    name: Transformation
 
   - id: storage
     name: Storage
+
+  - id: visualization
+    name: Visualization
+
+  - id: dashboarding
+    name: Dashboarding

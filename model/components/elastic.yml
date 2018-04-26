@@ -1,0 +1,82 @@
+---
+components:
+
+  # Beats
+  - id: elastic-beats
+    name: Elastic Beats
+    description: Elasticsearch is a search engine based on Lucene. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
+    link: https://www.elastic.co/products/beats
+    logo: elastic-beats
+    categories:
+      - agent
+    capabilities:
+      - aspects:
+        - metrics-app
+        - metrics-process
+    connections:
+        - elasticsearch
+        - logstash
+
+  # Elastic Apm agents
+  - id: elastic-apm-agent
+    name: Elastic APM Agent
+    description: The collections of Elastic APM Agents compatible with the Elastic APM Server.
+    link: https://www.elastic.co/solutions/apm
+    logo: elastic
+    capabilities:
+      - tech:
+        - nodejs
+        - python
+        - ruby
+      - aspects:
+        - tracing
+        - metrics-app
+    categories:
+      - agent
+    connections:
+      - elastic-apm
+
+  # Elastic Apm server
+  - id: elastic-apm
+    name: Elastic APM Server
+    description: The APM Server receives data from the Elastic APM agents and stores the data into Elasticsearch.
+    link: https://www.elastic.co/solutions/apm
+    logo: elastic
+    categories:
+      - collector
+    connections:
+      - elasticsearch
+
+  # Logstash
+  - id: logstash
+    name: Logstash
+    description: Logstash is an open source, server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite “stash.”
+    link: https://www.elastic.co/products/logstash
+    logo: elastic-logstash
+    categories:
+      - trasnformation
+    connections:
+      - elasticsearch
+      - graphite
+      - statsd
+
+  # Elasticsearch
+  - id: elasticsearch
+    name: Elasticsearch
+    description: Elasticsearch is a search engine based on Lucene. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
+    link: https://www.elastic.co/products/elasticsearch
+    logo: elastic-elasticsearch
+    categories:
+      - storage
+
+  # Kibana
+  - id: kibana
+    name: Kibana
+    description: Kibana is an open source data visualization plugin for Elasticsearch. It provides visualization capabilities on top of the content indexed on an Elasticsearch cluster.
+    link: https://www.elastic.co/products/kibana
+    logo: elastic-kibana
+    categories:
+      - visualization
+      - dashboarding
+    connections:
+      - elasticsearch

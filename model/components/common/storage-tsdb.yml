@@ -9,3 +9,12 @@ components:
     logo: influx-data
     categories:
       - storage
+
+  # graphite
+  - id: graphite
+    name: Graphite
+    description: Graphite is an enterprise-ready monitoring tool that runs equally well on cheap hardware or Cloud infrastructure. It store numeric time-series data and renders graphs of this data on demand.
+    link: http://graphiteapp.org/
+    logo: graphite
+    categories:
+      - storage
