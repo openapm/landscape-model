@@ -1,0 +1,39 @@
+---
+components:
+
+  # zipkin
+  - id: zipkin
+    name: Zipkin
+    description: Zipkin is a distributed tracing system. It helps gather timing data needed to troubleshoot latency problems in microservice architectures. It manages both the collection and lookup of this data. Zipkin’s design is based on the Google Dapper paper.
+    link: https://zipkin.io/
+    logo: zipkin
+    categories:
+      - agent
+    capabilities:
+      - tech:
+        - java
+        - c#
+        - c++
+        - go
+        - nodejs
+        - ruby
+        - scala
+        - python
+        - php
+      - aspects:
+        - tracing
+
+  # zipkin Server
+  - id: zipkin-server
+    name: Zipkin Server
+    description: The Zipkin Server represents set of collectors for the Zipkin-based spans with configurable storage and web-based UI.
+    link: https://zipkin.io/
+    logo: zipkin
+    categories:
+      - collector
+      - visualization
+    connections:
+      - zipkin
+      - cassandra
+      - elasticsearch
+      - mysql
