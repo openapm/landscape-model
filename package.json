@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Model for the Open APM landscape website.",
   "scripts": {
-    "merge": "node src/merge-all.js",
+    "model-output": "node src/model-output.js",
+    "check-connections": "node src/check-connections.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
