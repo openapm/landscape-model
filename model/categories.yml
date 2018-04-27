@@ -3,18 +3,24 @@ categories:
 
   - id: agent
     name: Agent
+    description: In traditional APM architecture, the agents are responsible for collecting the performance data from applications, processes, hosts, etc. They usually run as part of applications or as an independent process. The OpenAPM Landscape groups them together with frameworks and libraries that can be used to collect the performance data from applications. They can together be seen as the sources of the performance related data.
 
   - id: collector
     name: Collector
+    description: The main responsibility of collectors in the APM landscape is to receive data from the agents or instrumentation frameworks. The received data is usually persisted to some kind of storage or piped to another tool. Depending on the collector type, performance data enhancement and modification is also possible inside of the collector. In addition, collectors can have other responsibilities. For example, some expose the data access API, configuration points for the agents or user interface for interaction with the stored data.
 
-  - id: trasnformation
+  - id: transformation
     name: Transformation
+    description: The transformation tools can be seen as processing pipelines for the performance data. Similar to classic pipes, the transformation tools receive performance data in one format and usually output it in another. Each tool can usually ingests the data from a multitude of sources and also sends to different destinations.
 
   - id: storage
     name: Storage
+    description: Persisting the collected performance data to disk (or memory) is responsibility of storage components. Some storage types, like time series databases (TSDBs), were specially designed to support high-amount of metrics being monitored. The others storage types were primarily designed for the general usage, however they also found their part in the APM landscape, especially NoSQL databases with their great flexibility and scalability.
 
   - id: visualization
     name: Visualization
+    description: As the name suggests, the visualization components are offering some kind of user interface to interact with the APM tools or data. They can cover different APM aspects, like showing traces or application flow-maps. In addition, they can offer interfaces for configuration/setup or provide views that have been generated on top of the performance data, for example - health and problem views, business transactions overview, end-user actions visualizations, views showing results of artificial intelligence working with performance data, etc.
 
   - id: dashboarding
     name: Dashboarding
+    description: The dashboarding tools are special kind of visualization tools that display performance data on dashboards. Dashboards often provide at-a-glance views of KPIs (key performance indicators) relevant to a particular metric or set of metrics. They are usually constructed from set of graphs, but dashboarding tools often offer additional components like single stats, heat-maps, tables, etc.

@@ -54,7 +54,7 @@ components:
     link: https://www.elastic.co/products/logstash
     logo: elastic-logstash
     categories:
-      - trasnformation
+      - transformation
     connections:
       - elasticsearch
       - graphite
