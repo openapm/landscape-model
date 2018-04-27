@@ -1,0 +1,20 @@
+---
+components:
+
+  # MySQL
+  - id: mysql
+    name: MySQL
+    description: MySQL is an open-source relational database management system.
+    link: https://www.mysql.com/
+    logo: mysql
+    categories:
+      - storage
+
+  # Postgres
+  - id: postgres
+    name: PostgreSQL
+    description: PostgreSQL, often simply Postgres, is an object-relational database management system with an emphasis on extensibility and standards compliance.
+    link: https://www.postgresql.org/
+    logo: postgres
+    categories:
+      - storage
