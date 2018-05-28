@@ -1,0 +1,25 @@
+---
+components:
+
+  # micrometer
+  - id: micrometer
+    name: Micrometer
+    description: Micrometer provides a simple facade over the instrumentation clients for the most popular monitoring systems, allowing you to instrument your JVM-based application code without vendor lock-in. Think SLF4J, but for metrics.
+    link: https://micrometer.io/
+    logo: micrometer
+    categories:
+      - agent
+    capabilities:
+      - tech:
+        - java
+      - aspects:
+        - metrics-app
+        - metrics-process
+      - frameworks:
+        - spring
+    connections:
+      - prometheus-server
+      - netflix-atlas
+      - graphite
+      - influx-db
+      - statsd
