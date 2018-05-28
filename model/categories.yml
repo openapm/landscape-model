@@ -24,3 +24,7 @@ categories:
   - id: dashboarding
     name: Dashboarding
     description: The dashboarding tools are special kind of visualization tools that display performance data on dashboards. Dashboards often provide at-a-glance views of KPIs (key performance indicators) relevant to a particular metric or set of metrics. They are usually constructed from set of graphs, but dashboarding tools often offer additional components like single stats, heat-maps, tables, etc.
+
+  - id: alerting
+    name: Alerting
+    description: The alerting tools are capable of creating alerts based on the operational performance metrics and dispatching those alerts via different notification channels such as email, SMS, applications, etc. Beside notifications, some alerting tools support script execution or deployment updates when an alert is fired, thus enabling problem resolution through automation.
