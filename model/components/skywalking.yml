@@ -1,0 +1,61 @@
+---
+components:
+
+  # skywalking
+  - id: skywalking
+    name: Skywalking
+    description: Application performance monitor system based on distributed tracing
+    link: http://skywalking.apache.org/
+    logo: skywalking
+    categories:
+      - agent
+    capabilities:
+      - tech:
+        - java
+        - .net
+        - nodejs
+        - php
+        - c#
+      - aspects:
+        - tracing
+        - metrics-app
+        - metrics-process
+      - frameworks:
+        - tomcat
+        - spring
+        - nutz
+        - struts2
+        - resin
+        - jetty
+        - feign
+        - ok-http
+        - jdbc
+        - kafka
+        - rocket-mq
+
+  # skywalking Collector
+  - id: skywalking-collector
+    name: Skywalking Collector
+    description: Lightweight and powerful backend aggregation and analysis capabilities
+    link: http://skywalking.apache.org/
+    logo: skywalking
+    categories:
+      - collector
+    connections:
+      - elasticsearch
+      - h2
+      - skywalking
+
+  # skywalking UI
+  - id: skywalking-ui
+    name: Skywalking UI
+    description: Modern UI and Alarm for slow or unstable(low SLA) application, instance and service
+    link: http://skywalking.apache.org/
+    logo: skywalking
+    categories:
+      - visualization
+      - alerting
+    connections:
+      - skywalking-collector
+      - h2
+      - elasticsearch
