@@ -1,0 +1,95 @@
+---
+components:
+
+  # prometheus ClientLibs
+  - id: prometheus-client-libs
+    name: Prometheus ClientLibs
+    description: Prometheus client-libraries for instrumenting application code
+    link: https://prometheus.io/
+    logo: prometheus
+    categories:
+      - agent
+    capabilities:
+      - tech:
+        - java
+        - go
+        - scala
+        - python
+        - ruby
+        - bash
+        - c++
+        - common-lisp
+        - elixir
+        - erlang
+        - haskell
+        - lua
+        - .net
+        - c#
+        - nodejs
+        - php
+        - rust
+      - aspects:
+        - metrics-app
+        - metrics-process
+
+  # prometheus Server
+  - id: prometheus-server
+    name: Prometheus Server
+    description: Prometheus server is responsible for scraping and storing time series data collected from the client libraries and exporters
+    link: https://prometheus.io/
+    logo: prometheus
+    categories:
+      - collector
+      - visualization
+      - storage
+    connections:
+      - graphite
+      - influx-db
+      - chronix
+      - weavecortex
+      - crate-db
+      - open-tsdb
+      - postgresql
+      - timescala-db
+      - grafana
+      - prometheus-exporter
+      - prometheus-client-libs
+
+  # prometheus alerting
+  - id: prometheus-alerting
+    name: Prometheus Alert Manager
+    description: The Alertmanager handles alerts sent by client applications such as the Prometheus server. It takes care of deduplicating, grouping, and routing them to the correct receiver integration such as email, PagerDuty, or OpsGenie. It also takes care of silencing and inhibition of alerts.
+    link: https://prometheus.io/
+    logo: prometheus
+    categories:
+      - alerting
+    connections:
+      - prometheus-server
+
+  # prometheus exporter
+  - id: prometheus-exporter
+    name: Prometheus Exporter
+    description: Libraries and servers which help in exporting existing metrics from third-party systems as Prometheus metrics.
+    link: https://prometheus.io/
+    logo: prometheus
+    categories:
+      - agent
+      - exporter
+    capabilities:
+      - aspects:
+        - metrics-app
+        - metrics-process
+        - metrics-host
+      - frameworks:
+        - ha-proxy
+        - aws-cloud-watch
+        - collectd
+        - jmx
+        - snmp
+        - statsd
+        - blackbox
+        - node-system-metrics
+        - graphite
+        - influx-db
+      - os:
+        - linux
