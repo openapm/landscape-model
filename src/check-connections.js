@@ -7,7 +7,7 @@ let missingConnections = model['components'].reduce((a, component) => {
     if (conns !== undefined) {
         conns.forEach(c => {
             if (!component_ids.includes(c)) {
-                a.push(c);
+                a.push(c + ' in ' + component['name']);
             }
         });
         return a;
