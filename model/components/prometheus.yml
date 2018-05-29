@@ -49,7 +49,7 @@ components:
       - weavecortex
       - crate-db
       - open-tsdb
-      - postgresql
+      - postgres
       - timescala-db
       - grafana
       - prometheus-exporter

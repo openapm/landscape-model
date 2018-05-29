@@ -14,6 +14,6 @@ components:
       - elasticsearch
       - influx-db
       - open-tsdb
-      - prometheus
+      - prometheus-server
       - mysql
       - postgres
