@@ -7,6 +7,7 @@ components:
     description: Beats is the platform for single-purpose data shippers. They install as lightweight agents and send data from hundreds or thousands of machines to Logstash or Elasticsearch.
     link: https://www.elastic.co/products/beats
     logo: elastic-beats
+    license: Apache License 2.0
     categories:
       - agent
     capabilities:
@@ -23,6 +24,7 @@ components:
     description: The collections of Elastic APM Agents compatible with the Elastic APM Server.
     link: https://www.elastic.co/solutions/apm
     logo: elastic
+    license: Apache License 2.0
     capabilities:
       - tech:
         - nodejs
@@ -42,6 +44,7 @@ components:
     description: The APM Server receives data from the Elastic APM agents and stores the data into Elasticsearch.
     link: https://www.elastic.co/solutions/apm
     logo: elastic
+    license: Apache License 2.0
     categories:
       - collector
     connections:
@@ -53,6 +56,7 @@ components:
     description: Logstash is an open source, server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite “stash.”
     link: https://www.elastic.co/products/logstash
     logo: elastic-logstash
+    license: Apache License 2.0
     categories:
       - transformation
     connections:
@@ -66,6 +70,7 @@ components:
     description: Elasticsearch is a search engine based on Lucene. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
     link: https://www.elastic.co/products/elasticsearch
     logo: elastic-elasticsearch
+    license: Apache License 2.0
     categories:
       - storage
 
@@ -75,6 +80,7 @@ components:
     description: Kibana is an open source data visualization plugin for Elasticsearch. It provides visualization capabilities on top of the content indexed on an Elasticsearch cluster.
     link: https://www.elastic.co/products/kibana
     logo: elastic-kibana
+    license: Apache License 2.0
     categories:
       - visualization
       - dashboarding
