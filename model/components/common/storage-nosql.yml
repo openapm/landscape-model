@@ -7,6 +7,8 @@ components:
     description: Apache Cassandra is a free and open-source distributed NoSQL database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure.
     link: http://cassandra.apache.org/
     logo: cassandra
+    license:
+      - Apache License 2.0
     categories:
       - storage
 
@@ -16,5 +18,8 @@ components:
     description: MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas.
     link: https://www.mongodb.com/
     logo: mongo
+    license:
+      - GNU AGPLv3
+      - Apache License 2.0
     categories:
       - storage

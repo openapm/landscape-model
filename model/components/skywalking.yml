@@ -7,7 +7,8 @@ components:
     description: Application performance monitor system based on distributed tracing
     link: http://skywalking.apache.org/
     logo: skywalking
-    license: Apache License 2.0
+    license:
+      - Apache License 2.0
     categories:
       - agent
     capabilities:
@@ -40,7 +41,8 @@ components:
     description: Lightweight and powerful backend aggregation and analysis capabilities
     link: http://skywalking.apache.org/
     logo: skywalking
-    license: Apache License 2.0
+    license:
+      - Apache License 2.0
     categories:
       - collector
     connections:
@@ -54,7 +56,8 @@ components:
     description: Modern UI and Alarm for slow or unstable(low SLA) application, instance and service
     link: http://skywalking.apache.org/
     logo: skywalking
-    license: Apache License 2.0
+    license:
+      - Apache License 2.0
     categories:
       - visualization
       - alerting

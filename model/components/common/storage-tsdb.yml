@@ -7,6 +7,8 @@ components:
     description: InfluxDB is an open-source time series database developed by InfluxData.
     link: https://www.influxdata.com/time-series-platform/influxdb/
     logo: influx-data
+    license:
+      - MIT License
     categories:
       - storage
 
@@ -16,6 +18,8 @@ components:
     description: Graphite is an enterprise-ready monitoring tool that runs equally well on cheap hardware or Cloud infrastructure. It store numeric time-series data and renders graphs of this data on demand.
     link: http://graphiteapp.org/
     logo: graphite
+    license:
+      - Apache License 2.0
     categories:
       - storage
 
@@ -25,5 +29,7 @@ components:
     description: OpenTSDB is a distributed, scalable Time Series Database (TSDB) written on top of HBase. OpenTSDB was written to address a common need - store, index and serve metrics collected from computer systems (network gear, operating systems, applications) at a large scale, and make this data easily accessible and graphable.
     link: http://opentsdb.net/
     logo: open-tsdb
+    license:
+      - GNU GPLv3
     categories:
       - storage
