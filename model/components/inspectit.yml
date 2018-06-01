@@ -7,7 +7,8 @@ components:
     description: inspectIT agent for instrumenting and monitoring Java 6+ applications.
     link: http://www.inspectit.rocks/
     logo: inspectit
-    license: Apache License 2.0
+    license:
+      - Apache License 2.0
     categories:
       - agent
     capabilities:
@@ -25,7 +26,8 @@ components:
     description: inspectIT Server component know as Central Measurement Repository (CMR).
     link: http://www.inspectit.rocks/
     logo: inspectit
-    license: Apache License 2.0
+    license:
+      - Apache License 2.0
     categories:
       - collector
     connections:
@@ -38,7 +40,8 @@ components:
     description: inspectIT user interface based on Eclipse RCP.
     link: http://www.inspectit.rocks/
     logo: inspectit
-    license: Apache License 2.0
+    license:
+      - Apache License 2.0
     categories:
       - visualization
     connections:

@@ -7,7 +7,8 @@ components:
     description: Kamon is an instrumentation toolkit for applications running on the JVM. With Kamon you can record metrics, trace requests and propagate context across distributed systems without locking your service to a specific metrics or tracing vendor.
     link: http://kamon.io
     logo: kamon
-    license: Apache License 2.0
+    license:
+      - Apache License 2.0
     categories:
       - instrumentation-lib
     capabilities:

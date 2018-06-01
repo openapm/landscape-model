@@ -7,7 +7,8 @@ components:
     description: Prometheus client-libraries for instrumenting application code
     link: https://prometheus.io/
     logo: prometheus
-    license: Apache License 2.0
+    license:
+      - Apache License 2.0
     categories:
       - instrumentation-lib
     capabilities:
@@ -39,7 +40,8 @@ components:
     description: Prometheus server is responsible for scraping and storing time series data collected from the client libraries and exporters
     link: https://prometheus.io/
     logo: prometheus
-    license: Apache License 2.0
+    license:
+      - Apache License 2.0
     categories:
       - collector
       - visualization
@@ -63,7 +65,8 @@ components:
     description: The Alertmanager handles alerts sent by client applications such as the Prometheus server. It takes care of deduplicating, grouping, and routing them to the correct receiver integration such as email, PagerDuty, or OpsGenie. It also takes care of silencing and inhibition of alerts.
     link: https://prometheus.io/
     logo: prometheus
-    license: Apache License 2.0
+    license:
+      - Apache License 2.0
     categories:
       - alerting
     connections:
@@ -75,7 +78,8 @@ components:
     description: Libraries and servers which help in exporting existing metrics from third-party systems as Prometheus metrics.
     link: https://prometheus.io/
     logo: prometheus
-    license: Apache License 2.0
+    license:
+      - Apache License 2.0
     categories:
       - agent
       - exporter
