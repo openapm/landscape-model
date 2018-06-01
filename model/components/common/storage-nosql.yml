@@ -23,3 +23,12 @@ components:
       - Apache License 2.0
     categories:
       - storage
+
+  # redis
+  - id: redis
+    name: Redis
+    description: Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports many different data structures such as stringes, hashes, list, etc.
+    link: https://redis.io/
+    logo: redis
+    categories:
+      - storage

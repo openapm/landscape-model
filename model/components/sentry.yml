@@ -1,0 +1,45 @@
+---
+components:
+
+  # sentry
+  - id: sentry
+    name: Sentry
+    description: Sentry is cross-platform application monitoring, with a focus on error reporting.
+    link: https://sentry.io
+    logo: sentry
+    license:
+      - BSD 3-Clause "New" or "Revised" License
+    categories:
+      - instrumentation-lib
+    capabilities:
+      - tech:
+        - java
+        - c#
+        - go
+        - nodejs
+        - ruby
+        - python
+        - javascript
+        - reactnative
+        - php
+        - cocoa
+        - rust
+        - perl
+        - elixir
+        - electron
+      - aspects:
+        - error-reporting
+
+  # sentry Server
+  - id: sentry-server
+    name: Sentry Server
+    description: The Sentry Server is the core Python application that powers all of our Sentry installations. This covers everything related to getting it running on your own infrastructure.
+    link: https://docs.sentry.io/server/
+    logo: sentry
+    license:
+      - BSD 3-Clause "New" or "Revised" License
+    categories:
+      - collector
+      - visualization
+    connections:
+      - redis
