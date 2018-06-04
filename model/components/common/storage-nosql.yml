@@ -27,7 +27,7 @@ components:
   # redis
   - id: redis
     name: Redis
-    description: Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports many different data structures such as stringes, hashes, list, etc.
+    description: Redis is an open source, in-memory data structure store, used as a database, cache and message broker. It supports many different data structures such as stringes, hashes, list, etc.
     link: https://redis.io/
     logo: redis
     categories:
