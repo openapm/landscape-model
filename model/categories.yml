@@ -6,7 +6,7 @@ categories:
     description: In traditional APM architectures, the agents are responsible for collecting the performance data from applications, processes, hosts, etc. They usually run as part of applications or as an independent process. Together with instrumentation libraries, they can be seen as the sources of the performance related data.
 
   - id: instrumentation-lib
-    name: Instrumentation Lib
+    name: Libraries
     description: Instrumentation frameworks and libraries can be used to collect different types of performance data from applications. They are usually representing a direct dependency to the application being monitored, and opposite to the agents, require source code changes in order to collect performance data.
 
   - id: collector
