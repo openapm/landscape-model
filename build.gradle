@@ -21,6 +21,20 @@ checkConnections.dependsOn(npmInstall)
 assemble.dependsOn(checkConnections)
 
 /**
+ * Checks if we have any missing license links.
+ */
+task checkLicenses(type: NodeTask) {
+    description = 'Check missing license links in the model.'
+    group = 'Build'
+
+    inputs.dir project.file("${project.rootDir}/model")
+
+    script = file('src/check-licenses.js')
+}
+checkLicenses.dependsOn(npmInstall)
+assemble.dependsOn(checkLicenses)
+
+/**
  * Outputs the model as json.
  */
 task modelOutput(type: NodeTask) {
