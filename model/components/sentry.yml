@@ -11,6 +11,8 @@ components:
       - BSD 3-Clause "New" or "Revised" License
     categories:
       - instrumentation-lib
+    connections:
+      - sentry-server
     capabilities:
       - tech:
         - java
