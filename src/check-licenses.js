@@ -1,7 +1,7 @@
 const merge = require('./merge-all');
 
 let model = merge.model();
-let missingLicenses = model['components'].reduce((a, component) => {
+let missingLicenseLinks = model['components'].reduce((a, component) => {
     let licenses = component['license'];
     if (licenses !== undefined) {
         licenses.forEach(licenseName => {
@@ -15,7 +15,13 @@ let missingLicenses = model['components'].reduce((a, component) => {
     }
 }, []);
 
+let componentsWithoutLicenses = model['components'].filter(c => c['license'] === undefined).map(c => c.id);
 
-if (missingLicenses.length > 0) {
-    console.error('WARNING: There are unmatched licenses: ', missingLicenses);
+
+if (missingLicenseLinks.length > 0) {
+    console.error('WARNING: There are licenses with missing links: ', missingLicenseLinks);
+}
+
+if (componentsWithoutLicenses.length > 0) {
+    console.error('WARNING: The following components are missing license information: ', componentsWithoutLicenses);
 }
