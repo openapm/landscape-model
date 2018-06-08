@@ -11,6 +11,7 @@ components:
       - Apache License 2.0
     categories:
       - dashboarding
+      - alerting
     connections:
       - graphite
       - elasticsearch
