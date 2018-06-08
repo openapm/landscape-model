@@ -3,8 +3,9 @@ Model for the open-source application performance management landscape presented
 
 ## Build
 
-Building means combing all model files into one YAML output file. Easiest way to do this is execute Gradle build task:
+Building means combining all model files into one JSON file. The easiest way to do this is to execute the following command:
 ```
-$ ./gradlew build
+$ npm install
+$ npm run-script build
 ```
-The output file will be written to `build/output.yml`.
+The output file will be written to `build/model.json`.

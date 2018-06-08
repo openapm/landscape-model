@@ -55,9 +55,9 @@ generateModel = function (doFlush) {
              // dump combined objects as JSON
             const result = JSON.stringify(all, null, 4);
             // write to file
-            console.info('Writing to build/output/model.json');
+            console.info('Writing to build/model.json');
             mkdirp.sync(parentDir + '/build');
-            fs.writeFileSync(parentDir + '/build/output/model.json', result);
+            fs.writeFileSync(parentDir + '/build/model.json', result);
       }
 
       return all;
