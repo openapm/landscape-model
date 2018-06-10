@@ -1,0 +1,30 @@
+---
+components:
+
+  # opencensus instrumentation toolkit
+  - id: opencensus
+    name: OpenCensus
+    description: A single distribution of libraries that automatically collects traces and metrics from your app, displays them locally, and provides means to write to different analysis tools.
+    link: https://opencensus.io/
+    logo: opencensus
+    license:
+      - Apache License 2.0
+    categories:
+      - instrumentation-lib
+    capabilities:
+      - tech:
+        - c++
+        - erlang
+        - php
+        - go
+        - java
+        - python
+        - ruby
+      - aspects:
+        - tracing
+        - metrics-app
+        - metrics-process
+    connections:
+        - prometheus-server
+        - zipkin-server
+        - jaeger-collector
