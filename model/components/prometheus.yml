@@ -82,7 +82,6 @@ components:
       - Apache License 2.0
     categories:
       - agent
-      - exporter
     capabilities:
       - aspects:
         - metrics-app
