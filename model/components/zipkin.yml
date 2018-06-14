@@ -12,7 +12,7 @@ components:
     categories:
       - instrumentation-lib
     capabilities:
-      - tech:
+      tech:
         - java
         - c#
         - c++
@@ -22,7 +22,7 @@ components:
         - scala
         - python
         - php
-      - aspects:
+      aspects:
         - tracing
 
   # zipkin Server

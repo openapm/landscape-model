@@ -12,7 +12,7 @@ components:
     categories:
       - instrumentation-lib
     capabilities:
-      - tech:
+      tech:
         - java
         - go
         - scala
@@ -30,7 +30,7 @@ components:
         - nodejs
         - php
         - rust
-      - aspects:
+      aspects:
         - metrics-app
         - metrics-process
 
@@ -83,11 +83,11 @@ components:
     categories:
       - agent
     capabilities:
-      - aspects:
+      aspects:
         - metrics-app
         - metrics-process
         - metrics-host
-      - frameworks:
+      frameworks:
         - ha-proxy
         - aws-cloud-watch
         - collectd
@@ -98,5 +98,5 @@ components:
         - node-system-metrics
         - graphite
         - influx-db
-      - os:
+      os:
         - linux

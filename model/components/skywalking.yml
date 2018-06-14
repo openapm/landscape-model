@@ -12,17 +12,17 @@ components:
     categories:
       - agent
     capabilities:
-      - tech:
+      tech:
         - java
         - .net
         - nodejs
         - php
         - c#
-      - aspects:
+      aspects:
         - tracing
         - metrics-app
         - metrics-process
-      - frameworks:
+      frameworks:
         - tomcat
         - spring
         - nutz

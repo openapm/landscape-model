@@ -12,12 +12,12 @@ components:
     categories:
       - instrumentation-lib
     capabilities:
-      - tech:
+      tech:
         - java
-      - aspects:
+      aspects:
         - metrics-app
         - metrics-process
-      - frameworks:
+      frameworks:
         - spring
     connections:
       - prometheus-server

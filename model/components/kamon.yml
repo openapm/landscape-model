@@ -12,10 +12,10 @@ components:
     categories:
       - instrumentation-lib
     capabilities:
-      - tech:
+      tech:
         - java
         - scala
-      - aspects:
+      aspects:
         - tracing
         - metrics-app
         - metrics-process

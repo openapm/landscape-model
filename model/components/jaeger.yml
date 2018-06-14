@@ -12,15 +12,15 @@ components:
     categories:
       - instrumentation-lib
     capabilities:
-      - tech:
+      tech:
         - java
         - go
         - nodejs
         - python
         - c++
-      - aspects:
+      aspects:
         - tracing
-      - frameworks:
+      frameworks:
         - spring
         - jdbc
         - ldap

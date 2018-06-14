@@ -14,7 +14,7 @@ components:
     connections:
       - sentry-server
     capabilities:
-      - tech:
+      tech:
         - java
         - c#
         - go
@@ -29,7 +29,7 @@ components:
         - perl
         - elixir
         - electron
-      - aspects:
+      aspects:
         - error-reporting
 
   # sentry Server

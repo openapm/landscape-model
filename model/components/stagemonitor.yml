@@ -12,9 +12,9 @@ components:
     categories:
       - agent
     capabilities:
-      - tech:
+      tech:
         - java
-      - aspects:
+      aspects:
         - tracing
         - metrics-app
         - metrics-process

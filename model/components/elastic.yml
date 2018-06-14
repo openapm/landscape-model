@@ -13,7 +13,7 @@ components:
     categories:
       - agent
     capabilities:
-      - aspects:
+      aspects:
         - metrics-app
         - metrics-process
     connections:
@@ -30,11 +30,11 @@ components:
       - Apache License 2.0
       - Elastic License
     capabilities:
-      - tech:
+      tech:
         - nodejs
         - python
         - ruby
-      - aspects:
+      aspects:
         - tracing
         - metrics-app
     categories:

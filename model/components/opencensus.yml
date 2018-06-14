@@ -12,7 +12,7 @@ components:
     categories:
       - instrumentation-lib
     capabilities:
-      - tech:
+      tech:
         - c++
         - erlang
         - php
@@ -20,7 +20,7 @@ components:
         - java
         - python
         - ruby
-      - aspects:
+      aspects:
         - tracing
         - metrics-app
         - metrics-process
