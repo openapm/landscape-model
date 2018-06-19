@@ -20,8 +20,8 @@ components:
         - c#
       aspects:
         - tracing
-        - metrics-app
-        - metrics-process
+        - metrics [app]
+        - metrics [process]
       frameworks:
         - tomcat
         - spring

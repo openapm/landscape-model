@@ -4,14 +4,25 @@ categories:
   - id: agent
     name: Agent
     description: In traditional APM architectures, the agents are responsible for collecting the performance data from applications, processes, hosts, etc. They usually run as part of applications or as an independent process. Together with instrumentation libraries, they can be seen as the sources of the performance related data.
+    capabilities: 
+      - tech
+      - aspects
+      - frameworks
+      - os
 
   - id: instrumentation-lib
     name: Libraries
     description: Instrumentation frameworks and libraries can be used to collect different types of performance data from applications. They are usually representing a direct dependency to the application being monitored, and opposite to the agents, require source code changes in order to collect performance data.
+    capabilities: 
+      - tech
+      - aspects
+      - frameworks
 
   - id: collector
     name: Collector
     description: The main responsibility of collectors in the APM landscape is to receive data from the agents or instrumentation frameworks. The received data is usually persisted to some kind of storage or piped to another tool. Depending on the collector type, performance data enhancement and modification is also possible inside of the collector. In addition, collectors can have other responsibilities. For example, some expose the data access API, configuration points for the agents or user interface for interaction with the stored data.
+    capabilities: 
+      - aspects
 
   - id: transformation
     name: Transformation
@@ -20,15 +31,21 @@ categories:
   - id: storage
     name: Storage
     description: Persisting the collected performance data to disk (or memory) is the responsibility of storage components. Some storage types, like time series databases (TSDBs), were specially designed to support high-amount of metrics being monitored. Others storage types were primarily designed for the general usage, however they also found their part in the APM landscape, especially NoSQL databases with their great flexibility and scalability when storing and providing structured data.
+    capabilities: 
+      - aspects
 
   - id: visualization
     name: Visualization
     description: As the name suggests, the visualization components are offering some kind of user interface to interact with the APM tools or data. They can cover different APM aspects, like showing traces or application flow-maps. In addition, they can offer interfaces for configuration and setup or allow interaction with views that have been generated on top of the performance data, for example - health and problem views, business transactions overview, end-user actions visualizations, views showing results of artificial intelligence working with performance data, etc.
+    capabilities: 
+      - aspects
 
   - id: dashboarding
     name: Dashboarding
     description: The dashboarding tools are special kind of visualization tools that display performance data on dashboards. Dashboards often provide at-a-glance views of KPIs (key performance indicators) relevant to a particular metric or set of metrics. They are usually constructed from set of graphs, but dashboarding tools often offer additional components like single stats, heat-maps, tables, etc.
-
+    capabilities: 
+      - aspects
+      
   - id: alerting
     name: Alerting
     description: The alerting tools are capable of creating alerts based on the operational performance metrics and dispatching those alerts via different notification channels such as email, SMS, applications, etc. Beside notifications, some alerting tools support script execution or deployment updates when an alert is fired, thus enabling problem resolution through automation.

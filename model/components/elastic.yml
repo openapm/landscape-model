@@ -14,8 +14,8 @@ components:
       - agent
     capabilities:
       aspects:
-        - metrics-app
-        - metrics-process
+        - metrics [app]
+        - metrics [process]
     connections:
         - elasticsearch
         - logstash
@@ -36,7 +36,7 @@ components:
         - ruby
       aspects:
         - tracing
-        - metrics-app
+        - metrics [app]
     categories:
       - agent
     connections:

@@ -15,8 +15,8 @@ components:
       tech:
         - java
       aspects:
-        - metrics-app
-        - metrics-process
+        - metrics [app]
+        - metrics [process]
       frameworks:
         - spring
     connections:

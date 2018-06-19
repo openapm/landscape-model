@@ -31,8 +31,8 @@ components:
         - php
         - rust
       aspects:
-        - metrics-app
-        - metrics-process
+        - metrics [app]
+        - metrics [process]
 
   # prometheus Server
   - id: prometheus-server
@@ -84,9 +84,9 @@ components:
       - agent
     capabilities:
       aspects:
-        - metrics-app
-        - metrics-process
-        - metrics-host
+        - metrics [app]
+        - metrics [process]
+        - metrics [host]
       frameworks:
         - ha-proxy
         - aws-cloud-watch

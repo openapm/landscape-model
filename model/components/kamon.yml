@@ -17,8 +17,8 @@ components:
         - scala
       aspects:
         - tracing
-        - metrics-app
-        - metrics-process
+        - metrics [app]
+        - metrics [process]
     connections:
         - prometheus-server
         - influx-db

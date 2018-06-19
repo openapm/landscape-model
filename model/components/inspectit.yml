@@ -17,8 +17,8 @@ components:
       aspects:
         - tracing
         - eum
-        - metrics-app
-        - metrics-process
+        - metrics [app]
+        - metrics [process]
 
   # inspectIT Central Management Repository
   - id: inspectit-cmr
@@ -33,6 +33,12 @@ components:
     connections:
       - inspectit-agent
       - influx-db
+    capabilities:
+      aspects:
+        - tracing
+        - eum
+        - metrics [app]
+        - metrics [process]
 
   # inspectIT user interface
   - id: inspectit-ui
@@ -46,3 +52,9 @@ components:
       - visualization
     connections:
       - inspectit-cmr
+    capabilities:
+      aspects:
+        - tracing
+        - eum
+        - metrics [app]
+        - metrics [process]

@@ -16,8 +16,8 @@ components:
         - java
       aspects:
         - tracing
-        - metrics-app
-        - metrics-process
+        - metrics [app]
+        - metrics [process]
     connections:
       - elasticsearch
       - graphite
