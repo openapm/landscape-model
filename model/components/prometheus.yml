@@ -58,6 +58,9 @@ components:
       - grafana
       - prometheus-exporter
       - prometheus-client-libs
+    capabilities:
+      aspects:
+        - metrics
 
   # prometheus alerting
   - id: prometheus-alerting

@@ -12,6 +12,11 @@ components:
       - GPLv2
     categories:
       - storage
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
 
   # Postgres
   - id: postgres
@@ -23,3 +28,8 @@ components:
       - PostgreSQL License
     categories:
       - storage
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs

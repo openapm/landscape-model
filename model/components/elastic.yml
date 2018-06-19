@@ -16,6 +16,7 @@ components:
       aspects:
         - metrics [app]
         - metrics [process]
+        - logs
     connections:
         - elasticsearch
         - logstash
@@ -55,6 +56,10 @@ components:
       - collector
     connections:
       - elasticsearch
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
 
   # Logstash
   - id: logstash
@@ -83,6 +88,11 @@ components:
       - Elastic License
     categories:
       - storage
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
 
   # Kibana
   - id: kibana
@@ -98,3 +108,8 @@ components:
       - dashboarding
     connections:
       - elasticsearch
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs

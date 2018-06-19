@@ -11,6 +11,11 @@ components:
       - Apache License 2.0
     categories:
       - storage
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
 
   # mongoDB
   - id: mongo
@@ -23,6 +28,11 @@ components:
       - Apache License 2.0
     categories:
       - storage
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
 
   # redis
   - id: redis
@@ -34,3 +44,8 @@ components:
       - BSD 3-Clause "New" or "Revised" License
     categories:
       - storage
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs

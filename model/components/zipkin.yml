@@ -23,7 +23,8 @@ components:
         - python
         - php
       aspects:
-        - tracing
+        - tracing [app]
+        - tracing [eum]
 
   # zipkin Server
   - id: zipkin-server
@@ -41,3 +42,6 @@ components:
       - cassandra
       - elasticsearch
       - mysql
+    capabilities:
+      aspects:
+        - tracing

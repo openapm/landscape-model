@@ -49,6 +49,10 @@ components:
       - elasticsearch
       - h2
       - skywalking
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
 
   # skywalking UI
   - id: skywalking-ui
@@ -65,3 +69,7 @@ components:
       - skywalking-collector
       - h2
       - elasticsearch
+    capabilities:
+      aspects:
+        - tracing
+        - metrics

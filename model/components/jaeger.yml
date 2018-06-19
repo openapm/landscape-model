@@ -19,7 +19,8 @@ components:
         - python
         - c++
       aspects:
-        - tracing
+        - tracing [app]
+        - tracing [eum]
       frameworks:
         - spring
         - jdbc
@@ -40,6 +41,9 @@ components:
       - elasticsearch
       - jaeger-agent
       - zipkin
+    capabilities:
+      aspects:
+        - tracing
 
   # jaeger query and UI
   - id: jaeger-query
@@ -55,3 +59,6 @@ components:
       - cassandra
       - elasticsearch
       - jaeger-collector
+    capabilities:
+      aspects:
+        - tracing

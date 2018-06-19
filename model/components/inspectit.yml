@@ -15,8 +15,9 @@ components:
       tech:
         - java
       aspects:
-        - tracing
-        - eum
+        - tracing [app]
+        - tracing [eum]
+        - metrics [eum]
         - metrics [app]
         - metrics [process]
 
@@ -36,9 +37,7 @@ components:
     capabilities:
       aspects:
         - tracing
-        - eum
-        - metrics [app]
-        - metrics [process]
+        - metrics
 
   # inspectIT user interface
   - id: inspectit-ui
@@ -55,6 +54,4 @@ components:
     capabilities:
       aspects:
         - tracing
-        - eum
-        - metrics [app]
-        - metrics [process]
+        - metrics

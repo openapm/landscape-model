@@ -11,6 +11,9 @@ components:
       - MIT License
     categories:
       - storage
+    capabilities:
+      aspects:
+        - metrics
 
   # graphite
   - id: graphite
@@ -22,6 +25,9 @@ components:
       - Apache License 2.0
     categories:
       - storage
+    capabilities:
+      aspects:
+        - metrics
 
   # openTSDB
   - id: open-tsdb
@@ -33,3 +39,6 @@ components:
       - GNU GPLv3
     categories:
       - storage
+    capabilities:
+      aspects:
+        - metrics

@@ -35,4 +35,8 @@ components:
       - Apache License 2.0
     categories:
       - visualization
-      - alerting      
+      - alerting
+    capabilities:
+      aspects:
+        - tracing
+        - metrics 
