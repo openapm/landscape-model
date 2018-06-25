@@ -6,6 +6,9 @@ components:
     name: Elastic Beats
     description: Beats is the platform for single-purpose data shippers. They install as lightweight agents and send data from hundreds or thousands of machines to Logstash or Elasticsearch.
     link: https://www.elastic.co/products/beats
+    github: 
+      - elastic/beats
+    twitter: elastic
     logo: elastic-beats
     license:
       - Apache License 2.0
@@ -26,6 +29,14 @@ components:
     name: Elastic APM Agent
     description: The collections of Elastic APM Agents compatible with the Elastic APM Server.
     link: https://www.elastic.co/solutions/apm
+    github: 
+      - elastic/apm-agent-java
+      - elastic/apm-agent-python
+      - elastic/apm-agent-nodejs
+      - elastic/apm-agent-go
+      - elastic/apm-agent-ruby
+      - elastic/apm-agent-js-base
+    twitter: elastic
     logo: elastic
     license:
       - Apache License 2.0
@@ -48,6 +59,9 @@ components:
     name: Elastic APM Server
     description: The APM Server receives data from the Elastic APM agents and stores the data into Elasticsearch.
     link: https://www.elastic.co/solutions/apm
+    github: 
+      - elastic/apm-server
+    twitter: elastic
     logo: elastic
     license:
       - Apache License 2.0
@@ -66,6 +80,9 @@ components:
     name: Logstash
     description: Logstash is an open source, server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite “stash.”
     link: https://www.elastic.co/products/logstash
+    github: 
+      - elastic/logstash
+    twitter: elastic
     logo: elastic-logstash
     license:
       - Apache License 2.0
@@ -82,6 +99,9 @@ components:
     name: Elasticsearch
     description: Elasticsearch is a search engine based on Lucene. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
     link: https://www.elastic.co/products/elasticsearch
+    github: 
+      - elastic/elasticsearch
+    twitter: elastic
     logo: elastic-elasticsearch
     license:
       - Apache License 2.0
@@ -99,6 +119,9 @@ components:
     name: Kibana
     description: Kibana is an open source data visualization plugin for Elasticsearch. It provides visualization capabilities on top of the content indexed on an Elasticsearch cluster.
     link: https://www.elastic.co/products/kibana
+    github: 
+      - elastic/kibana
+    twitter: elastic
     logo: elastic-kibana
     license:
       - Apache License 2.0

@@ -6,6 +6,16 @@ components:
     name: Zipkin
     description: Zipkin is a distributed tracing system. It helps gather timing data needed to troubleshoot latency problems in microservice architectures. It manages both the collection and lookup of this data. Zipkin’s design is based on the Google Dapper paper.
     link: https://zipkin.io/
+    github:
+      - openzipkin/zipkin
+      - openzipkin/zipkin4net
+      - openzipkin/zipkin-go
+      - openzipkin/zipkin-go-opentracing
+      - openzipkin/brave
+      - openzipkin/zipkin-js
+      - openzipkin/zipkin-ruby
+      - openzipkin/zipkin-finagle
+    twitter: zipkinproject
     logo: zipkin
     license:
       - Apache License 2.0
@@ -31,6 +41,9 @@ components:
     name: Zipkin Server
     description: The Zipkin Server represents set of collectors for the Zipkin-based spans with configurable storage and web-based UI.
     link: https://zipkin.io/
+    github:
+      - openzipkin/zipkin
+    twitter: zipkinproject
     logo: zipkin
     license:
       - Apache License 2.0

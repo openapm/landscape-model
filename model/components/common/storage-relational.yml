@@ -6,6 +6,9 @@ components:
     name: MySQL
     description: MySQL is an open-source relational database management system.
     link: https://www.mysql.com/
+    github:
+      - mysql/mysql-server
+    twitter: MySQL
     logo: mysql
     license:
       - MySQL 8.0
@@ -23,6 +26,9 @@ components:
     name: PostgreSQL
     description: PostgreSQL, often simply Postgres, is an object-relational database management system with an emphasis on extensibility and standards compliance.
     link: https://www.postgresql.org/
+    github:
+      - postgres/postgres
+    twitter: postgresql
     logo: postgres
     license:
       - PostgreSQL License

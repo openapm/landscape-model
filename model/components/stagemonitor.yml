@@ -6,6 +6,9 @@ components:
     name: stagemonitor
     description: Agent that sits inside your Java application and sends metrics and request traces to a central database. Stagemonitor monitors applications with the help of servlet filters and bytecode manipulation. 
     link: http://www.stagemonitor.org/
+    github:
+      - stagemonitor/stagemonitor
+    twitter: stagemonitor
     logo: stagemonitor
     license:
       - Apache License 2.0
@@ -30,6 +33,9 @@ components:
     name: stagemonitor Widget
     description: The stagemonitor In Browser Widget lets you analyze metrics and call trees in your browser without installing a backend. If you are monitoring a web application (with servlet api >= 3) the in browser stagemonitor widget is automatically injected in your site. In case you have a REST or similar web application with no UI, then the widget is available under a specific sub-URL of your application.
     link: http://www.stagemonitor.org/
+    github:
+      - stagemonitor/stagemonitor
+    twitter: stagemonitor
     logo: stagemonitor
     license:
       - Apache License 2.0

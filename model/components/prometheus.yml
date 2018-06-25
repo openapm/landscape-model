@@ -6,6 +6,23 @@ components:
     name: Prometheus ClientLibs
     description: Prometheus client-libraries for instrumenting application code
     link: https://prometheus.io/docs/instrumenting/clientlibs/
+    github:
+      - prometheus/client_python
+      - prometheus/client_java
+      - prometheus/client_ruby
+      - prometheus/client_golang
+      - aecolley/client_bash
+      - jupp0r/prometheus-cpp
+      - deadtrickster/prometheus.cl
+      - deadtrickster/prometheus.ex
+      - deadtrickster/prometheus.erl
+      - fimad/prometheus-haskell
+      - knyar/nginx-lua-prometheus
+      - prometheus-net/prometheus-net
+      - siimon/prom-client
+      - Jimdo/prometheus_client_php
+      - pingcap/rust-prometheus
+    twitter: PrometheusIO
     logo: prometheus
     license:
       - Apache License 2.0
@@ -39,6 +56,9 @@ components:
     name: Prometheus Server
     description: Prometheus server is responsible for scraping and storing time series data collected from the client libraries and exporters
     link: https://prometheus.io/
+    github:
+      - prometheus/prometheus
+    twitter: PrometheusIO
     logo: prometheus
     license:
       - Apache License 2.0
@@ -67,6 +87,9 @@ components:
     name: Prometheus Alert Manager
     description: The Alertmanager handles alerts sent by client applications such as the Prometheus server. It takes care of deduplicating, grouping, and routing them to the correct receiver integration such as email, PagerDuty, or OpsGenie. It also takes care of silencing and inhibition of alerts.
     link: https://prometheus.io/docs/alerting/overview/
+    github:
+      - prometheus/alertmanager
+    twitter: PrometheusIO
     logo: prometheus
     license:
       - Apache License 2.0
@@ -80,6 +103,21 @@ components:
     name: Prometheus Exporter
     description: Libraries and servers which help in exporting existing metrics from third-party systems as Prometheus metrics.
     link: https://prometheus.io/docs/instrumenting/exporters/
+    github:
+      - prometheus/jmx_exporter
+      - prometheus/haproxy_exporter
+      - prometheus/node_exporter
+      - prometheus/cloudwatch_exporter
+      - prometheus/consul_exporter
+      - prometheus/statsd_exporter
+      - prometheus/snmp_exporter
+      - prometheus/mysqld_exporter
+      - prometheus/blackbox_exporter
+      - prometheus/memcached_exporter
+      - prometheus/graphite_exporter
+      - prometheus/influxdb_exporter
+      - prometheus/collectd_exporter
+    twitter: PrometheusIO
     logo: prometheus
     license:
       - Apache License 2.0

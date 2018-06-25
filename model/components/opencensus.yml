@@ -6,6 +6,16 @@ components:
     name: OpenCensus
     description: A single distribution of libraries that automatically collects traces and metrics from your app, displays them locally, and provides means to write to different analysis tools.
     link: https://opencensus.io/
+    github:
+      - census-instrumentation/opencensus-java
+      - census-instrumentation/opencensus-node
+      - census-instrumentation/opencensus-go
+      - census-instrumentation/opencensus-python
+      - census-instrumentation/opencensus-cpp
+      - census-instrumentation/opencensus-php
+      - census-instrumentation/opencensus-erlang
+      - census-instrumentation/opencensus-ruby
+    twitter: opencensusio
     logo: opencensus
     license:
       - Apache License 2.0

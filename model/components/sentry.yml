@@ -6,6 +6,18 @@ components:
     name: Sentry
     description: Sentry is cross-platform application monitoring, with a focus on error reporting.
     link: https://sentry.io
+    github:
+      - getsentry/sentry-rust
+      - sentry-java
+      - sentry-elixir
+      - sentry-php
+      - raven-ruby
+      - raven-js
+      - sentry-cocoa
+      - sentry-dotnet
+      - raven-csharp
+      - sentry-python
+    twitter: getsentry
     logo: sentry
     license:
       - BSD 3-Clause "New" or "Revised" License
@@ -16,7 +28,7 @@ components:
     capabilities:
       tech:
         - java
-        - c#
+        - .net
         - go
         - nodejs
         - ruby
@@ -37,6 +49,9 @@ components:
     name: Sentry Server
     description: The Sentry Server is the core Python application that powers all of our Sentry installations. This covers everything related to getting it running on your own infrastructure.
     link: https://docs.sentry.io/server/
+    github:
+      - getsentry/sentry
+    twitter: getsentry
     logo: sentry
     license:
       - BSD 3-Clause "New" or "Revised" License

@@ -6,6 +6,9 @@ components:
     name: inspectIT
     description: inspectIT agent for instrumenting and monitoring Java 6+ applications.
     link: http://www.inspectit.rocks/
+    github:
+      - inspectIT/inspectIT
+    twitter: inspectIT_APM
     logo: inspectit
     license:
       - Apache License 2.0
@@ -24,8 +27,11 @@ components:
   # inspectIT Central Management Repository
   - id: inspectit-cmr
     name: inspectIT CMR
-    description: inspectIT Server component know as Central Measurement Repository (CMR).
+    description: inspectIT Server component known as Central Measurement Repository (CMR).
     link: http://www.inspectit.rocks/
+    github:
+      - inspectIT/inspectIT
+    twitter: inspectIT_APM
     logo: inspectit
     license:
       - Apache License 2.0
@@ -44,6 +50,8 @@ components:
     name: inspectIT UI
     description: inspectIT user interface based on Eclipse RCP.
     link: http://www.inspectit.rocks/
+    github: inspectIT/inspectIT
+    twitter: inspectIT_APM
     logo: inspectit
     license:
       - Apache License 2.0
