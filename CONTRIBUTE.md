@@ -24,7 +24,7 @@ The following table describes the individual properties:
 | logo | The file name (without file extension) of the tool logo. Logo files must be located in the ./logos directory | yes |
 | categories | A list of category names that the corresponding tool component belongs to. Categories are defined by means of the primary purpose of the components. Note that a component can belong to multiple categories, if reasonable. | yes |
 | twitter | The name of the twitter account for that tool (without '@') | no |
-| github | A list of GitHub repositories for that component. Only provide the organization (or username) and repository name in the following format: <ORG-NAME>/<REPO-NAME>. E.g. for https://github.com/elastic/kibana provide only 'elastic/kibana'. | no |
+| github | A list of GitHub repositories for that component. Only provide the organization (or username) and repository name in the following format: ORG-NAME/REPO-NAME. E.g. for https://github.com/elastic/kibana provide only 'elastic/kibana'. | no |
 | connections | A list of component ids that this component can link to (which means can somehow be combined with). | no |
 | license | A list of license names that apply to the tool / component. Valid license names are defined in the ./model/licenses.yml file. If a license is missing in that file, just add it there with a link to the license website. | no |
 | capabilities | Describes the capabilities of data gathering for the corresponding tools. Which capabilities are valid for a specific category is defined in the categories.yml file.| no |
