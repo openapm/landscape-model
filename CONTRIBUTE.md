@@ -23,11 +23,13 @@ The following table describes the individual properties:
 | link | A link URL to the official website of the component / tool | yes |
 | logo | The file name (without file extension) of the tool logo. Logo files must be located in the ./logos directory | yes |
 | categories | A list of category names that the corresponding tool component belongs to. Categories are defined by means of the primary purpose of the components. Note that a component can belong to multiple categories, if reasonable. | yes |
+| twitter | The name of the twitter account for that tool (without '@') | no |
+| github | A list of GitHub repositories for that component. Only provide the organization (or username) and repository name in the following format: <ORG-NAME>/<REPO-NAME>. E.g. for https://github.com/elastic/kibana provide only 'elastic/kibana'. | no |
 | connections | A list of component ids that this component can link to (which means can somehow be combined with). | no |
 | license | A list of license names that apply to the tool / component. Valid license names are defined in the ./model/licenses.yml file. If a license is missing in that file, just add it there with a link to the license website. | no |
-| capabilities | This property is currently only available for components that belong to the *agent* or *instrumentation-lib* categories. Describes the capabilities of data gathering for the corresponding tools.| no |
+| capabilities | Describes the capabilities of data gathering for the corresponding tools. Which capabilities are valid for a specific category is defined in the categories.yml file.| no |
 | capabilities.tech | A list of technologies / pragramming languages that this agent or instrumentation-lib can gather data from. | no |
-| capabilities.aspects | What kind of data is the coreesponding agent or instrumentation-lib able to collect? Options are: *tracing, eum, metrics-app, metrics-process, metrics-host*. | no |
+| capabilities.aspects | What kind of data is the component dealing with? Options are: *tracing, tracing [app], tracing [eum], metrics, metrics [app], metrics [process], metrics [host]*. | no |
 | capabilities.frameworks | Supported frameworks for data collection | no |
 | capabilities.os | Supported operating systems | no |
 
