@@ -13,7 +13,6 @@ components:
     license:
       - GPLv2
     categories:
-      - agent
       - collector
       - alerting
     capabilities:
@@ -43,7 +42,6 @@ components:
       - GPLv2
     categories:
       - agent
-      - collector
     capabilities:
       aspects:
         - metrics [host]
@@ -58,7 +56,7 @@ components:
     description: Icinga Web 2 is the web interface to display in visualize details about everything happening in your Icinga monitoring environment.
     link: https://www.icinga.com/products/icinga-web-2/
     github:
-      - icinga/icingawe2
+      - icinga/icingaweb2
     twitter: icinga
     logo: icinga
     license:
