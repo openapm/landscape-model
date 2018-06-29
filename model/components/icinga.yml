@@ -20,7 +20,9 @@ components:
       - alerting
     capabilities:
       aspects:
-        - metrics
+        - metrics [host]
+        - metrics [app]
+        - metrics [process]
     connections:
       - mysql
       - postgres
