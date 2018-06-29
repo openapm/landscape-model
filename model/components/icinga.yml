@@ -1,0 +1,31 @@
+---
+components:
+
+  # Icinga 2
+  - id: icinga2
+    name: Icinga 2
+    description: Icinga monitors your network, servers and applications in a secure and reliable way.
+    link: https://www.icinga.com
+    github:
+      - icinga/icinga2
+    twitter: icinga
+    logo: icinga
+    license:
+      - GPLv2
+    categories:
+      - agent
+      - collector
+      - visualization
+      - dashboarding
+      - alerting
+    capabilities:
+      aspects:
+        - metrics
+    connections:
+      - mysql
+      - postgres
+      - influx-db
+      - graphite
+      - open-tsdb
+      - elasticsearch
+      - logstash
