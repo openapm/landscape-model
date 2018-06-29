@@ -1,0 +1,96 @@
+---
+components:
+
+  # Icinga 2 Server
+  - id: icinga2-server
+    name: Icinga 2 Server
+    description: Icinga monitors your network, servers and applications in a secure and reliable way.
+    link: https://www.icinga.com/products/icinga-2/
+    github:
+      - icinga/icinga2
+    twitter: icinga
+    logo: icinga
+    license:
+      - GPLv2
+    categories:
+      - collector
+      - alerting
+    capabilities:
+      aspects:
+        - metrics [host]
+        - metrics [app]
+        - metrics [process]
+    connections:
+      - mysql
+      - postgres
+      - influx-db
+      - graphite
+      - open-tsdb
+      - elasticsearch
+      - logstash
+
+  # Icinga 2 Agent
+  - id: icinga2-agent
+    name: Icinga 2 Agent
+    description: Icinga 2 in Agent mode runs on your server to check local resources and report back to the master.
+    link: https://www.icinga.com/products/icinga-2/
+    github:
+      - icinga/icinga2
+    twitter: icinga
+    logo: icinga
+    license:
+      - GPLv2
+    categories:
+      - agent
+    capabilities:
+      aspects:
+        - metrics [host]
+        - metrics [app]
+        - metrics [process]
+    connections:
+      - icinga2-server
+
+  # Icinga Web 2
+  - id: icingaweb2
+    name: Icinga Web 2
+    description: Icinga Web 2 is the web interface to display in visualize details about everything happening in your Icinga monitoring environment.
+    link: https://www.icinga.com/products/icinga-web-2/
+    github:
+      - icinga/icingaweb2
+    twitter: icinga
+    logo: icinga
+    license:
+      - GPLv2
+    categories:
+      - visualization
+      - dashboarding
+    capabilities:
+      aspects:
+        - metrics [host]
+        - metrics [app]
+        - metrics [process]
+    connections:
+      - icinga2-server
+      - graphite
+      - elasticsearch
+      - mysql
+      - postgres
+
+  # Icingabeat
+  - id: icingabeat
+    name: Icingabeat
+    description: Icingabeat is an Elastic Beat that fetches data from the Icinga 2 API and sends it either directly to Elasticsearch or Logstash.
+    link: https://www.icinga.com/docs/icingabeat/latest/
+    github:
+      - icinga/icingabeat
+    twitter: icinga
+    logo: icinga
+    license:
+      - Apache License 2.0
+    categories:
+      - transformation
+      - collector
+    connections:
+      - icinga2-server
+      - elasticsearch
+      - logstash
