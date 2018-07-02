@@ -37,6 +37,20 @@ components:
         - jdbc
         - kafka
         - rocket-mq
+        - gRPC
+        - dubbo
+        - motan
+        - service-comb
+        - jedis
+        - mongo-java-driver
+        - spymemcached
+        - xmemcached
+        - asp .net core
+        - .NET Core BCL types (HttpClient and SqlClient)
+        - .NET EntityFrameworkCore
+        - .NET Npgsql.EntityFrameworkCore.PostgreSQL
+        - .NET Pomelo.EntityFrameworkCore.MySql
+        - .NET CAP
 
   # skywalking Collector
   - id: skywalking-collector
@@ -55,6 +69,8 @@ components:
       - elasticsearch
       - h2
       - skywalking
+      - zipkin
+      - jaeger-agent
     capabilities:
       aspects:
         - tracing
