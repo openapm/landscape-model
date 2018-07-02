@@ -1,0 +1,160 @@
+---
+components:
+
+  # scouter agent
+  - id: scouter-agents
+    name: Scouter Agent
+    description: Agent for instrumenting and monitoring Java 5+ applications and gathering host's metrics.
+    link: https://github.com/scouter-project/scouter
+    github:
+      - scouter-project/scouter
+    logo: scouter
+    license:
+      - Apache License 2.0
+    categories:
+      - agent
+    capabilities:
+      tech:
+        - java
+      aspects:
+        - tracing [app]
+        - metrics [app]
+        - metrics [host]
+      frameworks:
+        - tomcat
+        - resin
+        - jetty
+        - spring
+        - struts
+        - jdbc
+        - jpa
+        - netty
+
+  # scouter pulse
+  - id: scouter-pulse
+    name: Scouter Pulse
+    description: Library for building lightweight agent program for many types of data you want to enrich with Scouter.
+    link: https://github.com/scouter-project/scouter-pulse
+    github:
+      - scouter-project/scouter-pulse
+    logo: scouter
+    license:
+      - Apache License 2.0
+    categories:
+      - instrumentation-lib
+    capabilities:
+      tech:
+        - java
+      aspects:
+        - metrics
+
+  # scouter collector
+  - id: scouter-collector-server
+    name: Scouter Collector (Server)
+    description: Backend aggregation and lightweight own storage engine capability.
+    link: https://github.com/scouter-project/scouter
+    github:
+      - scouter-project/scouter
+    logo: scouter
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+      - alerting
+    connections:
+      - scouter-agents
+      - scouter-pulse
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+
+  # scouter web api
+  - id: scouter-web-api
+    name: Scouter Web Api
+    description: Provides a web API for performance metric and trace information collected from the scouter for third party extensions.
+    link: https://github.com/scouter-project/scouter
+    github:
+      - scouter-project/scouter
+    logo: scouter
+    license:
+      - Apache License 2.0
+    categories:
+      - transformation
+    connections:
+      - scouter-collector-server
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+
+  # scouter UI
+  - id: scouter-client-ui
+    name: Scouter UI
+    description: A professional fat UI program for real time monitoring and problem analysis.
+    link: https://github.com/scouter-project/scouter
+    github:
+      - scouter-project/scouter
+    logo: scouter
+    license:
+      - Apache License 2.0
+    categories:
+      - visualization
+      - dashboarding
+    connections:
+      - scouter-collector-server
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+      os:
+        - windows
+        - osx
+        - linux
+
+  # scouter 3rd party UI - paper
+  - id: scouter-paper
+    name: Scouter Paper
+    description: A 3rd party Web UI for scouter.
+    link: https://github.com/mindplates/scouter-paper
+    github:
+      - mindplates/scouter-paper
+    logo: scouter
+    license:
+      - Apache License 2.0
+    categories:
+      - visualization
+      - dashboarding
+    connections:
+      - scouter-web-api
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+
+  # scouter server plugin
+  - id: scouter-server-plugin
+    name: Scouter Server Plugins
+    description: Extensions for delivering performance information and notification information provided by scouter to other backends or messengers.
+    link: https://github.com/scouter-project/scouter
+    github:
+      - scouter/scouter-plugin-server-influxdb
+      - scouter/scouter-plugin-server-alert-telegram
+      - scouter/scouter-plugin-server-alert-slack
+      - scouter/scouter-plugin-server-alert-line
+      - scouter/scouter-plugin-server-alert-dingtalk
+      - scouter/scouter-plugin-server-alert-email
+    logo: scouter
+    license:
+      - Apache License 2.0
+    categories:
+      - transformation
+      - alerting
+    connections:
+      - scouter-collector-server
+      - influx-db
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+
