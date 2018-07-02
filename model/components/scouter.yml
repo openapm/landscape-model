@@ -3,8 +3,8 @@ components:
 
   # scouter agent
   - id: scouter-agents
-    name: Scouter agent for java (or host)
-    description: agent for instrumenting and monitoring Java 5+ applications and gathering host's metrics.
+    name: Scouter Agent
+    description: Agent for instrumenting and monitoring Java 5+ applications and gathering host's metrics.
     link: https://github.com/scouter-project/scouter
     github:
       - scouter-project/scouter
@@ -33,7 +33,7 @@ components:
   # scouter pulse
   - id: scouter-pulse
     name: Scouter Pulse
-    description: library for building lightweight agent program for many types of data you want to enrich with Scouter.
+    description: Library for building lightweight agent program for many types of data you want to enrich with Scouter.
     link: https://github.com/scouter-project/scouter-pulse
     github:
       - scouter-project/scouter-pulse
@@ -41,7 +41,7 @@ components:
     license:
       - Apache License 2.0
     categories:
-      - agent
+      - instrumentation-lib
     capabilities:
       tech:
         - java
@@ -51,7 +51,7 @@ components:
   # scouter collector
   - id: scouter-collector-server
     name: Scouter Collector (Server)
-    description: backend aggregation and lightweight own storage engine capability
+    description: Backend aggregation and lightweight own storage engine capability.
     link: https://github.com/scouter-project/scouter
     github:
       - scouter-project/scouter
@@ -72,7 +72,7 @@ components:
   # scouter web api
   - id: scouter-web-api
     name: Scouter Web Api
-    description: provides a web API for performance metric and trace information collected from the scouter for third party extensions.
+    description: Provides a web API for performance metric and trace information collected from the scouter for third party extensions.
     link: https://github.com/scouter-project/scouter
     github:
       - scouter-project/scouter
@@ -91,7 +91,7 @@ components:
   # scouter UI
   - id: scouter-client-ui
     name: Scouter UI
-    description: a professional UI program for real time monitoring and problem analysis.
+    description: A professional fat UI program for real time monitoring and problem analysis.
     link: https://github.com/scouter-project/scouter
     github:
       - scouter-project/scouter
@@ -115,7 +115,7 @@ components:
   # scouter 3rd party UI - paper
   - id: scouter-paper
     name: Scouter Paper
-    description: 3rd party Web UI for scouter.
+    description: A 3rd party Web UI for scouter.
     link: https://github.com/mindplates/scouter-paper
     github:
       - mindplates/scouter-paper
@@ -134,8 +134,8 @@ components:
 
   # scouter server plugin
   - id: scouter-server-plugin
-    name: Scouter Server plugins
-    description: extensions for delivering performance information and notification information provided by scouter to other backends or messengers.
+    name: Scouter Server Plugins
+    description: Extensions for delivering performance information and notification information provided by scouter to other backends or messengers.
     link: https://github.com/scouter-project/scouter
     github:
       - scouter/scouter-plugin-server-influxdb
@@ -152,7 +152,7 @@ components:
       - alerting
     connections:
       - scouter-collector-server
-      - influxdb
+      - influx-db
     capabilities:
       aspects:
         - tracing
