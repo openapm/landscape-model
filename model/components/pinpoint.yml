@@ -1,0 +1,64 @@
+---
+components:
+
+  # Pinpoint Agent
+  - id: pinpoint-agent
+    name: Pinpoint Agent
+    description: Pinpoint is specialized on distributed system monitoring without changing a single line of code. Provides a solution to help analyze the overall structure of the system and how components within them are interconnected by tracing transactions across distributed applications. Agent is for instrumenting and monitoring Java 6+ applications and gathering host's metrics.
+    link: http://naver.github.io/pinpoint/
+    github:
+      - naver/pinpoint
+    logo: pinpoint
+    license:
+      - Apache License 2.0
+    categories:
+      - agent
+    capabilities:
+      tech:
+        - java
+      aspects:
+        - tracing
+        - metrics [app]
+        - metrics [process]
+
+  # Pinpoint Collector
+  - id: pinpoint-collector-server
+    name: Pinpoint Collector (Server)
+    description: Pinpoint is specialized on distributed system monitoring without changing a single line of code. Provides a solution to help analyze the overall structure of the system and how components within them are interconnected by tracing transactions across distributed applications. Collector aggregates the data from agents.
+    link: http://naver.github.io/pinpoint/
+    github:
+      - naver/pinpoint
+    logo: pinpoint
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+    connections:
+      - pinpoint-agent
+      - hbase
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+
+  # Pinpoint Web
+  - id: pinpoint-web-server
+    name: Pinpoint Web (Server)
+    description: Pinpoint is specialized on distributed system monitoring without changing a single line of code. Provides a solution to help analyze the overall structure of the system and how components within them are interconnected by tracing transactions across distributed applications. Web provides the UI for performance metrics and trace information collected by Pinpoint Agent.
+    link: http://naver.github.io/pinpoint/
+    github:
+      - naver/pinpoint
+    logo: pinpoint
+    license:
+      - Apache License 2.0
+    categories:
+      - visualization
+      - dashboarding
+      - alerting
+    connections:
+      - pinpoint-collector-server
+      - hbase
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
