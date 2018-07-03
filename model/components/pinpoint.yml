@@ -44,7 +44,7 @@ components:
   # Pinpoint Web
   - id: pinpoint-web-server
     name: Pinpoint Web (Server)
-    description: Pinpoint is specialized on distributed system monitoring without changing a single line of code. Provides a solution to help analyze the overall structure of the system and how components within them are interconnected by tracing transactions across distributed applications. Web provides the UI of performance metric and trace information collected by Pinpoint Agent.
+    description: Pinpoint is specialized on distributed system monitoring without changing a single line of code. Provides a solution to help analyze the overall structure of the system and how components within them are interconnected by tracing transactions across distributed applications. Web provides the UI for performance metrics and trace information collected by Pinpoint Agent.
     link: http://naver.github.io/pinpoint/
     github:
       - naver/pinpoint
