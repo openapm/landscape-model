@@ -8,6 +8,7 @@ components:
     link: http://naver.github.io/pinpoint/
     github:
       - naver/pinpoint
+    twitter: Pinpoint_APM
     logo: pinpoint
     license:
       - Apache License 2.0
@@ -28,6 +29,7 @@ components:
     link: http://naver.github.io/pinpoint/
     github:
       - naver/pinpoint
+    twitter: Pinpoint_APM
     logo: pinpoint
     license:
       - Apache License 2.0
@@ -48,6 +50,7 @@ components:
     link: http://naver.github.io/pinpoint/
     github:
       - naver/pinpoint
+    twitter: Pinpoint_APM
     logo: pinpoint
     license:
       - Apache License 2.0
