@@ -58,3 +58,22 @@ components:
         - tracing
         - metrics
         - logs
+
+# hbase
+  - id: hbase
+    name: HBase
+    description: Apache HBase is a scalable, distributed database that supports structured data storage for large tables. HBase is a column-oriented store modeled after Google' Bigtable.
+    link: https://hbase.apache.org/
+    github:
+      - apache/hbase
+    twitter: HBase
+    logo: hbase
+    license:
+      - Apache License 2.0
+    categories:
+      - storage
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
