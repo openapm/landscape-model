@@ -40,10 +40,12 @@ components:
     logo: elastic
     license:
       - Apache License 2.0
-      - BSD
-      - MIT
+      - BSD 2-Clause License
+      - BSD 3-Clause License
+      - MIT License
     capabilities:
       tech:
+        - java
         - nodejs
         - python
         - ruby

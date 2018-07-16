@@ -50,7 +50,7 @@ components:
     twitter: RedisLabs
     logo: redis
     license:
-      - BSD 3-Clause "New" or "Revised" License
+      - BSD 3-Clause License
     categories:
       - storage
     capabilities:

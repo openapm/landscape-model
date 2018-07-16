@@ -20,7 +20,7 @@ components:
     twitter: getsentry
     logo: sentry
     license:
-      - BSD 3-Clause "New" or "Revised" License
+      - BSD 3-Clause License
     categories:
       - instrumentation-lib
     connections:
@@ -54,7 +54,7 @@ components:
     twitter: getsentry
     logo: sentry
     license:
-      - BSD 3-Clause "New" or "Revised" License
+      - BSD 3-Clause License
     categories:
       - collector
       - visualization
