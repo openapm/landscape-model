@@ -53,6 +53,7 @@ components:
       - elasticsearch
       - jaeger-agent
       - zipkin
+      - kafka
     capabilities:
       aspects:
         - tracing

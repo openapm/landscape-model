@@ -1,0 +1,21 @@
+---
+components:
+
+  # Kafka
+  - id: kafka
+    name: Apache Kafka
+    description: Apache Kafka is a distributed streaming platform for handling real-time data feeds. As a unified, high-throughput, low-latency platform, Apache Kafka is highly valuable for enterprise infrastructures to process streaming data. Its storage is based on highly scalable publish/subscribe message queues.
+    link: http://kafka.apache.org/
+    github:
+      - apache/kafka
+    twitter: apachekafka
+    logo: kafka
+    license:
+      - Apache License 2.0
+    categories:
+      - pipeline
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
