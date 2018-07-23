@@ -91,7 +91,7 @@ components:
       - Apache License 2.0
       - Elastic License
     categories:
-      - transformation
+      - pipeline
     connections:
       - elasticsearch
       - graphite

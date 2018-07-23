@@ -24,9 +24,9 @@ categories:
     capabilities: 
       - aspects
 
-  - id: transformation
-    name: Transformation
-    description: The transformation tools can be seen as processing pipelines for the performance data. Similar to classic pipes, the transformation tools receive performance data in one format, generate additional value on the raw data, and usually output or store it in another format. Each tool usually ingests the data from a multitude of sources and also sends the results to different destinations.
+  - id: pipeline
+    name: Pipeline
+    description: The pipeline tools can be seen as transportation and processing pipelines for the performance data. Similar to classic pipes, the pipeline tools receive performance data in one format, buffer, transport or generate additional value on the raw data, and usually output or store it in another or the same format. Each tool usually ingests the data from a multitude of sources and also sends the results to different destinations.
 
   - id: storage
     name: Storage
