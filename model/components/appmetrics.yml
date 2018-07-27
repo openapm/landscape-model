@@ -1,0 +1,36 @@
+---
+components:
+
+  # appmetrics
+  - id: app-metrics
+    name: App Metrics
+    description: App Metrics is a cross-platform .NET library used to record and report metrics.
+    link: https://www.app-metrics.io/
+    github:
+      - appmetrics/appmetrics
+      - appmetrics/aspnetcore
+      - appmetrics/influxdb
+      - appmetrics/elasticsearch
+      - appmetrics/prometheus
+      - appmetrics/graphite
+      - appmetrics/grafanacloudhostedmetrics
+      - appmetrics/reporting
+      - alexmg/appmetricsserilogreporter
+      - danzel/app.metrics.formatters.custom.datadog
+    logo: appmetrics
+    license:
+      - Apache License 2.0
+    categories:
+      - instrumentation-lib
+      - collector
+    connections:
+      - graphite
+      - influx-db
+      - elasticsearch
+      - prometheus-server
+    capabilities:
+      tech:
+        - .net
+        - c#
+      aspects:
+        - metrics
