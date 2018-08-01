@@ -1,0 +1,90 @@
+---
+components:
+
+# kieker monitoring
+  - id: kieker-monitoring
+    name: Kieker Monitoring
+    description: Kieker Monitoring component for software instrumentation, performance data collection, and logging.
+    link: http://kieker-monitoring.net/
+    github:
+      - kieker-monitoring/kieker
+    twitter: kiekerapm 
+    logo: kieker
+    license:
+      - Apache License 2.0
+    categories:
+      - agent
+      - libraries
+      - collector
+      - storage
+      - pipeline
+    capabilities:
+      tech:
+        - java
+      aspects:
+        - tracing
+        - metrics
+    connections:
+      - influx-db
+      - kafka
+      - kieker-analysis
+      - kieker-trace-diagnosis-gui
+      - kieker-trace-analysis-ui
+
+# kieker analysis
+  - id: kieker-analysis
+    name: Kieker Analysis
+    description: Kieker Analysis component for reading, analyzing, and visualizing the monitoring data. It manages the lifecycle of various analysis plugins.
+    link: http://kieker-monitoring.net/
+    github:
+      - kieker-monitoring/kieker
+    twitter: kiekerapm 
+    logo: kieker
+    license:
+      - Apache License 2.0
+    categories:
+      - pipeline
+    capabilities:
+      tech:
+        - java
+      aspects:
+        - tracing
+        - metrics
+
+# kieker trace diagnosis ui
+  - id: kieker-trace-diagnosis-gui
+    name: Kieker Trace Analysis GUI
+    description: Kieker Trace Diagnosis UI for displaying trace data.
+    link: http://kieker-monitoring.net/
+    github:
+      - kieker-monitoring/kieker-trace-diagnosis-ui
+    twitter: kiekerapm 
+    logo: kieker
+    license:
+      - Apache License 2.0
+    categories:
+      - visualization
+    capabilities:
+      tech:
+        - java
+      aspects:
+        - tracing
+
+# kieker trace analysis - ui for offline generation of diagrams
+  - id: kieker-trace-analysis-ui
+    name: Kieker Trace Analysis UI
+    description: UI for generating visualizations offline based on Kieker data.
+    link: http://kieker-monitoring.net/
+    github:
+      - kieker-monitoring/kieker
+    twitter: kiekerapm 
+    logo: kieker
+    license:
+      - Apache License 2.0
+    categories:
+      - visualization
+    capabilities:
+      tech:
+        - java
+      aspects:
+        - tracing
