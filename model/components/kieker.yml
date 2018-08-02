@@ -63,7 +63,7 @@ components:
     license:
       - Apache License 2.0
     categories:
-      - libraries
+      - instrumentation-lib
     capabilities:
       tech:
         - java
