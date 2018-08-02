@@ -1,6 +1,28 @@
 ---
 components:
 
+# kieker monitoring agent
+  - id: kieker-monitoring-agent
+    name: Kieker Agent
+    description: Kieker Monitoring component for software performance data collection and logging.
+    link: http://kieker-monitoring.net/
+    github:
+      - kieker-monitoring/kieker
+    twitter: kiekerapm 
+    logo: kieker
+    license:
+      - Apache License 2.0
+    categories:
+      - agent
+    capabilities:
+      tech:
+        - java
+      aspects:
+        - tracing
+        - metrics
+    connections:
+      - kieker-monitoring
+      
 # kieker monitoring
   - id: kieker-monitoring
     name: Kieker Monitoring
