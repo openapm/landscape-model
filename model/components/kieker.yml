@@ -4,7 +4,7 @@ components:
 # kieker monitoring
   - id: kieker-monitoring
     name: Kieker Monitoring
-    description: Kieker Monitoring component for software instrumentation, performance data collection, and logging.
+    description: Kieker Monitoring component for software performance data collection and logging.
     link: http://kieker-monitoring.net/
     github:
       - kieker-monitoring/kieker
@@ -14,7 +14,6 @@ components:
       - Apache License 2.0
     categories:
       - agent
-      - libraries
       - collector
       - storage
       - pipeline
@@ -31,10 +30,32 @@ components:
       - kieker-trace-diagnosis-gui
       - kieker-trace-analysis-ui
 
+# kieker monitoring libraries
+  - id: kieker-monitoring-libraries
+    name: Kieker Monitoring Instrumentation Libraries
+    description: Libraries for software instrumentation using Kieker Monitoring.
+    link: http://kieker-monitoring.net/
+    github:
+      - kieker-monitoring/kieker
+    twitter: kiekerapm 
+    logo: kieker
+    license:
+      - Apache License 2.0
+    categories:
+      - libraries
+    capabilities:
+      tech:
+        - java
+      aspects:
+        - tracing
+        - metrics
+    connections:
+      - kieker-monitoring
+
 # kieker analysis
   - id: kieker-analysis
     name: Kieker Analysis
-    description: Kieker Analysis component for reading, analyzing, and visualizing the monitoring data. It manages the lifecycle of various analysis plugins.
+    description: Kieker Analysis component for reading, analyzing, and visualizing the monitoring data. It manages the lifecycle of various analysis plugins, which extend its function.
     link: http://kieker-monitoring.net/
     github:
       - kieker-monitoring/kieker
