@@ -1,0 +1,55 @@
+---
+components:
+
+  # the awesome collectd
+  - id: collectd
+    name: collectd
+    description: collectd gathers metrics from various sources, e.g. the operating system, applications, logfiles and external devices, and stores this information or makes it available over the network.
+    link: https://collectd.org
+    github:
+      - collectd/collectd
+      - collectd/go-collectd
+      - collectd/jcollectd
+      - collectd/collectd-ci
+    twitter: collectd
+    logo: collectd
+    license:
+      - MIT License
+      - GPLv2
+    categories:
+      - agent
+    capabilities:
+      tech:
+        - java
+        - go
+        - perl
+        - python
+      aspects:
+        - metrics [app]
+        - metrics [process]
+        - metrics [host]
+      frameworks:
+        - Apache
+        - Nginx
+        - fscache
+        - memcache
+        - Ganglia
+        - MySQL
+        - Oracle
+        - PostgreSQL
+        - Pinba
+        - Redis
+        - Zookeeper
+      os:
+        - linux
+    connections:
+      - rabbit-mq
+      - active-mq
+      - statsd
+      - prometheus-exporter
+      - graphite
+      - kafka
+      - mongo
+      - redis
+      - open-tsdb
+      - riemann
