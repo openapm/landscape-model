@@ -1,0 +1,49 @@
+---
+components:
+
+  # the awesome statsd
+  - id: statsd
+    name: statsd
+    description: A network daemon that runs on the Node.js platform and listens for statistics, like counters and timers, sent over UDP or TCP and sends aggregates to one or more pluggable backend services (e.g., Graphite).
+    link: https://github.com/etsy/statsd/wiki
+    github:
+      - etsy/statsd
+    logo: statsd
+    license:
+      - MIT License
+    categories:
+      - pipeline
+    capabilities:
+      tech:
+        - nodejs
+        - java
+        - perl
+        - python
+        - ruby
+        - php
+        - closure
+        - c
+        - c++
+        - .net
+        - go
+        - objective-c
+        - lua
+        - r-project
+        - haskell
+      aspects:
+        - metrics
+      frameworks:
+        - Apache
+        - Varnish
+        - ActionScript
+        - WordPress
+        - Drupal
+    connections:
+      - ganglia
+      - mongo
+      - mysql
+      - graphite
+      - zabbix
+      - open-tsdb
+      - influx-db
+      - couch-db
