@@ -40,6 +40,8 @@ components:
     logo: netflix-atlas
     license:
       - Apache License 2.0
+    aspects:
+      - metrics
     categories:
       - storage
       - dashboarding
