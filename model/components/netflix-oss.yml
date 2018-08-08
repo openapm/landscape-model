@@ -1,0 +1,61 @@
+---
+components:
+
+  # the spectator
+  - id: netflix-spectator
+    name: Netflix Spectator
+    description: Simple library for instrumenting code to record dimensional time series and integration with Netflix Atlas.
+    link: http://netflix.github.io/spectator/en/latest/
+    github:
+      - Netflix/spectator
+      - Netflix/spectator-go
+      - Netflix/spectator-py
+      - Netflix/spectator-rb
+    twitter: NetflixOSS
+    logo: netflix-oss
+    license:
+      - Apache License 2.0
+    categories:
+      - instrumentation-lib
+    capabilities:
+      tech:
+        - java
+        - go
+        - python
+        - ruby
+      aspects:
+        - metrics [app]
+        - metrics [process]
+    connections:
+      - netflix-atlas
+
+  # the atlas
+  - id: netflix-atlas
+    name: Netflix Atlas
+    description: Atlas was developed by Netflix to manage dimensional time series data for near real-time operational insight. Atlas features in-memory data storage, allowing it to gather and report very large numbers of metrics, very quickly.
+    link: https://github.com/Netflix/atlas/wiki
+    github:
+      - Netflix/atlas
+    twitter: NetflixOSS
+    logo: netflix-atlas
+    license:
+      - Apache License 2.0
+    categories:
+      - storage
+      - dashboarding
+
+  # the vector
+  - id: netflix-vector
+    name: Netflix Vector
+    description: ector is an open source on-host performance monitoring framework which exposes hand picked high resolution system and application metrics to every engineer’s browser. Having the right metrics available on-demand and at a high resolution is key to understand how a system behaves and correctly troubleshoot performance issues.
+    link: http://getvector.io
+    github:
+      - Netflix/vector
+    twitter: vectoross
+    logo: netflix-vector
+    license:
+      - Apache License 2.0
+    categories:
+      - dashboarding
+    connections:
+      - pcp
