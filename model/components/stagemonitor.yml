@@ -27,6 +27,7 @@ components:
       - influx-db
       - prometheus-server
       - stagemonitor-browserwidget
+      - stagemonitor-alerter
 
   # stagemonitor browser widget
   - id: stagemonitor-browserwidget
@@ -52,17 +53,17 @@ components:
     description: The stagemonitor alerting component lets you define thresholds for any metric collected by stagemonitor like for example the request response times or the rate of error-level logs. To get started you don't need any backend. Just add a dependency to stagemonitor-alerting. After restarting your server, the in browser widget now has a "Alerts" tab.
     link: http://www.stagemonitor.org/
     github:
-    - stagemonitor/stagemonitor
+      - stagemonitor/stagemonitor
     twitter: stagemonitor
     logo: stagemonitor
     license:
-    - Apache License 2.0
+      - Apache License 2.0
     categories:
-    - alerting
+      - alerting
     capabilities:
         aspects:
-        - tracing
-        - metrics
+          - tracing
+          - metrics
 
   # stagemonitor os plugin
   - id: stagemonitor-os
@@ -70,14 +71,20 @@ components:
     description: The stagemonitor os component lets you collect operating system metrics. The first option is to include the stagemonitor-os plugin to your application. The disadvantage is, that your application has to run in order to collect and report the OS metrics and that you might collect the same metrics multiple times when you have several applications running on the same host. That's why it is possible to run stagemonitor-os as a standalone application.
     link: http://www.stagemonitor.org/
     github:
-    - stagemonitor/stagemonitor
+      - stagemonitor/stagemonitor
     twitter: stagemonitor
     logo: stagemonitor
     license:
-    - Apache License 2.0
+      - Apache License 2.0
     categories:
-    - instrumentation-lib
+      - agent
     capabilities:
         aspects:
-        - tracing
-        - metrics
+          - metrics [host]
+    connections:
+      - elasticsearch
+      - graphite
+      - influx-db
+      - prometheus-server
+      - stagemonitor-browserwidget
+      - stagemonitor-alerter
