@@ -69,6 +69,7 @@ components:
     connections:
       - graphite
       - influx-db
+      - m3db
       - chronix
       - weavecortex
       - crate-db

@@ -50,3 +50,20 @@ components:
     capabilities:
       aspects:
         - metrics
+
+  # m3db
+  - id: m3db
+    name: M3DB
+    description: M3DB is a distributed time series database released as open source by Uber Technologies. It can be used for storing realtime metrics at long retention.
+    link: https://m3db.io/
+    github:
+      - m3db/m3
+    twitter: UberEng
+    logo: m3db
+    license:
+      - Apache License 2.0
+    categories:
+      - storage
+    capabilities:
+      aspects:
+        - metrics
