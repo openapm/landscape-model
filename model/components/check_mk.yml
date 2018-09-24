@@ -4,7 +4,7 @@ components:
   # check_mk_agent
   - id: check_mk-agent
     name: Check_MK Agent
-    description: Check_MK is a comprehensive Solution for IT Monitoring of applications, servers, and networks. The source code can be found on http://git.mathias-kettner.de/git/?p=check_mk.git;a=summary.
+    description: Check_MK is a comprehensive Solution for IT Monitoring of applications, servers, and networks. <br/>The source code can be found <a href="http://git.mathias-kettner.de/git/?p=check_mk.git;a=summary" target="_blank">here</a>.
     link: https://mathias-kettner.com/
     twitter: Check_MK
     logo: check_mk
