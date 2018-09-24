@@ -1,0 +1,41 @@
+---
+components:
+
+  # check_mk_agent
+  - id: check_mk-agent
+    name: Check_MK Agent
+    description: Check_MK is a comprehensive Solution for IT Monitoring of applications, servers, and networks. The source code can be found on http://git.mathias-kettner.de/git/?p=check_mk.git;a=summary.
+    link: https://mathias-kettner.com/
+    twitter: Check_MK
+    logo: check_mk
+    license:
+      - GPLv2
+    categories:
+      - agent
+    capabilities:
+      aspects:
+        - metrics [host]
+        - metrics [process]
+        - logs
+
+  # check_mk_server
+  - id: check_mk-server
+    name: Check_MK Server
+    description: Check_MK is a comprehensive Solution for IT Monitoring of applications, servers, and networks. The source code can be found on http://git.mathias-kettner.de/git/?p=check_mk.git;a=summary.
+    link: https://mathias-kettner.com/
+    twitter: Check_MK
+    logo: check_mk
+    license:
+      - GPLv2
+    categories:
+      - storage
+      - visualization
+      - alerting
+      - dashboarding
+    capabilities:
+      aspects:
+        - metrics [host]
+        - metrics [process]
+        - logs
+    connections:
+      - check_mk-agent
