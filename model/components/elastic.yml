@@ -139,3 +139,18 @@ components:
         - tracing
         - metrics
         - logs
+
+  # ElastAlert
+  - id: elastalert
+    name: ElastAlert
+    description: ElastAlert is a simple framework for alerting on anomalies, spikes, or other patterns of interest from data in Elasticsearch. If you have data being written into Elasticsearch in near real time and want to be alerted when that data matches certain patterns, ElastAlert is the tool for you.
+    link: https://elastalert.readthedocs.io/en/latest/
+    github: 
+      - Yelp/elastalert
+    logo: elastalert
+    license:
+      - Apache License 2.0
+    categories:
+      - alerting
+    connections:
+      - elasticsearch
