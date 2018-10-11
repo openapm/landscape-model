@@ -1,0 +1,18 @@
+# Explorviz
+  - id: explorviz
+    name: ExplorViz
+    description: ExplorViz visualizes large software landscapes monitored via Kieker
+    link: https://www.explorviz.net
+    github:
+      - ExplorViz
+    logo: explorviz
+    license:
+      - Apache License 2.0
+    categories:
+      - visualization
+    capabilities:
+      tech:
+        - java
+      aspects:
+        - tracing
+        - metrics
