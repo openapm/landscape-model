@@ -4,7 +4,8 @@
     description: ExplorViz is a monitoring and visualization approach, which uses dynamic analysis techniques to provide a live trace visualization of large software landscapes. For monitoring purposes, ExplorViz employs the Kieker monitoring agent.
     link: https://www.explorviz.net
     github:
-      - ExplorViz
+      - ExplorViz/explorviz-backend
+      - ExplorViz/explorviz-frontend
     logo: explorviz
     license:
       - Apache License 2.0
