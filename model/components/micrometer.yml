@@ -28,3 +28,5 @@ components:
       - graphite
       - influx-db
       - statsd
+      - elasticsearch
+      - ganglia
