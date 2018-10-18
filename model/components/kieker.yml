@@ -53,7 +53,7 @@ components:
 
 # kieker monitoring libraries
   - id: kieker-monitoring-libraries
-    name: Kieker Monitoring Instrumentation Libraries
+    name: Kieker Instr. Libraries
     description: Libraries for software instrumentation using Kieker Monitoring.
     link: http://kieker-monitoring.net/
     github:
