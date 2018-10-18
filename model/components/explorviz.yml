@@ -1,4 +1,7 @@
-# Explorviz
+---
+components:
+
+  # Explorviz
   - id: explorviz
     name: ExplorViz
     description: ExplorViz is a monitoring and visualization approach, which uses dynamic analysis techniques to provide a live trace visualization of large software landscapes. For monitoring purposes, ExplorViz employs the Kieker monitoring agent.
