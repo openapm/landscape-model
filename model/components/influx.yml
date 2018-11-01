@@ -1,0 +1,94 @@
+---
+components:
+
+  # influxDB
+  - id: influx-db
+    name: InfluxDB
+    description: InfluxDB is an open-source time series database developed by <a href="https://www.influxdata.com/" target="_blank">InfluxData</a>.
+    link: https://www.influxdata.com/time-series-platform/influxdb/
+    github:
+      - influxdata/influxdb
+    twitter: InfluxDB
+    logo: influx-data
+    license:
+      - MIT License
+    categories:
+      - storage
+    capabilities:
+      aspects:
+        - metrics
+
+  # telegraf
+  - id: influx-telegraf
+    name: Telegraf
+    description: Telegraf is a plugin-driven collector for gathering & reporting metrics. As such it is the first piece of the <a href="https://www.influxdata.com/" target="_blank">InfluxData</a>'s TICK stack. Telegraf has plugins to retrieve retrieve metrics directly from the system it’s running on, pull metrics from third party APIs, or even listen for metrics via a statsd and Kafka consumer services. It also has output plugins to send metrics to a variety of other datastores, services, and message queues.
+    link: https://www.influxdata.com/time-series-platform/telegraf/
+    github:
+      - influxdata/telegraf
+    twitter: InfluxDB
+    logo: influx-data
+    license:
+      - MIT License
+    categories:
+      - collector
+      - agent
+    connections:
+      - kafka
+      - prometheus-client-libs
+      - prometheus-exporter
+      - statsd
+      - amon
+      - amqp
+      - cratedb
+      - elasticsearch
+      - graphite
+      - graylog
+      - influx-db
+      - open-tsdb
+      - icinga2-server
+      - influx-kapacitor
+      - zipkin-server
+    capabilities:
+      aspects:
+        - metrics
+
+  # kapacitor
+  - id: influx-kapacitor
+    name: Kapacitor
+    description: Kapacitor is a real-time streaming data processing engine from <a href="https://www.influxdata.com/" target="_blank">InfluxData</a>. It can process both stream and batch data from InfluxDB. It lets you plug in your own custom logic or user-defined functions to process alerts with dynamic thresholds, match metrics for patterns, compute statistical anomalies, and perform specific actions based on these alerts like dynamic load rebalancing.
+    link: https://www.influxdata.com/time-series-platform/kapacitor/
+    github:
+      - influxdata/kapacitor
+    twitter: InfluxDB
+    logo: influx-data
+    license:
+      - MIT License
+    categories:
+      - alerting
+      - pipeline
+    connections:
+      - influx-db
+    capabilities:
+      aspects:
+        - metrics
+  
+  # chronograf
+  - id: influx-chronograf
+    name: Chronograf
+    description: Chronograf is the user interface component of <a href="https://www.influxdata.com/" target="_blank">InfluxData</a>’s TICK Stack. It allows you to quickly see the data that you have stored in InfluxDB so you can build robust queries and alerts. It is simple to use and includes templates and libraries to allow you to rapidly build dashboards with real-time visualizations of your data.
+    link: https://www.influxdata.com/time-series-platform/chronograf/
+    github:
+      - influxdata/chronograf
+    twitter: InfluxDB
+    logo: influx-data
+    license:
+      - MIT License
+    categories:
+      - visualization
+      - dashboarding
+    connections:
+      - influx-db
+      - influx-kapacitor
+    capabilities:
+      aspects:
+        - metrics
