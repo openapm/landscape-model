@@ -38,3 +38,4 @@ components:
         - prometheus-server
         - zipkin-server
         - jaeger-collector
+        - influx-telegraf
