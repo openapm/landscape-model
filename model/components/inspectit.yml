@@ -24,6 +24,31 @@ components:
         - metrics [app]
         - metrics [process]
 
+  # inspectIT OCE agent
+  - id: inspectit-oce-agent
+    name: inspectIT OCE
+    description: inspectIT OpenCensus Edition is a Java agent that provides the automatic collection of metrics and traces using OpenCensus standard.
+    link: http://www.inspectit.rocks/
+    github:
+      - inspectIT/inspectit-oce
+    twitter: inspectIT_APM
+    logo: inspectit
+    license:
+      - Apache License 2.0
+    categories:
+      - agent
+    connections:
+      - opencensus
+    capabilities:
+      tech:
+        - java
+      aspects:
+        - tracing [app]
+        - tracing [eum]
+        - metrics [eum]
+        - metrics [app]
+        - metrics [process]
+
   # inspectIT Central Management Repository
   - id: inspectit-cmr
     name: inspectIT CMR
