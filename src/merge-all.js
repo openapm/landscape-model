@@ -26,7 +26,7 @@ generateModel = function (doFlush) {
                         all[components] = all[components].concat(doc[components]);
                         console.info('Merged..');
                   } else {
-                        console.warn('Skipping as no components defined..');
+                        throw 'File ' + file + ' not valid as no components defined..\nBUILD FAILED';
                   }
             }
       });
