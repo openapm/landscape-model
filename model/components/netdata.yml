@@ -1,0 +1,40 @@
+---
+components:
+
+  # netdata agent
+  - id: netdata-agent
+    name: netdata
+    description: Real-time performance monitoring, done right!
+    link: https://my-netdata.io/
+    github:
+      - netdata/netdata
+    twitter: linuxnetdata
+    logo: netdata
+    license:
+      - GPLv3
+    categories:
+      - collector
+      - dashboarding
+      - alerting
+    capabilities:
+      tech:
+        - java
+        - python
+        - perl
+        - scala
+        - ruby
+        - go
+        - .net
+        - nodejs
+        - c++
+      aspects:
+        - metrics [host]
+        - metrics [app]
+        - metrics [process]
+    connections:
+      - kafka
+      - influx-db
+      - graphite
+      - open-tsdb
+      - kairos-db
+      - prometheus
