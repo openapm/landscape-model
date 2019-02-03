@@ -1,0 +1,24 @@
+---
+components:
+
+  # RabbitMQ
+  - id: rabbitmq
+    name: RabbitMQ
+    description: RabbitMQ is a message broker. RabbitMQ is lightweight and easy to deploy on premises and in the cloud. RabbitMQ supports different messaging protocols. Through distribution and federation deployment concepts RabbitMQ meets high-scale, high-availability requirements.
+    link: https://www.rabbitmq.com
+    github:
+      - rabbitmq/rabbitmq-server
+      - rabbitmq/rabbitmq-java-client
+      - rabbitmq/rabbitmq-dotnet-client
+      - rabbitmq/rabbitmq-common
+    twitter: RabbitMQ
+    logo: rabbitmq
+    license:
+      - Mozilla Public License 1.1
+    categories:
+      - transport
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
