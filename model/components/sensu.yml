@@ -43,7 +43,7 @@ components:
       - prometheus-exporter
       - rabbitmq
       - redis
-      - influxdb
+      - influx-db
       - graphite
       - grafana
 
