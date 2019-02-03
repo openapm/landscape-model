@@ -1,0 +1,64 @@
+---
+components:
+
+  # sensu client
+  - id: sensu-client
+    name: Sensu Client
+    description: The Sensu Client provides visibility into different components and aspects of your system by executing Service Checks. The Sensu client is run on every system you need to monitor. 
+    link: https://sensu.io/
+    github:
+      - sensu/sensu
+    twitter: sensu
+    logo: sensu
+    license:
+      - MIT License
+    categories:
+      - agent
+    capabilities:
+      aspects:
+        - metrics
+    connections:
+      - rabbitmq
+
+  # sensu server
+  - id: sensu-server
+    name: Sensu Server
+    description: The Sensu Server gathers data from Sensu Clients, processes event data and takes action. Sensu’s event processor is designed to scale along with the applications and infrastructure it is monitoring. 
+    link: https://sensu.io/
+    github:
+      - sensu/sensu
+    twitter: sensu
+    logo: sensu
+    license:
+      - MIT License
+    categories:
+      - collector
+      - data-processing
+      - alerting
+    capabilities:
+      aspects:
+        - metrics
+    connections:
+      - prometheus-client-libs
+      - prometheus-exporter
+      - rabbitmq
+      - redis
+      - influxdb
+      - graphite
+      - grafana
+
+  # uchiwa
+  - id: uchiwa
+    name: Uchiwa
+    description:  Uchiwa is a simple yet effective open-source dashboard for the Sensu monitoring event pipeline.
+    link: https://docs.sensu.io/uchiwa/1.0/
+    github:
+      - sensu/uchiwa
+    twitter: sensu
+    logo: sensu
+    license:
+      - MIT License
+    categories:
+      - dashboarding
+    connections:
+      - sensu-server

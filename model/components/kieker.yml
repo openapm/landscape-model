@@ -37,7 +37,7 @@ components:
     categories:
       - collector
       - storage
-      - pipeline
+      - data-processing
     capabilities:
       tech:
         - java
@@ -85,7 +85,7 @@ components:
     license:
       - Apache License 2.0
     categories:
-      - pipeline
+      - data-processing
     capabilities:
       tech:
         - java

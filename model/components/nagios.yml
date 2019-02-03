@@ -61,4 +61,4 @@ components:
     - Nagios Open Software License
   categories:
     - collector
-    - pipeline
+    - data-processing

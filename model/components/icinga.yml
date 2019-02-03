@@ -88,7 +88,7 @@ components:
     license:
       - Apache License 2.0
     categories:
-      - pipeline
+      - data-processing
       - collector
     connections:
       - icinga2-server

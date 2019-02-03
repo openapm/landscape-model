@@ -18,15 +18,23 @@ categories:
       - aspects
       - frameworks
 
+  - id: transport
+    name: Transport
+    description: The transport tools simply serve as transport pipelines for data. This includes messaging systems, proprietary protocols and exchange formats. 
+    capabilities: 
+      - aspects
+
   - id: collector
     name: Collector
     description: The main responsibility of collectors in the APM landscape is to receive data from the agents or instrumentation frameworks. The received data is usually persisted to some kind of storage or piped to another tool. Depending on the collector type, performance data enhancement and modification is also possible inside of the collector. In addition, collectors can have other responsibilities. For example, some expose the data access API, configuration points for the agents or user interface for interaction with the stored data.
     capabilities: 
       - aspects
 
-  - id: pipeline
-    name: Pipeline
-    description: The pipeline tools can be seen as transportation and processing pipelines for the performance data. Similar to classic pipes, the pipeline tools receive performance data in one format, buffer, transport or generate additional value on the raw data, and usually output or store it in another or the same format. Each tool usually ingests the data from a multitude of sources and also sends the results to different destinations.
+  - id: data-processing
+    name: Data Processing
+    description: The data processing tools can be seen as processing pipelines for the performance data. Similar to classic pipes, the pipeline tools receive performance data in one format, buffer or generate additional value on the raw data, and usually output or store it in another or the same format. Each tool usually ingests the data from a multitude of sources and also sends the results to different destinations.
+    capabilities: 
+      - aspects
 
   - id: storage
     name: Storage

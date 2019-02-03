@@ -75,7 +75,7 @@ components:
       - crate-db
       - open-tsdb
       - postgres
-      - timescala-db
+      - timescaledb
       - grafana
       - prometheus-exporter
       - prometheus-client-libs

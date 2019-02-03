@@ -12,7 +12,7 @@ components:
     license:
       - MIT License
     categories:
-      - pipeline
+      - data-processing
     capabilities:
       tech:
         - nodejs

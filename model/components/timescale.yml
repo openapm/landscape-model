@@ -1,0 +1,20 @@
+---
+components:
+
+  # TimescaleDB
+  - id: timescaledb
+    name: TimescaleDB
+    description: TimescaleDB is an open-source time-series database based on <a href="https://www.postgresql.org/" target="_blank">PostrgeSQL</a>. TimescaleDB comes with full SQL support and provides automatic partitioning across time and space.
+    link: https://www.timescale.com
+    github:
+      - timescale/timescaledb
+    twitter: TimescaleDB
+    logo: timescaledb
+    license:
+      - Apache License 2.0
+      - Timescale License
+    categories:
+      - storage
+    capabilities:
+      aspects:
+        - metrics

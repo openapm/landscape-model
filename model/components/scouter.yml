@@ -80,7 +80,7 @@ components:
     license:
       - Apache License 2.0
     categories:
-      - pipeline
+      - data-processing
     connections:
       - scouter-collector-server
     capabilities:
@@ -148,7 +148,7 @@ components:
     license:
       - Apache License 2.0
     categories:
-      - pipeline
+      - data-processing
       - alerting
     connections:
       - scouter-collector-server
