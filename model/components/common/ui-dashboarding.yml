@@ -24,3 +24,23 @@ components:
       - mysql
       - postgres
       - timescaledb
+     
+  # Metrictank
+  - id: metrictank
+    name: MetricTank
+    description: Metrictank is a multi-tenant timeseries engine for Graphite and friends. It provides long term storage, high availability, efficient storage, retrieval and processing for large scale environments.
+    link: https://github.com/grafana/metrictank
+    github:
+      - grafana/metrictank
+    twitter: grafana
+    logo: grafana
+    license:
+      - GNU AGPLv3
+    categories:
+      - data-processing
+    connections:
+      - kafka
+      - graphite
+      - cassandra
+      - elasticsearch
+      - grafana

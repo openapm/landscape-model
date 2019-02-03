@@ -39,3 +39,4 @@ components:
         - zipkin-server
         - jaeger-collector
         - influx-telegraf
+        - haystack-agent

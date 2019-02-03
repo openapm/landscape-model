@@ -1,0 +1,144 @@
+---
+components:
+
+  # Haxystack Client Lib
+  - id: haystack-client-lib
+    name: Haystack Client Lib
+    description: The Haystack Client Libraries (available for different languages) are used to push the tracing data (spans) to the Haystack Agent. 
+    link: https://expediadotcom.github.io/haystack/
+    github:
+      - ExpediaDotCom/haystack-client-java
+      - ExpediaDotCom/haystack-client-node
+      - ExpediaDotCom/haystack-client-go
+      - ExpediaDotCom/haystack-client-python
+    twitter: ExpediaEng
+    logo: haystack
+    license:
+      - Apache License 2.0
+    categories:
+      - instrumentation-lib
+    capabilities:
+      tech:
+        - java
+      aspects:
+        - tracing [app]
+    connections:
+      - haystack-agent
+
+  # Haxystack Agent
+  - id: haystack-agent
+    name: Haystack Agent
+    description: Though the name indicates that the Haystack Agent is an agent, its functionality is rather implying a collector role. The Haystack Agent is a standalone application that collects span data from clients libraries. The Haystack agents send the tracing data to the rest of the Haystack system for storage or analysis.
+    link: https://expediadotcom.github.io/haystack/
+    github:
+      - ExpediaDotCom/haystack-agent
+    twitter: ExpediaEng
+    logo: haystack
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+    capabilities:
+      aspects:
+        - tracing
+    connections:
+      - kafka
+      - micrometer
+
+  # Haxystack Collector
+  - id: haystack-collector
+    name: Haystack Collector
+    description: The Haystack Collector ingests spans from data sources other than those that report trace data directly to Haystack (in contrast to the Haystack Agent). Its purpose is to make it easy to integrate existing data streams of spans with Haystack.
+    link: https://expediadotcom.github.io/haystack/
+    github:
+      - ExpediaDotCom/haystack-collector
+    twitter: ExpediaEng
+    logo: haystack
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+    capabilities:
+      aspects:
+        - tracing
+    connections:
+      - kafka
+
+  # Haxystack Traces
+  - id: haystack-traces
+    name: Haystack Traces
+    description: Haystack Traces is a subsystem included in Haystack that manages distributed tracing system to troubleshoot problems in microservice architectures. Its design is based on the Google Dapper paper.
+    link: https://expediadotcom.github.io/haystack/
+    github:
+      - ExpediaDotCom/haystack-traces
+    twitter: ExpediaEng
+    logo: haystack
+    license:
+      - Apache License 2.0
+    categories:
+      - data-processing
+    capabilities:
+      aspects:
+        - tracing
+    connections:
+      - kafka
+      - cassandra
+      - elasticsearch
+
+  # Haxystack Trends
+  - id: haystack-trends
+    name: Haystack Trends
+    description: The Trends subsystem is responsible for reading spans and generating vital service health trends. By identifying the trends of change in the call pattern or the time taken to complete calls, Haystack makes it easier to identify which part of a complex system is responsible for a change in the system's responsiveness.
+    link: https://expediadotcom.github.io/haystack/
+    github:
+      - ExpediaDotCom/haystack-trends
+    twitter: ExpediaEng
+    logo: haystack
+    license:
+      - Apache License 2.0
+    categories:
+      - data-processing
+    capabilities:
+      aspects:
+        - tracing
+    connections:
+      - kafka
+
+  # Haxystack Service Graph
+  - id: haystack-service-graph
+    name: Haystack Service Graph
+    description: The Haystack Service Graph is designed for visualizing service graphs. It will combine data from the Alerts and Trending subsystems into a dependency graph to show the current state of the system at a glance. You will be able to drill down into the graph to get details and fine-grain data.
+    link: https://expediadotcom.github.io/haystack/
+    github:
+      - ExpediaDotCom/haystack-service-graph
+    twitter: ExpediaEng
+    logo: haystack
+    license:
+      - Apache License 2.0
+    categories:
+      - data-processing
+    capabilities:
+      aspects:
+        - tracing
+    connections:
+      - kafka
+
+  # Haxystack UI
+  - id: haystack-ui
+    name: Haystack UI
+    description: Haystack Traces is a subsystem included in Haystack that manages distributed tracing system to troubleshoot problems in microservice architectures. Its design is based on the Google Dapper paper.
+    link: https://expediadotcom.github.io/haystack/
+    github:
+      - ExpediaDotCom/haystack-traces
+    twitter: ExpediaEng
+    logo: haystack
+    license:
+      - Apache License 2.0
+    categories:
+      - visualization
+      - alerting
+    connections:
+      - haystack-trends
+      - haystack-traces
+      - haystack-service-graph
+      
