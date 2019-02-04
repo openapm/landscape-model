@@ -18,7 +18,8 @@ components:
       aspects:
         - metrics
     connections:
-      - rabbitmq
+      dataTo:
+        - rabbitmq
 
   # sensu server
   - id: sensu-server
@@ -39,13 +40,15 @@ components:
       aspects:
         - metrics
     connections:
-      - prometheus-client-libs
-      - prometheus-exporter
-      - rabbitmq
-      - redis
-      - influx-db
-      - graphite
-      - grafana
+      dataFrom:
+        - prometheus-client-libs
+        - prometheus-exporter
+        - rabbitmq
+      dataTo:
+        - redis
+        - influx-db
+        - graphite
+        - grafana
 
   # uchiwa
   - id: uchiwa
@@ -61,4 +64,5 @@ components:
     categories:
       - dashboarding
     connections:
-      - sensu-server
+      dataFrom:
+        - sensu-server

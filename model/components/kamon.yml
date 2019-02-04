@@ -24,6 +24,7 @@ components:
         - metrics [process]
         - metrics [host]
     connections:
+      dataTo:
         - prometheus-server
         - influx-db
         - statsd

@@ -38,4 +38,5 @@ components:
         - metrics [process]
         - logs
     connections:
-      - check_mk-agent
+      dataFrom:
+        - check_mk-agent

@@ -35,6 +35,7 @@ components:
         - metrics [app]
         - metrics [process]
     connections:
+      dataTo:
         - prometheus-server
         - zipkin-server
         - jaeger-collector

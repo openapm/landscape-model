@@ -16,14 +16,15 @@ components:
       - dashboarding
       - alerting
     connections:
-      - graphite
-      - elasticsearch
-      - influx-db
-      - open-tsdb
-      - prometheus-server
-      - mysql
-      - postgres
-      - timescaledb
+      dataFrom:
+        - graphite
+        - elasticsearch
+        - influx-db
+        - open-tsdb
+        - prometheus-server
+        - mysql
+        - postgres
+        - timescaledb
      
   # Metrictank
   - id: metrictank
@@ -39,8 +40,9 @@ components:
     categories:
       - data-processing
     connections:
-      - kafka
-      - graphite
-      - cassandra
-      - elasticsearch
-      - grafana
+      dataFrom:
+        - kafka
+        - graphite
+        - cassandra
+        - elasticsearch
+        - grafana

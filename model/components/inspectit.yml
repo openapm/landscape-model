@@ -38,7 +38,8 @@ components:
     categories:
       - agent
     connections:
-      - opencensus
+      dataTo:
+        - opencensus
     capabilities:
       tech:
         - java
@@ -63,8 +64,10 @@ components:
     categories:
       - collector
     connections:
-      - inspectit-agent
-      - influx-db
+      dataFrom:
+        - inspectit-agent
+      dataTo:
+        - influx-db
     capabilities:
       aspects:
         - tracing
@@ -83,7 +86,8 @@ components:
     categories:
       - visualization
     connections:
-      - inspectit-cmr
+      dataFrom:
+        - inspectit-cmr
     capabilities:
       aspects:
         - tracing

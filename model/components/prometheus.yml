@@ -67,18 +67,20 @@ components:
       - visualization
       - storage
     connections:
-      - graphite
-      - influx-db
-      - m3db
-      - chronix
-      - weavecortex
-      - crate-db
-      - open-tsdb
-      - postgres
-      - timescaledb
-      - grafana
-      - prometheus-exporter
-      - prometheus-client-libs
+      dataFrom:
+        - prometheus-exporter
+        - prometheus-client-libs
+      dataTo:
+        - graphite
+        - influx-db
+        - m3db
+        - chronix
+        - weavecortex
+        - crate-db
+        - open-tsdb
+        - postgres
+        - timescaledb
+        - grafana
     capabilities:
       aspects:
         - metrics
@@ -97,7 +99,8 @@ components:
     categories:
       - alerting
     connections:
-      - prometheus-server
+      dataFrom:
+        - prometheus-server
 
   # prometheus exporter
   - id: prometheus-exporter

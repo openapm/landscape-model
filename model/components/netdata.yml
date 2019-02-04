@@ -32,9 +32,10 @@ components:
         - metrics [app]
         - metrics [process]
     connections:
-      - kafka
-      - influx-db
-      - graphite
-      - open-tsdb
-      - kairos-db
-      - prometheus
+      dataTo:
+        - kafka
+        - influx-db
+        - graphite
+        - open-tsdb
+        - kairos-db
+        - prometheus-server

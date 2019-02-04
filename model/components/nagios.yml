@@ -23,8 +23,9 @@ components:
       - metrics [app]
       - metrics [process]
   connections:
-    - nagios-rdp
-    - nagios-cpa
+    dataFrom:
+      - nagios-rdp
+      - nagios-cpa
 
 # Nagios Cross-Platform Agent
 - id: nagios-cpa

@@ -21,7 +21,8 @@ components:
         - tracing
         - metrics
     connections:
-      - kieker-monitoring
+      dataTo:
+        - kieker-monitoring
       
 # kieker monitoring
   - id: kieker-monitoring
@@ -45,11 +46,12 @@ components:
         - tracing
         - metrics
     connections:
-      - influx-db
-      - kafka
-      - kieker-analysis
-      - kieker-trace-diagnosis-gui
-      - kieker-trace-analysis-ui
+      dataTo:
+        - influx-db
+        - kafka
+        - kieker-analysis
+        - kieker-trace-diagnosis-gui
+        - kieker-trace-analysis-ui
 
 # kieker monitoring libraries
   - id: kieker-monitoring-libraries
@@ -71,7 +73,8 @@ components:
         - tracing
         - metrics
     connections:
-      - kieker-monitoring
+      dataTo:
+        - kieker-monitoring
 
 # kieker analysis
   - id: kieker-analysis

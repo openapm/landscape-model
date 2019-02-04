@@ -23,7 +23,8 @@ components:
       aspects:
         - tracing [app]
     connections:
-      - haystack-agent
+      dataTo:
+        - haystack-agent
 
   # Haxystack Agent
   - id: haystack-agent
@@ -42,8 +43,10 @@ components:
       aspects:
         - tracing
     connections:
-      - kafka
-      - micrometer
+      dataTo:
+        - kafka
+      dataFrom:
+        - micrometer
 
   # Haxystack Collector
   - id: haystack-collector
@@ -62,7 +65,8 @@ components:
       aspects:
         - tracing
     connections:
-      - kafka
+      dataTo:
+        - kafka
 
   # Haxystack Traces
   - id: haystack-traces
@@ -81,9 +85,11 @@ components:
       aspects:
         - tracing
     connections:
-      - kafka
-      - cassandra
-      - elasticsearch
+      dataFrom:
+        - kafka
+      dataTo:
+        - cassandra
+        - elasticsearch
 
   # Haxystack Trends
   - id: haystack-trends
@@ -102,7 +108,8 @@ components:
       aspects:
         - tracing
     connections:
-      - kafka
+      dataFrom:
+        - kafka
 
   # Haxystack Service Graph
   - id: haystack-service-graph
@@ -121,7 +128,8 @@ components:
       aspects:
         - tracing
     connections:
-      - kafka
+      dataFrom:
+        - kafka
 
   # Haxystack UI
   - id: haystack-ui
@@ -138,7 +146,8 @@ components:
       - visualization
       - alerting
     connections:
-      - haystack-trends
-      - haystack-traces
-      - haystack-service-graph
+      dataFrom:
+        - haystack-trends
+        - haystack-traces
+        - haystack-service-graph
       

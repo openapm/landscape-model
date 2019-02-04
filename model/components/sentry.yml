@@ -24,7 +24,8 @@ components:
     categories:
       - instrumentation-lib
     connections:
-      - sentry-server
+      dataTo:
+        - sentry-server
     capabilities:
       tech:
         - java
@@ -59,4 +60,5 @@ components:
       - collector
       - visualization
     connections:
-      - redis
+      dataTo:
+        - redis

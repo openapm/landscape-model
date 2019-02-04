@@ -66,11 +66,13 @@ components:
     categories:
       - collector
     connections:
-      - elasticsearch
-      - h2
-      - skywalking
-      - zipkin
-      - jaeger-agent
+      dataFrom:
+        - skywalking
+        - jaeger-agent
+        - zipkin
+      dataTo:
+        - elasticsearch
+        - h2
     capabilities:
       aspects:
         - tracing
@@ -91,9 +93,10 @@ components:
       - visualization
       - alerting
     connections:
-      - skywalking-collector
-      - h2
-      - elasticsearch
+      dataFrom:
+        - skywalking-collector
+        - h2
+        - elasticsearch
     capabilities:
       aspects:
         - tracing

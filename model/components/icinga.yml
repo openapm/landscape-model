@@ -21,13 +21,14 @@ components:
         - metrics [app]
         - metrics [process]
     connections:
-      - mysql
-      - postgres
-      - influx-db
-      - graphite
-      - open-tsdb
-      - elasticsearch
-      - logstash
+      dataTo:
+        - mysql
+        - postgres
+        - influx-db
+        - graphite
+        - open-tsdb
+        - elasticsearch
+        - logstash
 
   # Icinga 2 Agent
   - id: icinga2-agent
@@ -48,7 +49,8 @@ components:
         - metrics [app]
         - metrics [process]
     connections:
-      - icinga2-server
+      dataTo:
+        - icinga2-server
 
   # Icinga Web 2
   - id: icingaweb2
@@ -70,11 +72,12 @@ components:
         - metrics [app]
         - metrics [process]
     connections:
-      - icinga2-server
-      - graphite
-      - elasticsearch
-      - mysql
-      - postgres
+      dataFrom:
+        - icinga2-server
+        - graphite
+        - elasticsearch
+        - mysql
+        - postgres
 
   # Icingabeat
   - id: icingabeat
@@ -91,6 +94,7 @@ components:
       - data-processing
       - collector
     connections:
-      - icinga2-server
-      - elasticsearch
-      - logstash
+      dataTo:
+        - icinga2-server
+        - elasticsearch
+        - logstash

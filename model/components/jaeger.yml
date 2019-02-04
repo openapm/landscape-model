@@ -35,7 +35,8 @@ components:
         - jdbc
         - ldap
     connections:
-      - jaeger-agent
+      dataTo:
+        - jaeger-agent
   
   # jaeger agent
   - id: jaeger-agent
@@ -54,6 +55,9 @@ components:
       aspects:
         - tracing [app]
         - tracing [eum]
+    connections:
+      dataTo:
+        - jaeger-collector
 
   # jaeger Collector
   - id: jaeger-collector
@@ -69,11 +73,12 @@ components:
     categories:
       - collector
     connections:
-      - cassandra
-      - elasticsearch
-      - jaeger-agent
-      - zipkin
-      - kafka
+      dataTo:
+        - cassandra
+        - elasticsearch
+      dataFrom:
+        - zipkin
+        - kafka
     capabilities:
       aspects:
         - tracing
@@ -92,9 +97,10 @@ components:
     categories:
       - visualization
     connections:
-      - cassandra
-      - elasticsearch
-      - jaeger-collector
+      dataFrom:
+        - cassandra
+        - elasticsearch
+        - jaeger-collector
     capabilities:
       aspects:
         - tracing

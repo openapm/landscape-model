@@ -9,11 +9,21 @@ let component_ids = model['components'].map((component) => { return component['i
 let missingConnections = model['components'].reduce((a, component) => {
     let conns = component['connections'];
     if (conns !== undefined) {
-        conns.forEach(c => {
-            if (!component_ids.includes(c)) {
-                a.push(c + ' in ' + component['name']);
-            }
-        });
+        if(conns.dataFrom !== undefined){
+            conns.dataFrom.forEach(c => {
+                if (!component_ids.includes(c)) {
+                    a.push(c + ' in ' + component['name']);
+                }
+            });
+        }
+        if(conns.dataTo !== undefined){
+            conns.dataTo.forEach(c => {
+                if (!component_ids.includes(c)) {
+                    a.push(c + ' in ' + component['name']);
+                }
+            });
+        }
+
         return a;
     } else {
         return a;

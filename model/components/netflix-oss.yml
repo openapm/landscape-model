@@ -27,7 +27,8 @@ components:
         - metrics [app]
         - metrics [process]
     connections:
-      - netflix-atlas
+      dataTo:
+        - netflix-atlas
 
   # the atlas
   - id: netflix-atlas
@@ -60,4 +61,5 @@ components:
     categories:
       - dashboarding
     connections:
-      - pcp
+      dataFrom:
+        - pcp

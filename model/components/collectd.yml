@@ -43,13 +43,14 @@ components:
       os:
         - linux
     connections:
-      - rabbit-mq
-      - active-mq
-      - statsd
-      - prometheus-exporter
-      - graphite
-      - kafka
-      - mongo
-      - redis
-      - open-tsdb
-      - riemann
+      dataTo:
+        - rabbit-mq
+        - active-mq
+        - statsd
+        - prometheus-exporter
+        - graphite
+        - kafka
+        - mongo
+        - redis
+        - open-tsdb
+        - riemann

@@ -15,7 +15,8 @@ components:
     categories:
       - visualization
     connections:
-      - kieker-monitoring-agent
+      dataFrom:
+        - kieker-monitoring-agent
     capabilities:
       aspects:
         - tracing

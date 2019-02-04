@@ -23,10 +23,11 @@ components:
       frameworks:
         - spring
     connections:
-      - prometheus-server
-      - netflix-atlas
-      - graphite
-      - influx-db
-      - statsd
-      - elasticsearch
-      - ganglia
+      dataTo:
+        - prometheus-server
+        - netflix-atlas
+        - graphite
+        - influx-db
+        - statsd
+        - elasticsearch
+        - ganglia

@@ -39,11 +39,12 @@ components:
         - WordPress
         - Drupal
     connections:
-      - ganglia
-      - mongo
-      - mysql
-      - graphite
-      - zabbix
-      - open-tsdb
-      - influx-db
-      - couch-db
+      dataTo:
+        - ganglia
+        - mongo
+        - mysql
+        - graphite
+        - zabbix
+        - open-tsdb
+        - influx-db
+        - couch-db

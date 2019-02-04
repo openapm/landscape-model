@@ -51,10 +51,12 @@ components:
       - collector
       - visualization
     connections:
-      - zipkin
-      - cassandra
-      - elasticsearch
-      - mysql
+      dataFrom:
+        - zipkin
+      dataTo:
+        - cassandra
+        - elasticsearch
+        - mysql
     capabilities:
       aspects:
         - tracing

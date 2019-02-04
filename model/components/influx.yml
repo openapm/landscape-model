@@ -33,22 +33,29 @@ components:
       - collector
       - agent
     connections:
-      - kafka
-      - timescaledb
-      - prometheus-client-libs
-      - prometheus-exporter
-      - statsd
-      - amon
-      - amqp
-      - cratedb
-      - elasticsearch
-      - graphite
-      - graylog
-      - influx-db
-      - open-tsdb
-      - icinga2-server
-      - influx-kapacitor
-      - zipkin-server
+      dataFrom:
+        - kafka
+        - elasticsearch
+        - graylog
+        - influx-db
+        - icinga2-server
+        - kibana
+        - prometheus-client-libs
+        - prometheus-exporter
+        - statsd
+        - influx-kapacitor
+        - zipkin-server
+      dataTo:
+        - timescaledb
+        - amon
+        - kafka
+        - cratedb
+        - elasticsearch
+        - graphite
+        - graylog
+        - influx-db
+        - open-tsdb
+        - prometheus-server  
     capabilities:
       aspects:
         - metrics
@@ -68,7 +75,8 @@ components:
       - alerting
       - data-processing
     connections:
-      - influx-db
+      dataFrom:
+        - influx-db
     capabilities:
       aspects:
         - metrics
@@ -88,8 +96,9 @@ components:
       - visualization
       - dashboarding
     connections:
-      - influx-db
-      - influx-kapacitor
+      dataFrom:
+        - influx-db
+        - influx-kapacitor
     capabilities:
       aspects:
         - metrics

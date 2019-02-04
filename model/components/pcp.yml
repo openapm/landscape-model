@@ -36,5 +36,6 @@ components:
         - macOSX
         - windows
     connections:
-      - grafana
-      - graphite
+      dataTo:
+        - grafana
+        - graphite

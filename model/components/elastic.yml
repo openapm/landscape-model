@@ -21,6 +21,7 @@ components:
         - metrics [process]
         - logs
     connections:
+      dataTo:
         - elasticsearch
         - logstash
 
@@ -55,7 +56,8 @@ components:
     categories:
       - agent
     connections:
-      - elastic-apm
+      dataTo:
+        - elastic-apm
 
   # Elastic Apm server
   - id: elastic-apm
@@ -72,7 +74,8 @@ components:
     categories:
       - collector
     connections:
-      - elasticsearch
+      dataTo:
+        - elasticsearch
     capabilities:
       aspects:
         - tracing
@@ -93,9 +96,10 @@ components:
     categories:
       - data-processing
     connections:
-      - elasticsearch
-      - graphite
-      - statsd
+      dataTo:
+        - elasticsearch
+        - graphite
+        - statsd
 
   # Elasticsearch
   - id: elasticsearch
@@ -133,7 +137,8 @@ components:
       - visualization
       - dashboarding
     connections:
-      - elasticsearch
+      dataFrom:
+        - elasticsearch
     capabilities:
       aspects:
         - tracing
@@ -153,4 +158,5 @@ components:
     categories:
       - alerting
     connections:
-      - elasticsearch
+      dataFrom:
+        - elasticsearch

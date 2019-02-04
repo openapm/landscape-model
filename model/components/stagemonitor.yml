@@ -22,12 +22,13 @@ components:
         - metrics [app]
         - metrics [process]
     connections:
-      - elasticsearch
-      - graphite
-      - influx-db
-      - prometheus-server
-      - stagemonitor-browserwidget
-      - stagemonitor-alerter
+      dataTo:
+        - elasticsearch
+        - graphite
+        - influx-db
+        - prometheus-server
+        - stagemonitor-browserwidget
+        - stagemonitor-alerter
 
   # stagemonitor browser widget
   - id: stagemonitor-browserwidget
@@ -82,9 +83,10 @@ components:
         aspects:
           - metrics [host]
     connections:
-      - elasticsearch
-      - graphite
-      - influx-db
-      - prometheus-server
-      - stagemonitor-browserwidget
-      - stagemonitor-alerter
+      dataTo:
+        - elasticsearch
+        - graphite
+        - influx-db
+        - prometheus-server
+        - stagemonitor-browserwidget
+        - stagemonitor-alerter

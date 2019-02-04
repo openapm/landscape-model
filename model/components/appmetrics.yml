@@ -24,10 +24,11 @@ components:
       - instrumentation-lib
       - collector
     connections:
-      - graphite
-      - influx-db
-      - elasticsearch
-      - prometheus-server
+      dataTo:
+        - graphite
+        - influx-db
+        - elasticsearch
+        - prometheus-server
     capabilities:
       tech:
         - .net

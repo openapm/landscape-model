@@ -36,8 +36,10 @@ components:
     categories:
       - collector
     connections:
-      - pinpoint-agent
-      - hbase
+      dataFrom:
+        - pinpoint-agent
+      dataTo:
+        - hbase
     capabilities:
       aspects:
         - tracing
@@ -59,8 +61,9 @@ components:
       - dashboarding
       - alerting
     connections:
-      - pinpoint-collector-server
-      - hbase
+      dataFrom:
+        - pinpoint-collector-server
+        - hbase
     capabilities:
       aspects:
         - tracing
