@@ -1,10 +1,10 @@
 ---
 components:
 
-  # jaeger agent
-  - id: jaeger-agent
-    name: Jaeger Agent
-    description: The Jaeger agent is a network daemon that listens for spans sent over UDP, which it batches and sends to the collector. It is designed to be deployed to all hosts as an infrastructure component. The agent abstracts the routing and discovery of the collectors away from the client.
+    # jaeger client
+  - id: jaeger-client
+    name: Jaeger Client
+    description: Jaeger clients are language specific implementations of the OpenTracing API. They can be used to instrument applications for distributed tracing either manually or with a variety of existing open source frameworks.
     link: http://www.jaegertracing.io/
     github:
       - jaegertracing/jaeger-client-java
@@ -34,6 +34,26 @@ components:
         - spring
         - jdbc
         - ldap
+    connections:
+      - jaeger-agent
+  
+  # jaeger agent
+  - id: jaeger-agent
+    name: Jaeger Agent
+    description: The Jaeger agent is a network daemon that listens for spans sent over UDP, which it batches and sends to the collector. It is designed to be deployed to all hosts as an infrastructure component. The agent abstracts the routing and discovery of the collectors away from the client.
+    link: http://www.jaegertracing.io/
+    github:
+      - jaegertracing/jaeger
+    twitter: JaegerTracing
+    logo: jaeger
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+    capabilities:
+      aspects:
+        - tracing [app]
+        - tracing [eum]
 
   # jaeger Collector
   - id: jaeger-collector
