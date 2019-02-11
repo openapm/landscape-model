@@ -32,7 +32,7 @@ components:
     github:
       - inspectIT/inspectit-oce
     twitter: inspectIT_APM
-    logo: inspectit
+    logo: inspectit-oce
     license:
       - Apache License 2.0
     categories:
