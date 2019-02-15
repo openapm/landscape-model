@@ -37,7 +37,6 @@ components:
         - kafka
         - elasticsearch
         - graylog
-        - influx-db
         - icinga2-server
         - kibana
         - prometheus-client-libs

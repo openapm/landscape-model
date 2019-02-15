@@ -150,4 +150,23 @@ components:
         - haystack-trends
         - haystack-traces
         - haystack-service-graph
-      
+
+  #  Pitchfork
+  - id: pitchfork
+    name: Pitchfork
+    description: Pitchfork acts as a collector and forwarder of tracing data. If you are currently using Zipkin you don't need to do code changes to your service in order to report traces to the Haystack system.
+    link: https://github.com/HotelsDotCom/pitchfork
+    github:
+      - HotelsDotCom/pitchfork
+    twitter: ExpediaEng
+    logo: pitchfork
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+    connections:
+      dataFrom:
+        - zipkin
+      dataTo:
+        - zipkin-server
+        - kafka
