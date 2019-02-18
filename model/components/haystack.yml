@@ -45,8 +45,6 @@ components:
     connections:
       dataTo:
         - kafka
-      dataFrom:
-        - micrometer
 
   # Haxystack Collector
   - id: haystack-collector
@@ -110,6 +108,8 @@ components:
     connections:
       dataFrom:
         - kafka
+      dataTo: 
+        - metrictank
 
   # Haxystack Service Graph
   - id: haystack-service-graph
@@ -131,6 +131,23 @@ components:
       dataFrom:
         - kafka
 
+  # Haxystack Alerting
+  - id: haystack-alerting
+    name: Haystack Alerting
+    description: The Haystack Alerting subsystem provides streaming anomaly detection with automated model selection and autotuning. It provides an interface for alert subscription management and in addition provides the aler information to the Haystack UI.
+    link: https://expediadotcom.github.io/haystack/
+    github:
+      - ExpediaDotCom/haystack-alerting
+    twitter: ExpediaEng
+    logo: haystack
+    license:
+      - Apache License 2.0
+    categories:
+      - alerting
+    connections:
+      dataFrom:
+        - haystack-trends
+
   # Haxystack UI
   - id: haystack-ui
     name: Haystack UI
@@ -150,6 +167,7 @@ components:
         - haystack-trends
         - haystack-traces
         - haystack-service-graph
+        - haystack-alerting
 
   #  Pitchfork
   - id: pitchfork
