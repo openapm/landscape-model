@@ -24,4 +24,4 @@ components:
         - graphite
         - elasticsearch
         - influx-db
-        - prometheus
+        - prometheus-server
