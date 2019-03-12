@@ -1,0 +1,27 @@
+---
+components:
+
+  # the bosun alerting system
+  - id: bosun
+    name: Bosun
+    description: Bosun is an alerting system initially developed at <a href="https://stackexchange.com/" target="_blank">Stack Exchange</a>. Bosun comes with an expressive domain specific language for evaluating alerts and creating detailed notifications. It allows to test your alerts against historical data to reduce alert noise before publishing alert notifications. Bosun can send alert notifications via e-mail, HTTP-requests or print it to the console.
+    link: http://bosun.org/
+    github:
+      - bosun-monitor/bosun
+    twitter: StackExchange
+    logo: bosun
+    license:
+      - MIT License
+    categories:
+      - alerting
+    capabilities:
+      aspects:
+        - metrics
+        - logs
+    connections:
+      dataFrom:
+        - open-tsdb
+        - graphite
+        - elasticsearch
+        - influx-db
+        - prometheus
