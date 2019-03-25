@@ -24,15 +24,15 @@ components:
         - metrics [app]
         - metrics [process]
 
-  # inspectIT OCE agent
-  - id: inspectit-oce-agent
-    name: inspectIT OCE
-    description: inspectIT OpenCensus Edition is a Java agent that provides the automatic collection of metrics and traces using OpenCensus standard.
+  # inspectIT Ocelot agent
+  - id: inspectit-ocelot-agent
+    name: inspectIT Ocelot
+    description: inspectIT Ocelot is a Java agent that provides the automatic collection of metrics and traces using OpenCensus standard.
     link: http://www.inspectit.rocks/
     github:
-      - inspectIT/inspectit-oce
+      - inspectIT/inspectit-ocelot
     twitter: inspectIT_APM
-    logo: inspectit-oce
+    logo: inspectit-ocelot
     license:
       - Apache License 2.0
     categories:
