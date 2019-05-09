@@ -41,3 +41,68 @@ components:
         - jaeger-collector
         - influx-telegraf
         - haystack-agent
+
+  # opencensus Agent
+  - id: opencensus-agent
+    name: OpenCensus Agent
+    description: The OpenCensus Agent is a daemon that allows polyglot deployments of OpenCensus to use centralized exporter implementations. Instead of traditionally taking down and configuring OpenCensus exporters per language library and for every single application, with the OpenCensus Agent, one just has to singly enable the OpenCensus Agent exporter for their target language and it will deliver stats, metrics and traces to the centralized point before they are exported to the target backends.
+    link: https://opencensus.io/service/components/agent/
+    github:
+      - census-instrumentation/opencensus-service
+    twitter: opencensusio
+    logo: opencensus
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+    connections:
+      dataTo:
+        - prometheus-server
+        - zipkin-server
+        - jaeger-collector
+        - influx-telegraf
+      dataFrom:
+        - opencensus
+        - prometheus-client-libs
+        - prometheus-exporter
+        - jaeger-client
+        - zipkin
+        - influx-telegraf
+
+
+  # opencensus Collector
+  - id: opencensus-collector
+    name: OpenCensus Collector
+    description: The OpenCensus Collector is a component that runs “nearby” (e.g. in the same VPC, AZ, etc.) a user’s application components and receives trace spans and metrics emitted by supported Receivers. The received spans and metrics could be emitted directly by clients in instrumented tasks, or potentially routed via intermediate proxy sidecar/daemon agents such as the OpenCensus Agent. The collector provides a central egress point for exporting traces and metrics to one or more tracing and/or metrics backends while offering buffering and retries as well as advanced aggregation, filtering, annotation and intelligent sampling capabilities.
+    link: https://opencensus.io/service/components/collector/
+    github:
+      - census-instrumentation/opencensus-service
+    twitter: opencensusio
+    logo: opencensus
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+      - data-processing
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+    connections:
+      dataTo:
+        - prometheus-server
+        - zipkin-server
+        - jaeger-collector
+        - influx-telegraf
+      dataFrom:
+        - opencensus
+        - opencensus-agent
+        - prometheus-client-libs
+        - prometheus-exporter
+        - jaeger-client
+        - zipkin
+        - influx-telegraf
