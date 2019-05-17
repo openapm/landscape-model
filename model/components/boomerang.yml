@@ -1,0 +1,19 @@
+---
+components:
+
+  # Boomerang Javascript library
+  - id: boomerang
+    name: Boomerang
+    description: Boomerang is a JavaScript library, that measures EUM metrics.
+    link: https://developer.akamai.com/tools/boomerang
+    github:
+      - akamai/boomerang
+    license:
+      - BSD License
+    categories:
+      - agent
+    capabilities:
+      tech:
+        - javascript
+      aspects:
+        - metrics [eum]
