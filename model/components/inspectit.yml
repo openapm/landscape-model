@@ -95,8 +95,8 @@ components:
   
   # inspectIT Ocelot Enduser Monitoring Server
   - id: inspectit-oce-eum-server
-    name: inspectIT Ocelot EUM Server
-    description: inspectIT Ocelot EUM Server provides EUM metrics to OpenCensus
+    name: inspectIT Ocelot EUM
+    description: inspectIT Ocelot EUM is a server that collects end user monitoring metrics from <a href="https://developer.akamai.com/tools/boomerang/">Boomerang</a>  and provides them through OpenCensus exporters to different tools.
     link: http://www.inspectit.rocks/
     github: inspectIT/inspectit-ocelot-eum
     twitter: inspectIT_APM
