@@ -92,3 +92,25 @@ components:
       aspects:
         - tracing
         - metrics
+  
+  # inspectIT Ocelot Enduser Monitoring Server
+  - id: inspectit-oce-eum-server
+    name: inspectIT Ocelot EUM Server
+    description: inspectIT Ocelot EUM Server provides EUM metrics to OpenCensus
+    link: http://www.inspectit.rocks/
+    github: inspectIT/inspectit-ocelot-eum
+    twitter: inspectIT_APM
+    logo: inspectit-ocelot
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+    connections:
+      dataFrom:
+        - boomerang
+      dataTo:
+        - opencensus
+    capabilities:
+      aspects:
+        - metrics
+    
