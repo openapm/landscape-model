@@ -1,0 +1,25 @@
+---
+components:
+
+  # fluentbit
+  - id: fluentbit
+    name: Fluent Bit
+    description: Fluent Bit is an open source and multi-platform Log Processor and Forwarder which allows you to collect data/logs from different sources, unify and send them to multiple destinations. It's fully compatible with Docker and Kubernetes environments.
+    link: https://fluentbit.io/
+    twitter: FluentBit
+    github:
+      - fluent/fluent-bit
+      - fluent/fluent-bit-docs
+    logo: fluentbit
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+    connections:
+      dataTo:
+        - elasticsearch
+        - kafka
+        - influx-db
+    capabilities:
+      aspects:
+        - logs
