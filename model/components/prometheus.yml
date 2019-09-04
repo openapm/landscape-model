@@ -145,3 +145,25 @@ components:
         - influx-db
       os:
         - linux
+
+  # prometheus push gateway
+  - id: prometheus-push-gateway
+    name: Prometheus Pushgateway
+    description: LThe Prometheus Pushgateway exists to allow ephemeral and batch jobs to expose their metrics to Prometheus. Since these kinds of jobs may not exist long enough to be scraped, they can instead push their metrics to a Pushgateway. The Pushgateway then exposes these metrics to Prometheus.
+    link: https://prometheus.io/docs/instrumenting/exporters/
+    github:
+      - prometheus/pushgateway
+    twitter: PrometheusIO
+    logo: prometheus
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+    capabilities:
+      aspects:
+        - metrics
+    connections:
+      dataFrom:
+        - prometheus-client-libs
+      dataTo:
+        - prometheus-server
