@@ -1,0 +1,25 @@
+---
+components:
+
+  # Cortex
+  - id: cortex
+    name: Cortex
+    description: Cortex provides horizontally scalable, highly available, multi-tenant, long term storage for Prometheus.
+    link: https://github.com/cortexproject/cortex
+    github:
+      - cortexproject/cortex
+    twitter: weaveworks
+    logo: cortex
+    license:
+      - Apache License 2.0
+    categories:
+      - storage
+    capabilities:
+      aspects:
+        - metrics
+    connections:
+      dataFrom:
+        - prometheus-server
+      dataTo:
+        - grafana
+        - cassandra
