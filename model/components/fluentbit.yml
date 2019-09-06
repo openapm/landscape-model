@@ -20,6 +20,7 @@ components:
         - elasticsearch
         - kafka
         - influx-db
+        - fluentd
     capabilities:
       aspects:
         - logs
