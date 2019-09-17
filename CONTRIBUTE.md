@@ -44,5 +44,5 @@ Accepted license names are defined in the ./model/licenses.yml file, with corres
 ### Adding new Categories
 Valid categories are defined in the ./model/categories.yml file. If possible, categorize your tool or components into one or multiple of the available components. To keep a clean structure, new categories should only be introduced if it is absolutely necessary.
 
-### When is my change refelcted on the OpenAPM website?
+### When is my change reflected on the OpenAPM website?
 Once your pull request has been accepted and merged, the corresponding changes become visible on the [OpenAPM Landscape](https://openapm.io/landscape) latest on the next day.

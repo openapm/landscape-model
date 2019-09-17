@@ -1,6 +1,5 @@
 ---
 components:
-
   # inspectIT agent
   - id: inspectit-agent
     name: inspectIT
@@ -92,13 +91,52 @@ components:
       aspects:
         - tracing
         - metrics
-  
+
+  # inspectIT Ocelot Configuration Server
+  - id: inspectit-oce-config-server
+    name: inspectIT Ocelot Configuration Server
+    description: Central server managing the distribution of the agent configuration.
+    link: http://www.inspectit.rocks/
+    github: inspectIT/inspectit-ocelot
+    twitter: inspectIT_APM
+    logo: inspectit
+    license:
+      - Apache License 2.0
+    categories:
+      - configuration
+    connections:
+      dataTo:
+        - inspectit-ocelot-agent
+        - inspectit-oce-config-ui
+    capabilities:
+      aspects:
+        - configuration
+
+  # inspectIT Ocelot Configuration Server UI
+  - id: inspectit-oce-config-ui
+    name: inspectIT Ocelot Configuration Server UI
+    description: Web UI providing possibilites to edit and apply agent configuration files.
+    link: http://www.inspectit.rocks/
+    github: inspectIT/inspectit-ocelot
+    twitter: inspectIT_APM
+    logo: inspectit
+    license:
+      - Apache License 2.0
+    categories:
+      - visualization
+    connections:
+      dataFrom:
+        - inspectit-oce-config-server
+    capabilities:
+      aspects:
+        - configuration
+
   # inspectIT Ocelot Enduser Monitoring Server
   - id: inspectit-oce-eum-server
     name: inspectIT Ocelot EUM
     description: inspectIT Ocelot EUM is a server that collects end user monitoring metrics from <a href="https://developer.akamai.com/tools/boomerang/">Boomerang</a>  and provides them through OpenCensus exporters to different tools.
     link: http://www.inspectit.rocks/
-    github: inspectIT/inspectit-ocelot-eum
+    github: inspectIT/inspectit-ocelot
     twitter: inspectIT_APM
     logo: inspectit-ocelot
     license:
@@ -113,4 +151,3 @@ components:
     capabilities:
       aspects:
         - metrics
-    
