@@ -21,9 +21,14 @@ components:
         - metrics [process]
         - logs
     connections:
+      dataFrom:
+        - kafka
+        - redis
       dataTo:
         - elasticsearch
         - logstash
+        - kafka
+        - redis
 
   # Elastic Apm agents
   - id: elastic-apm-agent
@@ -96,10 +101,23 @@ components:
     categories:
       - data-processing
     connections:
+      dataFrom:
+        - kafka
+        - rabbitmq
+        - redis
       dataTo:
         - elasticsearch
         - graphite
         - statsd
+        - ganglia
+        - kafka
+        - mongo
+        - nagios
+        - opentsdb
+        - rabbitmq
+        - redis
+        - riemann
+        - zabbix
 
   # Elasticsearch
   - id: elasticsearch
