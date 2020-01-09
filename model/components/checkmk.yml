@@ -1,0 +1,42 @@
+---
+components:
+
+  # checkmk_agent
+  - id: checkmk-agent
+    name: Checkmk Agent
+    description: Checkmk is a comprehensive Solution for IT Monitoring of applications, servers, and networks. <br/>The source code can be found <a href="https://github.com/tribe29/checkMK/?p=check_mk" target="_blank">here</a>.
+    link: https://checkmk.com/
+    twitter: Check_MK
+    logo: check_mk
+    license:
+      - GPLv2
+    categories:
+      - agent
+    capabilities:
+      aspects:
+        - metrics [host]
+        - metrics [process]
+        - logs
+
+  # checkmk_server
+  - id: checkmk-server
+    name: Checkmk Server
+    description: Checkmk is a comprehensive Solution for IT Monitoring of applications, servers, and networks. The source code can be found on <a href="https://github.com/tribe29/checkMK/?p=check_mk" target="_blank">here</a>.
+    link: https://checkmk.com/
+    twitter: Check_MK
+    logo: check_mk
+    license:
+      - GPLv2
+    categories:
+      - storage
+      - visualization
+      - alerting
+      - dashboarding
+    capabilities:
+      aspects:
+        - metrics [host]
+        - metrics [process]
+        - logs
+    connections:
+      dataFrom:
+        - checkmk-agent
