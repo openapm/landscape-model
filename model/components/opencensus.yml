@@ -41,6 +41,7 @@ components:
         - jaeger-collector
         - influx-telegraf
         - haystack-agent
+        - influx-db
 
   # opencensus Agent
   - id: opencensus-agent
