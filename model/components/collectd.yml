@@ -44,13 +44,15 @@ components:
         - linux
     connections:
       dataTo:
-        - rabbit-mq
+        - rabbitmq
         - active-mq
         - statsd
         - prometheus-exporter
+        - fluentbit
         - graphite
         - kafka
         - mongo
         - redis
         - open-tsdb
         - riemann
+        - rsyslog

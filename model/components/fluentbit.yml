@@ -16,6 +16,8 @@ components:
     categories:
       - collector
     connections:
+      dataFrom:
+        - rsyslog
       dataTo:
         - elasticsearch
         - kafka
