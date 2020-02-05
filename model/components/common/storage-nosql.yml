@@ -53,6 +53,7 @@ components:
       - BSD 3-Clause License
     categories:
       - storage
+      - transport
     capabilities:
       aspects:
         - tracing
