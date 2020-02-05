@@ -43,7 +43,7 @@ components:
       - elastic/apm-agent-ruby
       - elastic/apm-agent-js-base
     twitter: elastic
-    logo: elastic
+    logo: elastic-apm
     license:
       - Apache License 2.0
       - BSD 2-Clause License
@@ -72,7 +72,7 @@ components:
     github: 
       - elastic/apm-server
     twitter: elastic
-    logo: elastic
+    logo: elastic-apm
     license:
       - Apache License 2.0
       - Elastic License
