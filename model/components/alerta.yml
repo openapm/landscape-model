@@ -36,7 +36,7 @@ components:
 
   # alerta web ui
   - id: alerta-webui
-    name: alerta
+    name: alerta Web UI
     description: The Alerta web UI console takes full advantage of the state-based Alerta API to ensure that the most important events at any given time are brought to the attention of operators.
     github:
       - alerta/alerta-webui
