@@ -13,6 +13,7 @@ components:
     license:
       - GPLv3
     categories:
+      - agent
       - collector
       - dashboarding
       - alerting
