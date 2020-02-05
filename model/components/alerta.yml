@@ -1,0 +1,54 @@
+---
+components:
+
+  # alerta server
+  - id: alerta-server
+    name: alerta
+    description: The alerta monitoring system is a tool used to consolidate and de-duplicate alerts from multiple sources for quick ‘at-a-glance’ visualisation.
+    link: https://alerta.io/
+    github:
+      - alerta/alerta
+    twitter: alertaio
+    logo: alerta
+    license:
+      - Apache License 2.0
+    categories:
+      - alerting
+    capabilities:
+      tech:
+        - python
+    connections:
+      dataFrom:
+        - grafana
+        - graylog
+        - influx-kapacitor
+        - nagios-core
+        - netdata-agent
+        - prometheus-alerting
+        - sensu-server
+      dataTo:
+        - elastalert
+        - influx-db
+        - kibana
+        - logstash
+        - prometheus-alerting
+        - rabbitmq
+
+  # alerta web ui
+  - id: alerta-webui
+    name: alerta
+    description: The Alerta web UI console takes full advantage of the state-based Alerta API to ensure that the most important events at any given time are brought to the attention of operators.
+    github:
+      - alerta/alerta-webui
+    twitter: alertaio
+    logo: alerta
+    license:
+      - Apache License 2.0
+    categories:
+      - dashboarding
+    capabilities:
+      tech:
+        - javascript
+    connections:
+      dataFrom:
+        - alerta-server
