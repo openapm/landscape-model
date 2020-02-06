@@ -1,0 +1,29 @@
+---
+components:
+
+  # RSYSLOG 
+  - id: rsyslog
+    name: RabbitMQ
+    description: RSYSLOG is the rocket-fast system for log processing.
+    link: https://www.rsyslog.com/
+    github:
+      - rsyslog/rsyslog
+    twitter: rsyslog
+    logo: rsyslog
+    license:
+      - GNU GPLv3
+    categories:
+      - transport
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+    connections:
+      dataFrom:
+        - kafka
+      dataTo:
+        - elasticsearch
+        - kafka
+        - rabbitmq
+        - redis

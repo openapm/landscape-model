@@ -11,7 +11,7 @@ components:
     twitter: linuxnetdata
     logo: netdata
     license:
-      - GPLv3
+      - GNU GPLv3
     categories:
       - agent
       - collector
@@ -40,3 +40,4 @@ components:
         - open-tsdb
         - kairos-db
         - prometheus-server
+        - rsyslog

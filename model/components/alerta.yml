@@ -19,12 +19,13 @@ components:
         - python
     connections:
       dataFrom:
+        - elastalert
         - grafana
-        - graylog
         - influx-kapacitor
         - nagios-core
         - netdata-agent
         - prometheus-alerting
+        - rsyslog
         - sensu-server
       dataTo:
         - elastalert
@@ -33,6 +34,7 @@ components:
         - logstash
         - prometheus-alerting
         - rabbitmq
+        - rsyslog
 
   # alerta web ui
   - id: alerta-webui
