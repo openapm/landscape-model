@@ -3,7 +3,7 @@ components:
 
   # RSYSLOG 
   - id: rsyslog
-    name: RabbitMQ
+    name: Rsyslog
     description: RSYSLOG is the rocket-fast system for log processing.
     link: https://www.rsyslog.com/
     github:
