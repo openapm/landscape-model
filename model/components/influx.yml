@@ -35,6 +35,7 @@ components:
     connections:
       dataFrom:
         - kafka
+        - redis
         - elasticsearch
         - graylog
         - icinga2-server
@@ -48,6 +49,7 @@ components:
         - timescaledb
         - amon
         - kafka
+        - rabbitmq
         - cratedb
         - elasticsearch
         - graphite
