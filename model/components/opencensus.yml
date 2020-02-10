@@ -66,6 +66,7 @@ components:
         - zipkin-server
         - jaeger-collector
         - influx-telegraf
+        - kafka
       dataFrom:
         - opencensus
         - prometheus-client-libs
@@ -99,6 +100,7 @@ components:
         - zipkin-server
         - jaeger-collector
         - influx-telegraf
+        - kafka
       dataFrom:
         - opencensus
         - opencensus-agent
