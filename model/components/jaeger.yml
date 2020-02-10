@@ -76,8 +76,31 @@ components:
       dataTo:
         - cassandra
         - elasticsearch
+        - kafka
       dataFrom:
         - zipkin
+    capabilities:
+      aspects:
+        - tracing
+
+  # jaeger Ingester
+  - id: jaeger-ingester
+    name: Jaeger Ingester
+    description: The Jaeger Ingester is a service which reads span data from Kafka topic and writes it to another storage backend
+    link: http://www.jaegertracing.io/
+    github:
+      - jaegertracing/jaeger
+    twitter: JaegerTracing
+    logo: jaeger
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+    connections:
+      dataTo:
+        - cassandra
+        - elasticsearch
+      dataFrom:
         - kafka
     capabilities:
       aspects:
@@ -104,3 +127,4 @@ components:
     capabilities:
       aspects:
         - tracing
+
