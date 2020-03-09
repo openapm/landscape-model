@@ -4,7 +4,7 @@ components:
   # opencensus instrumentation toolkit
   - id: opencensus
     name: OpenCensus
-    description: A single distribution of libraries that automatically collects traces and metrics from your app, displays them locally, and provides means to write to different analysis tools.
+    description: <b>OpenTracing and OpenCensus have merged to form <a href="/landscape/instrumentation-lib/opentelemetry">OpenTelemetry</a>!</b> <br/> OpenCensus is a single distribution of libraries that automatically collects traces and metrics from your app, displays them locally, and provides means to write to different analysis tools.
     link: https://opencensus.io/
     github:
       - census-instrumentation/opencensus-java

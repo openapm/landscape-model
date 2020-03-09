@@ -1,0 +1,103 @@
+---
+components:
+
+    # Datadog
+  - id: datadog
+    name: Datadog
+    description: Datadog is a powerfull data, monitoring and observability platform covering the three pillars of observability (metrics, traces and logs). Datadog comes with an flexible and consistent tagging concept that allows correlation of different data types as well as flexible filtering and grouping of data. It provides open interfaces for ingesting data from different data collection utilities and standards and, thus, is highly integrateable with different open source monitoring components.
+    link: https://www.datadoghq.com/
+    github:
+      - DataDog/documentation
+    twitter: datadoghq
+    logo: datadog
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+    connections:
+      dataTo:
+        - grafana
+      dataFrom:
+        - datadog-agent
+        - fluentbit
+    isCommercial: true
+  
+  # Datadog agent
+  - id: datadog-agent
+    name: Datadog Agent
+    description: The Datadog Agent is a standalone OS-level process that runs on a host. Its main purpose is to gather traces, metrics and logs from different instrumentation sources on the corredsponding host (such as instrumentation SDKs, bytecode instrumentation agents, etc.) and forward them to the Datadog service.
+    link: https://www.datadoghq.com/
+    github:
+      - DataDog/datadog-agent
+    twitter: datadoghq
+    logo: datadog
+    categories:
+      - agent
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+    connections:
+      dataFrom:
+        - datadog-language-agents
+        - datadog-language-sdks
+        - opencensus
+        - opentracing
+        - opentelemetry
+        - kamon
+        - prometheus-client-libs
+        - prometheus-exporter
+        - influx-telegraf
+        - nagios-core
+        - fluentd
+
+  # Datadog language agent
+  - id: datadog-language-agents
+    name: Datadog Language Agents
+    description: For the purpose of distributed tracing Datadog provides automatic instrumentation agents for Java and .NET. The agents provided by Datadog are open source.
+    link: https://www.datadoghq.com/
+    github:
+      - DataDog/dd-trace-java
+      - DataDog/dd-trace-dotnet
+      - DataDog/dd-trace-js
+    twitter: datadoghq
+    logo: datadog
+    categories:
+      - agent
+    capabilities:
+      aspects:
+        - tracing
+      tech: 
+        - java
+        - .net
+
+  # Datadog language SDKs
+  - id: datadog-language-sdks
+    name: Datadog Language SDKs
+    description: Datadog provides various SDKs for instrumenting applications to implement distributed tracing. There are different GitHub repositories for different programming languages. All data collection utilities provided by Datadog are open source.
+    link: https://www.datadoghq.com/
+    github:
+      - DataDog/dd-trace-js
+      - DataDog/dd-trace-py
+      - DataDog/dd-trace-rb
+      - DataDog/dd-trace-go
+      - DataDog/dd-trace-php
+    twitter: datadoghq
+    logo: datadog
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - tracing
+      tech:
+        - javascript
+        - go
+        - nodejs
+        - python
+        - c++
+        - php
+        - ruby

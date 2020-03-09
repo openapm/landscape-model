@@ -1,0 +1,81 @@
+---
+components:
+
+  # opencensus instrumentation toolkit
+  - id: opentelemetry
+    name: OpenTelemetry
+    description: OpenTelemetry is the continuation project from <a href="/landscape/instrumentation-lib/opentracing">OpenTracing</a> and <a href="/landscape/instrumentation-lib/opencensus">OpenCensus</a>. It provides a single set of APIs, libraries, agents, and collector services to capture distributed traces and metrics from your applications and serevices. There are different exporters available to provide data collected through OpenTelemetry to different observability backends.
+    link: https://opentelemetry.io/
+    github:
+      - open-telemetry/opentelemetry-java
+      - open-telemetry/opentelemetry-auto-instr-java
+      - open-telemetry/opentelemetry-dotnet
+      - open-telemetry/opentelemetry-js
+      - open-telemetry/opentelemetry-go
+      - open-telemetry/opentelemetry-python
+      - open-telemetry/opentelemetry-cpp
+      - open-telemetry/opentelemetry-php
+      - open-telemetry/opentelemetry-erlang
+      - open-telemetry/opentelemetry-ruby
+    twitter: opentelemetry
+    logo: opentelemetry
+    license:
+      - Apache License 2.0
+    categories:
+      - instrumentation-lib
+    capabilities:
+      tech:
+        - c++
+        - erlang
+        - php
+        - go
+        - java
+        - javascript
+        - dotnet
+        - python
+        - ruby
+      aspects:
+        - tracing
+        - metrics [app]
+        - metrics [process]
+    connections:
+      dataTo:
+        - prometheus-server
+        - zipkin-server
+        - jaeger-collector
+        - influx-telegraf
+        - haystack-agent
+        - influx-db
+
+  # opencensus Collector
+  - id: opentelemetry-collector
+    name: OpenTelemetry Collector
+    description: The OpenTelemetry Collector is a component that runs “nearby” (e.g. in the same VPC, AZ, etc.) a user’s application components and receives trace spans and metrics emitted by supported Receivers. The received spans and metrics could be emitted directly by clients in instrumented tasks, or potentially routed via intermediate proxy sidecar/daemon agents. The collector provides a central egress point for exporting traces and metrics to one or more tracing and/or metrics backends while offering buffering and retries as well as advanced aggregation, filtering, annotation and intelligent sampling capabilities.
+    link: https://github.com/open-telemetry/opentelemetry-collector
+    github:
+      - open-telemetry/opentelemetry-collector
+    twitter: opentelemetry
+    logo: opentelemetry
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+      - data-processing
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+    connections:
+      dataTo:
+        - prometheus-server
+        - zipkin-server
+        - jaeger-collector
+        - influx-telegraf
+        - kafka
+      dataFrom:
+        - opentelemetry
+        - prometheus-client-libs
+        - prometheus-exporter
+        - jaeger-client
+        - zipkin
+        - influx-telegraf

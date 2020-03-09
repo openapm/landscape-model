@@ -57,3 +57,7 @@ categories:
   - id: alerting
     name: Alerting
     description: The alerting tools are capable of creating alerts based on the operational performance metrics and dispatching those alerts via different notification channels such as email, SMS, applications, etc. Beside notifications, some alerting tools support script execution or deployment updates when an alert is fired, thus enabling problem resolution through automation.
+
+  - id: commercial-services
+    name: Commercial Platforms
+    description: Commercial monitoring, observability and analytics platforms usualy provide a broad range of features to process, visualize and act on monitoring data. Commercial cloud services increasingly support integration with different open source tools and standards, especially when it comes to data collection.

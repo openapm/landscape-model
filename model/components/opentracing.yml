@@ -1,0 +1,44 @@
+---
+components:
+
+  # opentracing instrumentation toolkit
+  - id: opentracing
+    name: OpenTracing
+    description: <b>OpenTracing and OpenCensus have merged to form <a href="/landscape/instrumentation-lib/opentelemetry">OpenTelemetry</a>!</b> <br/> OpenTracing is a vendor-neutral API for distributed tracing. There are instrumentation libraries for various languages as well as implementations for different tracing backends that support OpenTracing.
+    link: https://opentracing.io/
+    github:
+      - opentracing/opentracing-java
+      - opentracing/opentracing-go
+      - opentracing/opentracing-javascript
+      - opentracing/opentracing-python
+      - opentracing/opentracing-ruby
+      - opentracing/opentracing-php
+      - opentracing/opentracing-csharp
+    twitter: opentracing
+    logo: opentracing
+    license:
+      - Apache License 2.0
+    categories:
+      - instrumentation-lib
+    capabilities:
+      tech:
+        - c++
+        - .net
+        - php
+        - go
+        - java
+        - python
+        - ruby
+        - javascript
+      aspects:
+        - tracing
+    connections:
+      dataTo:
+        - zipkin-server
+        - jaeger-collector
+        - haystack-agent
+        - inspectit-agent
+        - stagemonitor-agent
+
+
+
