@@ -105,3 +105,22 @@ components:
     capabilities:
       aspects:
         - metrics
+
+  # cloud
+  - id: influx-cloud
+    name: InfluxDB Cloud
+    description: InfluxDB Cloud is the SaaS offering from InfluxData providing a scaleable, serverless monitoring platform. InfluxDB Cloud covers data persistance, processing, dashboarding, analytics and alerting functionalities.
+    link: https://www.influxdata.com/products/influxdb-cloud/
+    twitter: InfluxDB
+    logo: influx-data
+    categories:
+      - commercial-services
+    connections:
+      dataFrom:
+        - influx-telegraf
+        - 
+    capabilities:
+      aspects:
+        - metrics
+        - logs
+    isCommercial: true
