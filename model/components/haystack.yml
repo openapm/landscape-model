@@ -25,6 +25,8 @@ components:
     connections:
       dataTo:
         - haystack-agent
+      dataFrom:
+        - opentracing
 
   # Haxystack Agent
   - id: haystack-agent

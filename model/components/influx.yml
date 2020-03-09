@@ -117,8 +117,29 @@ components:
       - commercial-services
     connections:
       dataFrom:
+        - alerta
+        - fluentbit
+        - fluentd
+        - icinga2-server
         - influx-telegraf
-        - 
+        - inspectit-crm
+        - kieker-monitoring
+        - netdata
+        - prometheus-server
+        - sensu-server
+        - stagemonitor
+        - stagemonitor-os
+        - statsd
+        - opencensus
+        - opencensus-agent
+        - opencensus-collector
+        - opentelemetry
+        - opentelemetry-collector
+        - micrometer
+        - kamon
+        - app-metrics
+      dataTo:
+        - grafana
     capabilities:
       aspects:
         - metrics

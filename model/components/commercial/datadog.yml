@@ -46,8 +46,10 @@ components:
         - datadog-language-agents
         - datadog-language-sdks
         - opencensus
-        - opentracing
+        - opencensus-agent
+        - opencensus-collector
         - opentelemetry
+        - opentelemetry-collector
         - kamon
         - prometheus-client-libs
         - prometheus-exporter
@@ -81,6 +83,8 @@ components:
     description: Datadog provides various SDKs for instrumenting applications to implement distributed tracing. There are different GitHub repositories for different programming languages. All data collection utilities provided by Datadog are open source.
     link: https://www.datadoghq.com/
     github:
+      - DataDog/dd-trace-java
+      - DataDog/dd-trace-dotnet
       - DataDog/dd-trace-js
       - DataDog/dd-trace-py
       - DataDog/dd-trace-rb
@@ -101,3 +105,8 @@ components:
         - c++
         - php
         - ruby
+        - java
+        - .net
+    connections:
+      dataFrom:
+        - opentracing

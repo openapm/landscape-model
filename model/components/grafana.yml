@@ -105,8 +105,10 @@ components:
         - graphite
         - elasticsearch
         - influx-db
+        - influx-cloud
         - open-tsdb
         - prometheus-server
+        - prometheus-push-gateway
         - mysql
         - postgres
         - timescaledb

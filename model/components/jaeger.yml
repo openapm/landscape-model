@@ -37,6 +37,8 @@ components:
     connections:
       dataTo:
         - jaeger-agent
+      dataFrom:
+        - opentracing
   
   # jaeger agent
   - id: jaeger-agent

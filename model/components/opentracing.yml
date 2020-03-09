@@ -32,13 +32,6 @@ components:
         - javascript
       aspects:
         - tracing
-    connections:
-      dataTo:
-        - zipkin-server
-        - jaeger-collector
-        - haystack-agent
-        - inspectit-agent
-        - stagemonitor-agent
 
 
 

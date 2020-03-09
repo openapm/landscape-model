@@ -29,6 +29,8 @@ components:
         - prometheus-server
         - stagemonitor-browserwidget
         - stagemonitor-alerter
+      dataFrom:
+        - opentracing
 
   # stagemonitor browser widget
   - id: stagemonitor-browserwidget

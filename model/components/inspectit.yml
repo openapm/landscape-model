@@ -22,7 +22,10 @@ components:
         - tracing [eum]
         - metrics [eum]
         - metrics [app]
-        - metrics [process]
+        - metrics [process]    
+    connections:
+      dataFrom:
+        - opentracing
 
   # inspectIT Ocelot agent
   - id: inspectit-ocelot-agent

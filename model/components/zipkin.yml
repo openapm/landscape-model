@@ -35,6 +35,9 @@ components:
       aspects:
         - tracing [app]
         - tracing [eum]
+    connections:
+      dataFrom:
+        - opentracing
 
   # zipkin Server
   - id: zipkin-server

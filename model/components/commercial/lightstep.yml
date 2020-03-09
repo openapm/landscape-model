@@ -1,0 +1,70 @@
+---
+components:
+
+    # Lightstep
+  - id: lightstep
+    name: LightStep
+    description: LightStep is a SaaS platform for trace-based observability. It provides visualization, processing, root cause analysis and alerting based on tracing data. For data / trace ingestion LightStep integrates with many different data collection tools from the open source market. 
+    link: https://lightstep.com/
+    twitter: LightStepHQ
+    logo: lightstep
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - tracing
+    connections:
+      dataTo:
+        - grafana
+      dataFrom:
+        - lightstep-tracers
+        - opencensus
+        - opencensus-agent
+        - opencensus-collector
+        - opentelemetry
+        - opentelemetry-collector
+        - jaeger-client
+        - zipkin
+        - elastic-apm-agent
+        - datadog-language-agents
+        - datadog-language-sdks
+    isCommercial: true
+
+  # Lightstep tracers
+  - id: lightstep-tracers
+    name: LightStep Tracers
+    description: LightStep provides a set of open-source tracing SDKs for different programming languages.
+    link: https://lightstep.com/
+    github:
+      - lightstep/lightstep-tracer-javascript
+      - lightstep/lightstep-tracer-go
+      - lightstep/lightstep-tracer-java
+      - lightstep/lightstep-tracer-python
+      - lightstep/lightstep-tracer-cpp
+      - lightstep/lightstep-tracer-ruby
+      - lightstep/lightstep-tracer-php
+      - lightstep/lightstep-tracer-csharp
+      - lightstep/lightstep-tracer-objc
+      - lightstep/lightstep-tracer-android
+    twitter: LightStepHQ
+    logo: lightstep
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - tracing
+      tech:
+        - javascript
+        - go
+        - java
+        - .net
+        - nodejs
+        - python
+        - c++
+        - objc
+        - php
+        - ruby
+        - android
+    connections:
+      dataFrom:
+        - opentracing
