@@ -32,22 +32,10 @@ components:
     logo: wavefront
     categories:
       - collector
-      - metrics
     capabilities:
       aspects:
         - tracing
-      tech:
-        - javascript
-        - go
-        - java
-        - .net
-        - nodejs
-        - python
-        - c++
-        - objc
-        - php
-        - ruby
-        - android
+        - metrics
     connections:
       dataFrom:
         - elastic-beats
