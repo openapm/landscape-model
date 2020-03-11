@@ -1,0 +1,120 @@
+---
+components:
+
+    # Wavefront
+  - id: wavefront
+    name: Wavefront
+    description: Wavefront is a SaaS-based monitoring and analytics platform providing different features to monitor your IT environments, such as data processing, analytics, visualization, alerting and others. Wavefront provides many different integrations to ingest data, such as metrics and traces, from different sources and collection utilities.
+    link: https://www.wavefront.com/
+    twitter: WavefrontHQ
+    logo: wavefront
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+    connections:
+      dataTo:
+        - grafana
+      dataFrom:
+        - wavefront-proxy
+    isCommercial: true
+
+  # Wavefront Proxy
+  - id: wavefront-proxy
+    name: Wavefront Proxy
+    description: The Wavefront proxy is an open source component that serves as a intermediate service to scale up and simplify data collection for Wavefront. The Wavefront proxy is a standalone process that collects, filters, enriches and bundles metrics and traces collected from different processes, applications and systems.
+    link: https://www.wavefront.com/
+    github:
+      - wavefrontHQ/wavefront-proxy
+    twitter: WavefrontHQ
+    logo: wavefront
+    categories:
+      - collector
+      - metrics
+    capabilities:
+      aspects:
+        - tracing
+      tech:
+        - javascript
+        - go
+        - java
+        - .net
+        - nodejs
+        - python
+        - c++
+        - objc
+        - php
+        - ruby
+        - android
+    connections:
+      dataFrom:
+        - elastic-beats
+        - wavefront-sdks
+        - wavefront-j-agent
+        - jaeger-agent
+        - zipkin
+        - influx-telegraf
+        - kamon
+        - micrometer
+        - opencensus
+        - opentelemetry
+  
+    # Wavefront SDKs
+  - id: wavefront-sdks
+    name: Wavefront SDKs
+    description: Wavefront provides a set of different SDKs that allow data collection for the Wavefron service. There is a set of <a href="/landscape/instrumentation-lib/opentracing">OpenTracing</a>-based SDKs for distributed tracing as well as proprietary Wavefront SDKs allowing collection of traces and metrics. 
+    link: https://www.wavefront.com/
+    github:
+      - wavefrontHQ/wavefront-opentracing-sdk-java
+      - wavefrontHQ/wavefront-opentracing-sdk-go
+      - wavefrontHQ/wavefront-opentracing-sdk-python
+      - wavefrontHQ/wavefront-opentracing-sdk-csharp
+      - wavefrontHQ/wavefront-opentracing-sdk-ruby
+      - wavefrontHQ/wavefront-opentracing-sdk-cpp
+      - wavefrontHQ/wavefront-sdk-java
+      - wavefrontHQ/wavefront-sdk-python
+      - wavefrontHQ/wavefront-sdk-cpp
+      - wavefrontHQ/wavefront-sdk-go
+      - wavefrontHQ/wavefront-sdk-ruby
+      - wavefrontHQ/wavefront-sdk-csharp
+    twitter: WavefrontHQ
+    logo: wavefront
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+      tech:
+        - go
+        - java
+        - .net
+        - python
+        - c++
+        - ruby
+    connections:
+      dataFrom:
+        - opentracing
+  
+  # Wavefront Java Agent
+  - id: wavefront-j-agent
+    name: Wavefront J-Agent
+    description: Wavefront provides a Java-agent that utilizes bytecode instrumentation to enable automatic, runtime instrumentation of common Java frameworks and libraries.
+    link: https://www.wavefront.com/
+    github:
+      - wavefrontHQ/wavefront-opentracing-bundle-java
+    twitter: WavefrontHQ
+    logo: wavefront
+    categories:
+      - agent
+    capabilities:
+      aspects:
+        - tracing
+      tech:
+        - java
+    connections:
+      dataFrom:
+        - opentracing
+

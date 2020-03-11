@@ -110,8 +110,6 @@ components:
         - prometheus-server
         - prometheus-push-gateway
         - mysql
-        - postgres
-        - timescaledb
         - influx-telegraf
         - datadog
     capabilities:

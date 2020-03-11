@@ -28,14 +28,14 @@ components:
   # Datadog agent
   - id: datadog-agent
     name: Datadog Agent
-    description: The Datadog Agent is a standalone OS-level process that runs on a host. Its main purpose is to gather traces, metrics and logs from different instrumentation sources on the corredsponding host (such as instrumentation SDKs, bytecode instrumentation agents, etc.) and forward them to the Datadog service.
+    description: The Datadog Agent is a standalone OS-level process that runs on a host. Its main purpose is to gather traces, metrics and logs from different instrumentation and data collection sources on the corredsponding host (such as instrumentation SDKs, bytecode instrumentation agents, etc.) and forward them to the Datadog service. In addition the Datadog Agent collects host and OS-level metrics.
     link: https://www.datadoghq.com/
     github:
       - DataDog/datadog-agent
     twitter: datadoghq
     logo: datadog
     categories:
-      - agent
+      - collector
     capabilities:
       aspects:
         - tracing
@@ -56,10 +56,11 @@ components:
         - influx-telegraf
         - nagios-core
         - fluentd
+        - micrometer
 
   # Datadog language agent
   - id: datadog-language-agents
-    name: Datadog Language Agents
+    name: DD Language Agents
     description: For the purpose of distributed tracing Datadog provides automatic instrumentation agents for Java and .NET. The agents provided by Datadog are open source.
     link: https://www.datadoghq.com/
     github:
@@ -79,7 +80,7 @@ components:
 
   # Datadog language SDKs
   - id: datadog-language-sdks
-    name: Datadog Language SDKs
+    name: DD Language SDKs
     description: Datadog provides various SDKs for instrumenting applications to implement distributed tracing. There are different GitHub repositories for different programming languages. All data collection utilities provided by Datadog are open source.
     link: https://www.datadoghq.com/
     github:

@@ -28,6 +28,8 @@ components:
         - elastic-apm-agent
         - datadog-language-agents
         - datadog-language-sdks
+        - wavefront-j-agent
+        - wavefront-sdks
     isCommercial: true
 
   # Lightstep tracers
