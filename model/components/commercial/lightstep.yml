@@ -48,6 +48,8 @@ components:
       - lightstep/lightstep-tracer-csharp
       - lightstep/lightstep-tracer-objc
       - lightstep/lightstep-tracer-android
+    license:
+      - Apache License 2.0
     twitter: LightStepHQ
     logo: lightstep
     categories:

@@ -1,0 +1,127 @@
+---
+components:
+
+  # Honeycomb
+  - id: honeycomb
+    name: Honeycomb
+    description: Honeycomb is a platform for analysing distributed IT systems. Honeycomb gathers different type of data (events, traces, metrics) from different sources, such as custom code, mobile devices, IoT Devices, etc. It provides features to analyze, debug and visualize the data.
+    link: https://www.honeycomb.io/
+    twitter: honeycombio
+    logo: honeycomb
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+    connections:
+      dataTo:
+        - grafana
+      dataFrom:
+        - honeycomb-ot-proxy
+        - honeycomb-libhoney
+        - honeycomb-beeline
+        - honeycomb-honeytail
+        - logstash
+        - fluentd
+    isCommercial: true
+  
+  # Honeycomb OT Proxy
+  - 
+    id: honeycomb-ot-proxy
+    name: Honeycomb OT Proxy
+    description: Honeycomb OpenTracing Proxy is a lightweight standalone process serving as a replacement for the Zipkin collector. It converts Zipkin format data and forwards it to Honeycomb.
+    link: https://www.honeycomb.io/
+    github:
+      - honeycombio/honeycomb-opentracing-proxy
+    license:
+      - Apache License 2.0
+    twitter: honeycombio
+    logo: honeycomb
+    categories:
+      - collector
+    capabilities:
+      aspects:
+        - tracing
+    connections:
+      dataFrom:
+        - zipkin
+        - opencensus
+        - opentelemetry
+
+  # Honeycomb SDKs
+  - 
+    id: honeycomb-libhoney
+    name: LibHoney
+    description: LibHoney is Honeycomb's set of SDKs for instrumenting applications. For different programming languages there are different LibHoney SDKs that allow to gather data in corresponding applications and send the data to Honeycomb.
+    link: https://www.honeycomb.io/
+    github:
+      - honeycombio/libhoney-js
+      - honeycombio/libhoney-go
+      - honeycombio/libhoney-rb
+      - honeycombio/libhoney-py
+      - honeycombio/libhoney-java
+    license:
+      - Apache License 2.0
+    twitter: honeycombio
+    logo: honeycomb
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+      tech:
+        - java
+  
+  # Honeycomb Beeline
+  - id: honeycomb-beeline
+    name: Beeline
+    description: Honeycomb Beeline is a set of libraries for different programming languages that provides utilities to easily start collecting data for different, common frameworks. 
+    link: https://docs.honeycomb.io/getting-data-in/beelines/
+    github:
+      - honeycombio/beeline-java
+      - honeycombio/beeline-go
+      - honeycombio/beeline-nodejs
+      - honeycombio/beeline-python
+      - honeycombio/beeline-ruby
+    license:
+      - Apache License 2.0
+    twitter: honeycombio
+    logo: honeycomb
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - tracing
+      tech:
+        - java
+        - go
+        - nodejs
+        - python
+        - ruby
+    connections:
+      dataFrom:
+        - opentracing
+
+    # Honeycomb Honeytail
+  - id: honeycomb-honeytail
+    name: Honeytail
+    description: Honeytail is lightweight log collector that tails existing log files, parses the content, and sends it up to Honeycomb.
+    link: https://docs.honeycomb.io/getting-data-in/integrations/honeytail/
+    github:
+      - honeycombio/honeytail
+    license:
+      - Apache License 2.0
+    twitter: honeycombio
+    logo: honeycomb
+    categories:
+      - collector
+    capabilities:
+      aspects:
+        - logs
+    connections:
+      dataFrom:
+        - opentracing
+

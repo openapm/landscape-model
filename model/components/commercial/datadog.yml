@@ -32,6 +32,8 @@ components:
     link: https://www.datadoghq.com/
     github:
       - DataDog/datadog-agent
+    license:
+      - Apache License 2.0
     twitter: datadoghq
     logo: datadog
     categories:
@@ -67,6 +69,8 @@ components:
       - DataDog/dd-trace-java
       - DataDog/dd-trace-dotnet
       - DataDog/dd-trace-js
+    license:
+      - Apache License 2.0
     twitter: datadoghq
     logo: datadog
     categories:
@@ -91,6 +95,8 @@ components:
       - DataDog/dd-trace-rb
       - DataDog/dd-trace-go
       - DataDog/dd-trace-php
+    license:
+      - Apache License 2.0
     twitter: datadoghq
     logo: datadog
     categories:

@@ -28,6 +28,8 @@ components:
     link: https://www.wavefront.com/
     github:
       - wavefrontHQ/wavefront-proxy
+    license:
+      - Apache License 2.0
     twitter: WavefrontHQ
     logo: wavefront
     categories:
@@ -67,6 +69,8 @@ components:
       - wavefrontHQ/wavefront-sdk-go
       - wavefrontHQ/wavefront-sdk-ruby
       - wavefrontHQ/wavefront-sdk-csharp
+    license:
+      - Apache License 2.0
     twitter: WavefrontHQ
     logo: wavefront
     categories:
@@ -93,6 +97,8 @@ components:
     link: https://www.wavefront.com/
     github:
       - wavefrontHQ/wavefront-opentracing-bundle-java
+    license:
+      - Apache License 2.0
     twitter: WavefrontHQ
     logo: wavefront
     categories:
