@@ -112,6 +112,7 @@ components:
         - mysql
         - influx-telegraf
         - datadog
+        - newrelic
     capabilities:
       aspects:
         - metrics

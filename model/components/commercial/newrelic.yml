@@ -1,0 +1,116 @@
+---
+components:
+
+    # NewRelic
+  - id: newrelic
+    name: New Relic
+    description: New Relic provides a variety of different features including application performance management, end user monitoring, log analytics, infrastructure Monitoring, etc. as part of their SaaS-based observability platform called New Relic One™. New Relic allows to process, analyze, visualize and act upon data gathered from different sources. Through their open API, New Relic integrates with different open source monitoring and data collection utilities.
+    link: https://newrelic.com/
+    twitter: newrelic
+    logo: newrelic
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+    connections:
+      dataTo:
+        - grafana
+      dataFrom:
+        - newrelic-agents
+        - newrelic-sdks
+        - newrelic-prometheus-integration
+        - opencensus
+        - opentelemetry
+        - zipkin
+        - micrometer
+        - fluentd
+        - fluentbit
+        - logstash
+    isCommercial: true
+  
+  # NewRelic Agent
+  - id: newrelic-agents
+    name: New Relic Agents
+    description: New Relic provides different language-specific agents for application data collection as well as an infrastructure agent to gather system data. New Relic agents are sending their collected data directly to the New Relic SaaS platform.
+    link: https://docs.newrelic.com/docs/agents/manage-apm-agents/installation/compatibility-requirements-new-relic-agents-products
+    twitter: newrelic
+    logo: newrelic
+    categories:
+      - agent
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+      tech:
+        - java
+        - c++
+        - go
+        - .net 
+        - nodejs
+        - php
+        - python
+        - ruby
+    isCommercial: true
+
+
+  # NewRelic SDKs
+  - id: newrelic-sdks
+    name: NR Telemetry SDKs
+    description: New Relic provides a set of language-specific SDKs for instrumenting applications and services ain different languages. The SDKs allow to collect distributed tracing information as well as metrics and send the data to the New Relic platform.
+    link: https://docs.newrelic.com/docs/data-ingest-apis/get-data-new-relic/new-relic-sdks/telemetry-sdks-send-custom-telemetry-data-new-relic#client-libraries
+    twitter: newrelic
+    logo: newrelic
+    github:
+      - newrelic/newrelic-telemetry-sdk-java
+      - newrelic/newrelic-telemetry-sdk-dotnet
+      - newrelic/newrelic-telemetry-sdk-python
+      - newrelic/newrelic-telemetry-sdk-go
+      - newrelic/newrelic-telemetry-sdk-node
+    license:
+      - Apache License 2.0
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+      tech:
+        - java
+        - .net
+        - python
+        - go 
+        - nodejs
+    connections:
+      dataTo:
+        - grafana
+
+  # NewRelic SDKs
+  - id: newrelic-prometheus-integration
+    name: NRI Prometheus
+    description: This utility fetches metrics from Prometheus endpoints and sends them to the NewRelic platform.
+    link: https://docs.newrelic.com/docs/integrations/prometheus-integrations/get-started/new-relic-prometheus-openmetrics-integration-docker
+    twitter: newrelic
+    logo: newrelic
+    github:
+      - newrelic/nri-prometheus
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+    capabilities:
+      aspects:
+        - metrics
+      tech:
+        - docker
+        - kubernetes
+    connections:
+      dataFrom:
+        - opencensus
+        - opentelemetry
+        - kamon
+        - prometheus-client-libs
+        - prometheus-exporter
+        - influx-telegraf
