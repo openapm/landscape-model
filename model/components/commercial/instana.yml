@@ -1,0 +1,99 @@
+---
+components:
+
+    # Instana
+  - id: instana
+    name: Instana
+    description: Instana is an Application Performance Management platform with a focus on microservice environments. Based on automatic data collection Instana provides insights into application behaviour, infrastructure as well as end user monitoring. It comes with automated, AI-based anomaly detection and correlation. Instana allows for ingesting custom data through open standards such as OpenTracing, OpenCensus and OpenTelemetry.
+    link: https://www.instana.com/
+    twitter: InstanaHQ
+    logo: instana
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+    connections:
+      dataTo:
+        - grafana
+      dataFrom:
+        - instana-agent
+    isCommercial: true
+  
+  # Instana agent
+  - id: instana-agent
+    name: Instana Agent
+    description: The Instana Agent is a central component on each system node that to collect monitoring data such as traces, metrics and logs. There are different deployments for the Instana Agent (Linux, Windows, Kubernetes, etc.). Beyond the pure collection of data, the Instana Agent automates instrumentation and rolls out Instana's AutoTrace™ technology on corresponding nodes.
+    link: https://docs.instana.io/quick_start/agent_setup/
+    twitter: InstanaHQ
+    logo: instana
+    categories:
+      - collector
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+    connections:
+      dataFrom:
+        - instana-sdks
+        - instana-autotrace
+        - zipkin
+        - jaeger-client
+        - opencensus
+        - opentelemetry
+    isCommercial: true
+
+  # Instana AutoTrace
+  - id: instana-autotrace
+    name: Instana AutoTrace™
+    description: Instana AutoTrace™ is Instana's proprietary technology for automated, zero-effort distributed tracing as well as service and topology discovery. The Instana Agent automatically provides the AutoTrace™ technology on corresponding system nodes.
+    link: https://www.instana.com/supported-technologies/instana-autotrace/
+    twitter: InstanaHQ
+    logo: instana
+    categories:
+      - agent
+    capabilities:
+      aspects:
+        - tracing
+      tech:
+        - java
+        - .net
+        - php
+        - python
+    isCommercial: true
+
+  # Instana SDKs
+  - id: instana-sdks
+    name: Instana SDKs
+    description: Instana provides a set of SDKs for instrumenting applications in different languages and send the data to the Instana Agent. Some of the SDK implementations are OpenTracing compatible. 
+    link: https://docs.instana.io/quick_start/custom_tracing/#instana-language-tracing-sdks
+    twitter: InstanaHQ
+    logo: instana
+    github:
+      - instana/instana-java-sdk
+      - instana/instana-php-sdk
+      - instana/instana-java-opentracing
+      - instana/instana-php-opentracing
+      - instana/go-sensor
+      - instana/nodejs-sensor
+      - instana/python-sensor
+    license:
+      - MIT License
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - tracing
+      tech:
+        - java
+        - .net
+        - php
+        - python
+        - go 
+        - nodejs
+    connections:
+      dataFrom:
+        - opentracing
