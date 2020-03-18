@@ -1,0 +1,29 @@
+---
+components:
+
+  # thanos
+  - id: thanos
+    name: Thanos
+    description: Thanos is an CNCF project, set of components that can be composed into a highly available metric system with unlimited storage capacity, which can be added seamlessly on top of existing Prometheus deployments.
+    link: https://thanos.io/
+    github:
+      - thanos-io/thanos
+    twitter: ThanosMetrics
+    logo: thanos
+    license:
+      - Apache License 2.0
+    categories:
+      - visualization
+      - storage
+    connections:
+      dataFrom:
+        - prometheus-server
+        - open-tsdb
+      dataTo:
+        - prometheus-server
+        - prometheus-alerting
+        - grafana
+    capabilities:
+      aspects:
+        - metrics
+
