@@ -52,6 +52,8 @@ components:
         - kieker-analysis
         - kieker-trace-diagnosis-gui
         - kieker-trace-analysis-ui
+      dataFrom:
+        - opencensus
 
 # kieker monitoring libraries
   - id: kieker-monitoring-libraries
