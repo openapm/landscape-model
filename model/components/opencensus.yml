@@ -42,6 +42,8 @@ components:
         - influx-telegraf
         - haystack-agent
         - influx-db
+        - elastic-apm
+        - elastic-beats
 
   # opencensus Agent
   - id: opencensus-agent
