@@ -1,0 +1,58 @@
+---
+components:
+
+    # Sysdig Metrics Store
+  - id: sysdig-metrics-store
+    name: Sysdig Metrics Store
+    description: The Sysdig Secure DevOps Platform converges security and compliance with performance and capacity monitoring to create a secure DevOps workflow.
+    link: https://sysdig.com
+    twitter: sysdig
+    logo: sysdig
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - metrics
+    connections:
+      dataTo:
+        - grafana
+        - sysdig-monitor
+      dataFrom:
+        - sysdig-agent
+    isCommercial: true
+
+  - id: sysdig-monitor
+    name: Sysdig Monitor
+    description:  Sysdig Monitor is a monitoring, troubleshooting, and alerting suite offering deep, process-level visibility into dynamic, distributed production environments. Sysdig Monitor captures, correlates, and visualizes full-stack data, and provides dashboards for monitoring.
+    link: https://sysdig.com
+    twitter: sysdig
+    logo: sysdig
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - metrics
+    connections:
+      dataFrom:
+        - sysdig-metrics-store
+    isCommercial: true
+
+  - id: sysdig-agent
+    name: Sysdig Agent
+    description: Sysdig Agent is capable of collecting various infrastructure metrics such as Prometheus and Kubernetes metrics. 
+    link: https://sysdig.com
+    twitter: sysdig
+    logo: sysdig
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - metrics
+    connections:
+      dataTo:
+        - sysdig-monitor
+      dataFrom:
+        - prometheus-client-libs
+        - prometheus-exporter
+        - statsd
+    isCommercial: true
