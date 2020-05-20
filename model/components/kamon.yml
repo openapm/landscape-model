@@ -24,9 +24,10 @@ components:
         - metrics [process]
         - metrics [host]
     connections:
+      includesTo:
+        - prometheus-exposition-format
+        - zipkin-format
+        - jaeger-format
       dataTo:
-        - prometheus-server
         - influx-db
         - statsd
-        - zipkin-server
-        - jaeger-collector

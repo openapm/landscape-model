@@ -26,7 +26,6 @@ components:
       dataTo:
         - elasticsearch
         - kafka
-        - prometheus-server
         - influx-db
         - rabbitmq
         - cassandra

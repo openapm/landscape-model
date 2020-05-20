@@ -14,6 +14,9 @@ components:
       aspects:
         - tracing
     connections:
+      includesFrom:
+        - jaeger-format
+        - zipkin-format
       dataTo:
         - grafana
       dataFrom:
@@ -23,8 +26,6 @@ components:
         - opencensus-collector
         - opentelemetry
         - opentelemetry-collector
-        - jaeger-client
-        - zipkin
         - elastic-apm-agent
         - datadog-language-agents
         - datadog-language-sdks

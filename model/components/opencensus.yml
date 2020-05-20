@@ -35,15 +35,14 @@ components:
         - metrics [app]
         - metrics [process]
     connections:
+      includesTo:
+        - prometheus-exposition-format
+        - jaeger-format
+        - zipkin-format
       dataTo:
-        - prometheus-server
-        - zipkin-server
-        - jaeger-collector
         - influx-telegraf
         - haystack-agent
         - influx-db
-        - elastic-apm
-        - elastic-beats
 
   # opencensus Agent
   - id: opencensus-agent
@@ -63,19 +62,18 @@ components:
         - tracing
         - metrics
     connections:
+      includesFrom:
+        - prometheus-exposition-format
+        - jaeger-format
+        - zipkin-format
+      includesTo:
+        - prometheus-exposition-format
+        - jaeger-format
+        - zipkin-format
       dataTo:
-        - prometheus-server
-        - zipkin-server
-        - jaeger-collector
-        - influx-telegraf
         - kafka
       dataFrom:
         - opencensus
-        - prometheus-client-libs
-        - prometheus-exporter
-        - jaeger-client
-        - zipkin
-        - influx-telegraf
 
 
   # opencensus Collector
@@ -97,17 +95,15 @@ components:
         - tracing
         - metrics
     connections:
+      includesFrom:
+        - prometheus-exposition-format
+        - jaeger-format
+        - zipkin-format
+      includesTo:
+        - prometheus-exposition-format
+        - jaeger-format
+        - zipkin-format
       dataTo:
-        - prometheus-server
-        - zipkin-server
-        - jaeger-collector
-        - influx-telegraf
         - kafka
       dataFrom:
-        - opencensus
         - opencensus-agent
-        - prometheus-client-libs
-        - prometheus-exporter
-        - jaeger-client
-        - zipkin
-        - influx-telegraf

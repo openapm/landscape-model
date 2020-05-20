@@ -23,8 +23,9 @@ components:
       frameworks:
         - spring
     connections:
+      includesTo:
+        - prometheus-exposition-format
       dataTo:
-        - prometheus-server
         - netflix-atlas
         - graphite
         - influx-db

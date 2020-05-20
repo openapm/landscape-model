@@ -41,8 +41,7 @@ components:
         - graylog
         - icinga2-server
         - kibana
-        - prometheus-client-libs
-        - prometheus-exporter
+        - prometheus-exposition-format
         - statsd
         - influx-kapacitor
         - zipkin-server
@@ -57,8 +56,9 @@ components:
         - graylog
         - influx-db
         - open-tsdb
-        - prometheus-server  
         - rsyslog
+      includesTo:
+        - prometheus-exposition-format
     capabilities:
       aspects:
         - metrics

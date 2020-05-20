@@ -101,14 +101,14 @@ components:
     categories:
       - commercial-services
     connections:
+      includesFrom:
+        - prometheus-server
       dataFrom:
         - graphite
         - elasticsearch
         - influx-db
         - influx-cloud
         - open-tsdb
-        - prometheus-server
-        - prometheus-push-gateway
         - mysql
         - influx-telegraf
         - datadog

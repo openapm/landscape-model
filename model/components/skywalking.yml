@@ -66,9 +66,10 @@ components:
     categories:
       - collector
     connections:
+      includesFrom:
+        - jaeger-format
+        - zipkin-format
       dataFrom:
-        - skywalking
-        - jaeger-agent
         - zipkin
       dataTo:
         - elasticsearch

@@ -98,3 +98,20 @@ components:
         - icinga2-server
         - elasticsearch
         - logstash
+  
+    # Icinga2 Prometheus Exporter
+  - id: icing2prometheus-exporter
+    name: Icinga2 Exporter
+    description: The icinga2-exporter utilizes the Icinga 2 REST API to fetch service based performance data and publish it in a way that lets Prometheus scrape the performance data as metrics.
+    link: https://opsdis.com/released-an-icinga2-prometheus-exporter/
+    github:
+      - opsdis/icinga2-exporter
+    license:
+      - GNU GPLv3
+    categories:
+      - data-processing
+    connections:
+      dataFrom:
+        - icinga2-server
+      includesTo:
+        - prometheus-exposition-format

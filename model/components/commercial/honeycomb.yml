@@ -28,8 +28,7 @@ components:
     isCommercial: true
   
   # Honeycomb OT Proxy
-  - 
-    id: honeycomb-ot-proxy
+  - id: honeycomb-ot-proxy
     name: Honeycomb OT Proxy
     description: Honeycomb OpenTracing Proxy is a lightweight standalone process serving as a replacement for the Zipkin collector. It converts Zipkin format data and forwards it to Honeycomb.
     link: https://www.honeycomb.io/
@@ -45,14 +44,14 @@ components:
       aspects:
         - tracing
     connections:
+      includesFrom:
+        - zipkin-format
       dataFrom:
-        - zipkin
         - opencensus
         - opentelemetry
 
   # Honeycomb SDKs
-  - 
-    id: honeycomb-libhoney
+  - id: honeycomb-libhoney
     name: LibHoney
     description: LibHoney is Honeycomb's set of SDKs for instrumenting applications. For different programming languages there are different LibHoney SDKs that allow to gather data in corresponding applications and send the data to Honeycomb.
     link: https://www.honeycomb.io/

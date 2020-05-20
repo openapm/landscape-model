@@ -1,5 +1,21 @@
 ---
 components:
+  # Zipkin trace format
+  - id: zipkin-format
+    name: Zipkin Format
+    description: The Zipkin Format defines a JSON-based tracing format. Besides Zipkin itself, there are many other tools that support the Jaeger Tracing Format.
+    link: https://zipkin.io/pages/data_model.html
+    github:
+      - openzipkin/zipkin
+    twitter: zipkinproject
+    logo: zipkin
+    license:
+      - Apache License 2.0
+    categories:
+      - format
+    capabilities:
+      aspects:
+        - tracing
 
   # zipkin
   - id: zipkin
@@ -38,6 +54,9 @@ components:
     connections:
       dataFrom:
         - opentracing
+      includesTo:
+        - zipkin-format
+      
 
   # zipkin Server
   - id: zipkin-server
@@ -54,8 +73,8 @@ components:
       - collector
       - visualization
     connections:
-      dataFrom:
-        - zipkin
+      includesFrom:
+        - zipkin-format
       dataTo:
         - cassandra
         - elasticsearch

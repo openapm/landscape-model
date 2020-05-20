@@ -1,5 +1,21 @@
 ---
 components:
+  # Prometheus Exposition Format
+  - id: prometheus-exposition-format
+    name: Prometheus Format
+    description: The Prometheus Exposition Format is an industry standard for exposing metrics in a textual format. Many different tools support scraping of metrics exposed in the Prometheus Exposition Format. 
+    link: https://prometheus.io/docs/instrumenting/exposition_formats/#text-based-format
+    github:
+      - prometheus/docs
+    twitter: PrometheusIO
+    logo: prometheus
+    license:
+      - Apache License 2.0
+    categories:
+      - format
+    capabilities:
+      aspects:
+        - metrics
 
   # prometheus ClientLibs
   - id: prometheus-client-libs
@@ -50,6 +66,11 @@ components:
       aspects:
         - metrics [app]
         - metrics [process]
+    connections:
+      dataTo:
+        - prometheus-push-gateway
+      includesTo:
+        - prometheus-exposition-format
 
   # prometheus Server
   - id: prometheus-server
@@ -67,9 +88,6 @@ components:
       - visualization
       - storage
     connections:
-      dataFrom:
-        - prometheus-exporter
-        - prometheus-client-libs
       dataTo:
         - graphite
         - influx-db
@@ -81,6 +99,8 @@ components:
         - postgres
         - timescaledb
         - grafana
+      includesFrom:
+        - prometheus-exposition-format
     capabilities:
       aspects:
         - metrics
@@ -145,6 +165,11 @@ components:
         - influx-db
       os:
         - linux
+    connections:
+      dataTo:
+        - prometheus-push-gateway
+      includesTo:
+        - prometheus-exposition-format
 
   # prometheus push gateway
   - id: prometheus-push-gateway
@@ -163,7 +188,5 @@ components:
       aspects:
         - metrics
     connections:
-      dataFrom:
-        - prometheus-client-libs
-      dataTo:
-        - prometheus-server
+      includesTo:
+        - prometheus-exposition-format

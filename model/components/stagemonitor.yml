@@ -22,11 +22,12 @@ components:
         - metrics [app]
         - metrics [process]
     connections:
+      includesTo:
+        - prometheus-exposition-format
       dataTo:
         - elasticsearch
         - graphite
         - influx-db
-        - prometheus-server
         - stagemonitor-browserwidget
         - stagemonitor-alerter
       dataFrom:
@@ -85,10 +86,11 @@ components:
         aspects:
           - metrics [host]
     connections:
+      includesTo:
+        - prometheus-exposition-format
       dataTo:
         - elasticsearch
         - graphite
         - influx-db
-        - prometheus-server
         - stagemonitor-browserwidget
         - stagemonitor-alerter

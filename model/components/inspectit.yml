@@ -41,7 +41,7 @@ components:
     categories:
       - agent
     connections:
-      dataTo:
+      includesTo:
         - opencensus
     capabilities:
       tech:
@@ -111,7 +111,7 @@ components:
     connections:
       dataFrom:
         - boomerang
-      dataTo:
+      includesTo:
         - opencensus
     capabilities:
       aspects:

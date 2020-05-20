@@ -52,7 +52,6 @@ components:
       dataTo:
         - sysdig-monitor
       dataFrom:
-        - prometheus-client-libs
-        - prometheus-exporter
+        - prometheus-exposition-format
         - statsd
     isCommercial: true

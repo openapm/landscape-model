@@ -1,7 +1,23 @@
 ---
 components:
+  # jaeger tracing format
+  - id: jaeger-format
+    name: Jaeger Format
+    description: The Jaeger Format defines a tracing format based on <a href="https://github.com/jaegertracing/jaeger-idl/tree/master/thrift">Jaeger Thrift</a> and <a href="https://developers.google.com/protocol-buffers">Protobuf</a>. Besides Jaeger itself, there are many other tools that support the Jaeger Tracing Format.
+    link: https://www.jaegertracing.io/docs/1.16/apis/
+    github:
+      - jaegertracing/jaeger
+    twitter: JaegerTracing
+    logo: jaeger
+    license:
+      - Apache License 2.0
+    categories:
+      - format
+    capabilities:
+      aspects:
+        - tracing
 
-    # jaeger client
+  # jaeger client
   - id: jaeger-client
     name: Jaeger Client
     description: Jaeger clients are language specific implementations of the OpenTracing API. They can be used to instrument applications for distributed tracing either manually or with a variety of existing open source frameworks.
@@ -35,10 +51,10 @@ components:
         - jdbc
         - ldap
     connections:
-      dataTo:
-        - jaeger-agent
       dataFrom:
         - opentracing
+      includesTo:
+        - jaeger-format
   
   # jaeger agent
   - id: jaeger-agent
@@ -58,8 +74,10 @@ components:
         - tracing [app]
         - tracing [eum]
     connections:
-      dataTo:
-        - jaeger-collector
+      includesFrom:
+        - jaeger-format
+      includesTo:
+        - jaeger-format
 
   # jaeger Collector
   - id: jaeger-collector
@@ -75,12 +93,13 @@ components:
     categories:
       - collector
     connections:
+      includesFrom:
+        - jaeger-format
+        - zipkin-format
       dataTo:
         - cassandra
         - elasticsearch
         - kafka
-      dataFrom:
-        - zipkin
     capabilities:
       aspects:
         - tracing

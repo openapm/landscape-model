@@ -185,8 +185,9 @@ components:
     categories:
       - collector
     connections:
-      dataFrom:
-        - zipkin
+      includesFrom:
+        - zipkin-format
+      includesTo:
+        - zipkin-format
       dataTo:
-        - zipkin-server
         - kafka

@@ -20,7 +20,13 @@ categories:
 
   - id: transport
     name: Transport
-    description: The transport tools simply serve as transport pipelines for data. This includes messaging systems, proprietary protocols and exchange formats. 
+    description: The transport tools simply serve as transport pipelines for data, e.g. messaging systems and protocols. 
+    capabilities: 
+      - aspects
+
+  - id: format
+    name: Format
+    description: Explicit Formats. 
     capabilities: 
       - aspects
 

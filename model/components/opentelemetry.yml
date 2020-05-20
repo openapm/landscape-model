@@ -39,10 +39,11 @@ components:
         - metrics [app]
         - metrics [process]
     connections:
+      includesTo:
+        - prometheus-exposition-format
+        - jaeger-format
+        - zipkin-format
       dataTo:
-        - prometheus-server
-        - zipkin-server
-        - jaeger-collector
         - influx-telegraf
         - haystack-agent
         - influx-db
@@ -66,16 +67,16 @@ components:
         - tracing
         - metrics
     connections:
+      includesFrom:
+        - prometheus-exposition-format
+        - jaeger-format
+        - zipkin-format
+      includesTo:
+        - prometheus-exposition-format
+        - jaeger-format
+        - zipkin-format
       dataTo:
-        - prometheus-server
-        - zipkin-server
-        - jaeger-collector
-        - influx-telegraf
         - kafka
       dataFrom:
         - opentelemetry
-        - prometheus-client-libs
-        - prometheus-exporter
-        - jaeger-client
-        - zipkin
-        - influx-telegraf
+

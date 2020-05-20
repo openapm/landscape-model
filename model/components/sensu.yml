@@ -40,9 +40,9 @@ components:
       aspects:
         - metrics
     connections:
+      includesFrom:
+        - prometheus-exposition-format
       dataFrom:
-        - prometheus-client-libs
-        - prometheus-exporter
         - rabbitmq
       dataTo:
         - redis

@@ -43,13 +43,9 @@ components:
         - elastic-beats
         - wavefront-sdks
         - wavefront-j-agent
-        - jaeger-agent
-        - zipkin
-        - influx-telegraf
-        - kamon
-        - micrometer
-        - opencensus
-        - opentelemetry
+        - zipkin-format
+        - jaeger-format
+        - prometheus-exposition-format
   
     # Wavefront SDKs
   - id: wavefront-sdks

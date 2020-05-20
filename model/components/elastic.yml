@@ -21,6 +21,8 @@ components:
         - metrics [process]
         - logs
     connections:
+      includesFrom:
+        - prometheus-exposition-format
       dataFrom:
         - kafka
         - redis
@@ -81,6 +83,8 @@ components:
     categories:
       - collector
     connections:
+      includesFrom:
+        - jaeger-format
       dataTo:
         - elasticsearch
     capabilities:

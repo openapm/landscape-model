@@ -37,11 +37,12 @@ components:
         - metrics
         - logs
     connections:
+      includesFrom:
+        - zipkin-format
+        - jaeger-format
       dataFrom:
         - instana-sdks
         - instana-autotrace
-        - zipkin
-        - jaeger-client
         - opencensus
         - opentelemetry
     isCommercial: true

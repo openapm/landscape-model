@@ -33,6 +33,8 @@ components:
         - metrics [app]
         - metrics [process]
     connections:
+      includesTo:
+        - prometheus-exposition-format
       dataTo:
         - kafka
         - influx-db

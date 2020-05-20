@@ -108,9 +108,8 @@ components:
         - kubernetes
     connections:
       dataFrom:
+        - prometheus-exposition-format
         - opencensus
         - opentelemetry
         - kamon
-        - prometheus-client-libs
-        - prometheus-exporter
         - influx-telegraf

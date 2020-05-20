@@ -45,20 +45,13 @@ components:
         - logs
     connections:
       dataFrom:
+        - prometheus-exposition-format
         - datadog-language-agents
         - datadog-language-sdks
         - opencensus
-        - opencensus-agent
-        - opencensus-collector
         - opentelemetry
-        - opentelemetry-collector
-        - kamon
-        - prometheus-client-libs
-        - prometheus-exporter
-        - influx-telegraf
         - nagios-core
         - fluentd
-        - micrometer
 
   # Datadog language agent
   - id: datadog-language-agents
