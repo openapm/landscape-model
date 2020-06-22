@@ -1,0 +1,54 @@
+---
+components:
+
+    # Epsagon
+  - id: epsagon
+    name: Epsagon
+    description: Applied Observability for Modern Applications.
+    link: https://epsagon.com/
+    twitter: epsagon
+    logo: epsagon
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+        - visualization
+        - dashboarding
+    connections:
+      dataTo:
+        - grafana
+      dataFrom:
+        - epsagon-tracing
+    isCommercial: true
+  
+  # Epsagon agents
+  - id: epsagon-tracing
+    name: Epsagon Tracing
+    description: The Epsagon tracing libraries that gather traces, metrics, logs and errors.
+    link: https://epsagon.com/
+    github:
+      - epsagon/epsagon-node
+      - epsagon/epsagon-python
+      - epsagon/epsagon-java
+      - epsagon/epsagon-dotnet
+      - epsagon/epsagon-go
+    license:
+      - MIT License
+    twitter: epsagon
+    logo: epsagon
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+      tech: 
+        - python
+        - node
+        - java
+        - go
+        - .net
