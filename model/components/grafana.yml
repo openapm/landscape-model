@@ -25,6 +25,7 @@ components:
         - mysql
         - postgres
         - timescaledb
+        - victoriametrics
      
   # Metrictank
   - id: metrictank

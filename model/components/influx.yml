@@ -53,6 +53,7 @@ components:
         - influx-db
         - open-tsdb
         - rsyslog
+        - victoriametrics
       includesTo:
         - prometheus-exposition-format
     capabilities:
