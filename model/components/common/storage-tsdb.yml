@@ -50,20 +50,3 @@ components:
     capabilities:
       aspects:
         - metrics
-
-  # victoriametrics
-  - id: victoriametrics
-    name: VictoriaMetrics
-    description: VictoriaMetrics is cost-effective open source time series database with easy setup and operation.
-    link: https://victoriametrics.com/
-    github:
-      - VictoriaMetrics/VictoriaMetrics
-    twitter: MetricsVictoria
-    logo: victoriametrics
-    license:
-      - Apache License 2.0
-    categories:
-      - storage
-    capabilities:
-      aspects:
-        - metrics

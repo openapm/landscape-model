@@ -1,0 +1,69 @@
+---
+components:
+
+  # VictoriaMetrics
+  - id: victoriametrics
+    name: VictoriaMetrics
+    description: VictoriaMetrics is cost-effective open source time series database with easy setup and operation.
+    link: https://victoriametrics.com/
+    github:
+      - VictoriaMetrics/VictoriaMetrics
+    twitter: MetricsVictoria
+    logo: victoriametrics
+    license:
+      - Apache License 2.0
+    categories:
+      - storage
+    capabilities:
+      aspects:
+        - metrics
+
+  # vmagent
+  - id: vmagent
+    name: vmagent
+    description: Vmagent collects metrics via various data ingestion protocols (both pull and push-based), applies relabeling and filtering to these metrics and routes them to the configured destination. Vmagent can be used as drop-in replacement for scraping Prometheus exporters. It can also replicate data among multiple destinations.
+    link: https://victoriametrics.github.io/vmagent.html
+    github:
+      - VictoriaMetrics/VictoriaMetrics/tree/master/app/vmagent
+    twitter: MetricsVictoria
+    logo: victoriametrics
+    license:
+      - Apache License 2.0
+    categories:
+      - collector
+      - agent
+    connections:
+      dataFrom:
+        - prometheus-exposition-format
+        - statsd
+        - influx-telegraf
+      dataTo:
+        - victoriametrics
+        - cortex
+        - m3db
+      includesTo:
+        - prometheus-exposition-format
+    capabilities:
+      aspects:
+        - metrics
+
+  # vmalert
+  - id: vmalert
+    name: vmalert
+    description: Vmalert executes Prometheus-compatible alerts and recording rules against any service that supports Prometheus querying API.
+    link: https://victoriametrics.github.io/vmalert.html
+    github:
+      - VictoriaMetrics/VictoriaMetrics/tree/master/app/vmalert
+    twitter: MetricsVictoria
+    logo: victoriametrics
+    license:
+      - Apache License 2.0
+    categories:
+      - alerting
+      - data-processing
+    connections:
+      dataFrom:
+        - influx-db
+    capabilities:
+      aspects:
+        - metrics
