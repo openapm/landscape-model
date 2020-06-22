@@ -4,7 +4,7 @@ components:
   # VictoriaMetrics
   - id: victoriametrics
     name: VictoriaMetrics
-    description: VictoriaMetrics is cost-effective open source time series database with easy setup and operation.
+    description: VictoriaMetrics is cost-effective open source time series database with easy setup and operation. It supports PromQL-compatible query language and Prometheus querying API, so it can be used as drop-in replacement for Prometheus in Grafana.
     link: https://victoriametrics.com/
     github:
       - VictoriaMetrics/VictoriaMetrics
