@@ -116,16 +116,13 @@ components:
         - elasticsearch
         - graphite
         - statsd
-        - ganglia
         - kafka
         - mongo
-        - nagios
-        - opentsdb
+        - nagios-core
+        - open-tsdb
         - rabbitmq
         - redis
-        - riemann
         - rsyslog
-        - zabbix
 
   # Elasticsearch
   - id: elasticsearch

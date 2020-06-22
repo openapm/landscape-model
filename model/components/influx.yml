@@ -38,7 +38,6 @@ components:
         - rsyslog
         - redis
         - elasticsearch
-        - graylog
         - icinga2-server
         - kibana
         - prometheus-exposition-format
@@ -47,13 +46,10 @@ components:
         - zipkin-server
       dataTo:
         - timescaledb
-        - amon
         - kafka
         - rabbitmq
-        - cratedb
         - elasticsearch
         - graphite
-        - graylog
         - influx-db
         - open-tsdb
         - rsyslog
@@ -117,17 +113,16 @@ components:
       - commercial-services
     connections:
       dataFrom:
-        - alerta
+        - alerta-server
         - fluentbit
         - fluentd
         - icinga2-server
         - influx-telegraf
-        - inspectit-crm
+        - inspectit-cmr
         - kieker-monitoring
-        - netdata
+        - netdata-agent
         - prometheus-server
         - sensu-server
-        - stagemonitor
         - stagemonitor-os
         - statsd
         - opencensus

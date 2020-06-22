@@ -9,7 +9,7 @@ components:
     github:
       - akamai/boomerang
     license:
-      - BSD License
+      - BSD 3-Clause License
     categories:
       - agent
     capabilities:

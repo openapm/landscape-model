@@ -53,7 +53,7 @@ let missingLicenseLinks = model['components'].reduce((a, component) => {
     }
 }, []);
 
-let componentsWithoutLicenses = model['components'].filter(c => c['license'] === undefined).map(c => c.id);
+let componentsWithoutLicenses = model['components'].filter(c => c['isCommercial'] === undefined || c['isCommercial'] === false).filter(c => c['license'] === undefined).map(c => c.id);
 
 
 if (missingLicenseLinks.length > 0) {

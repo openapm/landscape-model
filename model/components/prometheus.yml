@@ -92,9 +92,6 @@ components:
         - graphite
         - influx-db
         - m3db
-        - chronix
-        - weavecortex
-        - crate-db
         - open-tsdb
         - postgres
         - timescaledb

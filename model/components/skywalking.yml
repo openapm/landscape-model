@@ -73,7 +73,6 @@ components:
         - zipkin
       dataTo:
         - elasticsearch
-        - h2
     capabilities:
       aspects:
         - tracing
@@ -96,7 +95,6 @@ components:
     connections:
       dataFrom:
         - skywalking-collector
-        - h2
         - elasticsearch
     capabilities:
       aspects:

@@ -31,4 +31,3 @@ components:
         - influx-db
         - statsd
         - elasticsearch
-        - ganglia

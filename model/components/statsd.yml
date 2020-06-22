@@ -40,11 +40,8 @@ components:
         - Drupal
     connections:
       dataTo:
-        - ganglia
         - mongo
         - mysql
         - graphite
-        - zabbix
         - open-tsdb
         - influx-db
-        - couch-db

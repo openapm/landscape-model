@@ -40,6 +40,5 @@ components:
         - influx-db
         - graphite
         - open-tsdb
-        - kairos-db
         - prometheus-server
         - rsyslog
