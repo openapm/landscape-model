@@ -63,7 +63,15 @@ components:
       - data-processing
     connections:
       dataFrom:
-        - influx-db
+        - victoriametrics
+        - cortex
+        - m3db
+        - prometheus
+        - thanos
+      dataTo:
+        - victoriametrics
+        - cortex
+        - m3db
     capabilities:
       aspects:
         - metrics
