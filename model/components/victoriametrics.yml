@@ -37,6 +37,7 @@ components:
         - prometheus-exposition-format
         - statsd
         - influx-telegraf
+        - open-tsdb
       dataTo:
         - victoriametrics
         - cortex
