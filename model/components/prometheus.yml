@@ -38,6 +38,7 @@ components:
       - siimon/prom-client
       - Jimdo/prometheus_client_php
       - pingcap/rust-prometheus
+      - VictoriaMetrics/metrics
     twitter: PrometheusIO
     logo: prometheus
     license:
@@ -96,6 +97,7 @@ components:
         - postgres
         - timescaledb
         - grafana
+        - victoriametrics
       includesFrom:
         - prometheus-exposition-format
     capabilities:

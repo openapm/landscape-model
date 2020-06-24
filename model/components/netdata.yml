@@ -42,3 +42,4 @@ components:
         - open-tsdb
         - prometheus-server
         - rsyslog
+        - victoriametrics

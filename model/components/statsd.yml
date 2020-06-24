@@ -45,3 +45,4 @@ components:
         - graphite
         - open-tsdb
         - influx-db
+        - victoriametrics
