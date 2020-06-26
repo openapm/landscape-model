@@ -145,6 +145,8 @@ components:
         - cassandra
         - elasticsearch
         - jaeger-collector
+      dataTo:
+        - grafana
     capabilities:
       aspects:
         - tracing
