@@ -41,11 +41,14 @@ components:
     link: https://www.elastic.co/solutions/apm
     github: 
       - elastic/apm-agent-java
+      - elastic/apm-agent-dotnet
       - elastic/apm-agent-python
       - elastic/apm-agent-nodejs
       - elastic/apm-agent-go
       - elastic/apm-agent-ruby
+      - elastic/apm-agent-rum-js
       - elastic/apm-agent-js-base
+      - elastic/apm-agent-php
     twitter: elastic
     logo: elastic-apm
     license:
@@ -56,9 +59,12 @@ components:
     capabilities:
       tech:
         - java
+        - .net
         - nodejs
         - python
         - ruby
+        - javascript
+        - php
       aspects:
         - tracing
         - metrics [app]
