@@ -26,7 +26,7 @@ components:
         - postgres
         - timescaledb
         - victoriametrics
-     
+
   # Metrictank
   - id: metrictank
     name: MetricTank
@@ -86,11 +86,12 @@ components:
         - logs
     connections:
       dataTo:
+        - cassandra
         - grafana
       dataFrom:
+        - fluentbit
+        - fluentd
         - promtail
-
-
 
   # Grafana Cloud
   - id: grafana-cloud
