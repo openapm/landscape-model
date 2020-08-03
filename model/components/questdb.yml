@@ -17,5 +17,8 @@ components:
     capabilities:
       aspects:
         - metrics
+    connections:
+      dataFrom:
+        influx-telegraf
 
 
