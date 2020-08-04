@@ -1,0 +1,24 @@
+---
+components:
+
+  # questDB
+  - id: quest-db
+    name: QuestDB
+    description: QuestDB is a high-performance, open source, SQL-based time series database developed by <a href="https://www.questdb.io/" target="_blank">QuestDB</a>.
+    link: https://questdb.io/
+    github:
+      - questdb/questdb
+    twitter: questdb
+    logo: questdb
+    license:
+      - Apache License 2.0
+    categories:
+      - storage
+    capabilities:
+      aspects:
+        - metrics
+    connections:
+      dataFrom:
+        influx-telegraf
+
+
