@@ -1,0 +1,118 @@
+---
+components:
+
+    # AppDynamics
+  - id: AppDynamics
+    name: AppDynamics
+    description: AppDynamics is the Application Intelligence company. With AppDynamics, enterprises have real-time insights into application performance, user performance and business performance so they can move faster in an increasingly sophisticated, software-driven world. AppDynamics’ integrated suite of applications is built on its innovative, enterprise-grade App iQ Platform that enables its customers to make faster decisions that enhance customer engagement and improve operational and business performance. AppDynamics is uniquely positioned to enable enterprises to accelerate their digital transformations by actively monitoring, analyzing and optimizing complex application environments at scale.
+    link: https://www.appdynamics.com/
+    twitter: AppDynamics
+    logo: appdynamics
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+    connections:
+      dataTo:
+        - grafana
+      dataFrom:
+        - appdynamics-agent
+        - opentracing
+    isCommercial: true
+
+      # AppDynamics Collector
+  - id: appdynamics-collector
+    name: AppDynamics Controller
+    description: The AppDynamics Controller is the central element of the AppDynamics Monitoring Plattform. The AppDynamics Controller UI is the primary interface you will use to monitor, troubleshoot, and analyze your entire application landscape from backend infrastructure/servers to the end user's application. 
+    link: https://docs.appdynamics.com/display/LATEST/AppDynamics+Application+Performance+Monitoring+Platform
+    twitter: AppDynamics
+    logo: appdynamics
+    categories:
+      - collector
+      - data-processing
+      - storage
+      - dashboarding
+      - alerting
+      - visualisation
+    capabilities:
+      deployments:
+        - SaaS
+        - On-Premises
+      cloudplattform:
+        - AWS
+        - Azure
+        - Google Cloudplattform
+      aspects:
+        - tracing
+        - metrics
+        - analytics    
+    connections:
+      dataTo:
+        - grafana
+      dataFrom:
+        - appdynamics-sdks
+        - appdynamics-agent
+        - opentracing    
+    isCommercial: true
+
+  # AppDynamics APM Agent
+  - id: appdynamics-agent
+    name: AppDynamics Agent
+    description: AppDynamics Application Performance Monitoring (APM), a component of the AppDynamics platform, gives you end-to-end visibility into the performance of your applications. The main goal of our agents is to have the lowest overhead possible on the system and during installation. Monst of the AppDynamics agents can be integrated without any code changes.
+    link: https://docs.appdynamics.com/display/LATEST/Application+Monitoring
+    twitter: AppDynamics
+    logo: appdynamics
+    categories:
+      - agent
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - analytics
+      tech:
+        - java
+        - .net
+        - php
+        - python
+        - nodejs
+        - SAP ABAP
+        - IBM Integration Bus
+        - Webserver 
+    connections:
+      dataFrom:
+        - opentracing
+        - appdynamics-agent
+    isCommercial: true
+
+  # AppDynamics SDKs
+  - id: appdynamics-sdks
+    name: AppDynamics SDKs
+    description: AppDynamics Application Performance Monitoring (APM), a component of the AppDynamics platform, gives you end-to-end visibility into the performance of your applications. The main goal of our agents is to have the lowest overhead possible on the system and during installation. Monst of the AppDynamics agents can be integrated without any code changes.
+    link: https://docs.appdynamics.com/display/LATEST/Application+Monitoring
+    twitter: AppDynamics
+    logo: appdynamics
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - analytics
+      tech:
+        - java
+        - .net
+        - php
+        - python
+        - go 
+        - nodejs
+        - c++
+        - Amazon Lambda
+    connections:
+      dataFrom:
+        - opentracing
+        - appdynamics-agent
+    isCommercial: true
+
