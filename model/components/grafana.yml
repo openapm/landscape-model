@@ -26,7 +26,7 @@ components:
         - postgres
         - timescaledb
         - victoriametrics
-        - appdynamics-storrage
+        - appdynamics-collector
 
   # Metrictank
   - id: metrictank
@@ -48,7 +48,7 @@ components:
         - cassandra
         - elasticsearch
         - grafana
-        - appdynamics-storrage
+        - appdynamics-collector
 
   # promtail Agent
   - id: promtail
