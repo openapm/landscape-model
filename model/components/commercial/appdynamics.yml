@@ -20,6 +20,7 @@ components:
         - grafana
       dataFrom:
         - appdynamics-agent
+        - appdynamics-sdks
         - opentracing
     isCommercial: true
 
@@ -38,10 +39,11 @@ components:
       - alerting
       - visualisation
     capabilities:
-      deployments:
+      os:
+        - linux
+        - Windows
         - SaaS
-        - On-Premises
-      cloudplattform:
+      tech:
         - AWS
         - Azure
         - Google Cloudplattform
@@ -68,10 +70,15 @@ components:
     categories:
       - agent
     capabilities:
+      os:
+        - linux
+        - windows
+        - MacOS
       aspects:
         - tracing
         - metrics
         - analytics
+        - eum
       tech:
         - java
         - .net
@@ -80,7 +87,8 @@ components:
         - nodejs
         - SAP ABAP
         - IBM Integration Bus
-        - Webserver 
+        - Webserver
+        - Browser Monitoring Java Script 
     connections:
       dataFrom:
         - opentracing
