@@ -37,7 +37,7 @@ components:
       - storage
       - dashboarding
       - alerting
-      - visualisation
+      - visualization
     capabilities:
       os:
         - linux
