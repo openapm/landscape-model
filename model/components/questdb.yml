@@ -19,6 +19,6 @@ components:
         - metrics
     connections:
       dataFrom:
-        influx-telegraf
+        - influx-telegraf
 
 
