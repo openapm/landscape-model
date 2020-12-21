@@ -1,13 +1,30 @@
 ---
 components:
+  - id: skywalking-format
+    name: SkyWalking Format
+    description: The SkyWalking Format defines a tracing/metrics/logging format based on gRPC and HTTP.
+    link: https://skywalking.apache.org/
+    github:
+      - apache/skywalking-data-collect-protocol
+    twitter: AsfSkyWalking
+    logo: skywalking
+    license:
+      - Apache License 2.0
+    categories:
+      - format
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
 
   # skywalking
   - id: skywalking
-    name: Skywalking
-    description: Application performance monitor system based on distributed tracing
-    link: http://skywalking.apache.org/
+    name: SkyWalking
+    description: APM, Application Performance Monitoring System
+    link: https://skywalking.apache.org/
     github:
-      - apache/incubator-skywalking
+      - apache/skywalking
     twitter: AsfSkyWalking
     logo: skywalking
     license:
@@ -21,6 +38,10 @@ components:
         - nodejs
         - php
         - c#
+        - lua
+        - python
+        - javascript
+        - c++
       aspects:
         - tracing
         - metrics [app]
@@ -56,9 +77,9 @@ components:
   - id: skywalking-collector
     name: Skywalking Collector
     description: Lightweight and powerful backend aggregation and analysis capabilities
-    link: http://skywalking.apache.org/
+    link: https://skywalking.apache.org/
     github:
-      - apache/incubator-skywalking
+      - apache/skywalking
     twitter: AsfSkyWalking
     logo: skywalking
     license:
@@ -67,24 +88,38 @@ components:
       - collector
     connections:
       includesFrom:
+        - skywalking-format
         - jaeger-format
         - zipkin-format
+        - prometheus-exposition-format
       dataFrom:
+        - skywalking
+        - prometheus-client-libs
         - zipkin
+        - jaeger
+        - opentelemetry-collector
+        - micrometer
+        - opencensus-collector
+        - opentracing
       dataTo:
         - elasticsearch
+        - influxdb
+        - mysql
+        - h2
+        - tidb
     capabilities:
       aspects:
         - tracing
         - metrics
+        - logs
 
   # skywalking UI
   - id: skywalking-ui
     name: Skywalking UI
     description: Modern UI and Alarm for slow or unstable(low SLA) application, instance and service
-    link: http://skywalking.apache.org/
+    link: https://skywalking.apache.org/
     github:
-      - apache/incubator-skywalking-ui
+      - apache/skywalking-rocketbot-ui
     twitter: AsfSkyWalking
     logo: skywalking
     license:
@@ -96,7 +131,12 @@ components:
       dataFrom:
         - skywalking-collector
         - elasticsearch
+        - influxdb
+        - mysql
+        - h2
+        - tidb
     capabilities:
       aspects:
         - tracing
         - metrics
+        - logs
