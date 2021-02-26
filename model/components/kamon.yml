@@ -1,13 +1,34 @@
 ---
 components:
 
-  # kamon instrumentation toolkit
-  - id: kamon
-    name: Kamon
-    description: Kamon is an instrumentation toolkit for applications running on the JVM. With Kamon you can record metrics, trace requests and propagate context across distributed systems without locking your service to a specific metrics or tracing vendor.
+# kamon kanela agent
+  - id: kamon-kanela-agent
+    name: Kamon Kanela 
+    description: Kanela is a Java Agent written in Java 8+ and powered by ByteBuddy with some additionally ASM features to provide a simple way to instrument applications running on the JVM and allow introduce Kamon features such as context propagation and metrics.
     link: http://kamon.io
     github:
-      - kamon-io/Kamon
+      - kamon-io/kanela
+    twitter: kamonteam
+    logo: kamon
+    license:
+      - Apache License 2.0
+    categories:
+      - agent
+    capabilities:
+      tech:
+        - java
+        - scala
+      aspects:
+        - metrics
+    
+
+  # kamon telemetry
+  - id: kamon-telemetry
+    name: Kamon Telemetry
+    description: Kamon Telemetry is an instrumentation library for applications running on the JVM. With Kamon you can record metrics, trace requests and propagate context across distributed systems without locking your service to a specific metrics or tracing vendor.
+    link: http://kamon.io
+    github:
+      - kamon-io/Kamon/tree/master/instrumentation
     twitter: kamonteam
     logo: kamon
     license:
@@ -31,3 +52,50 @@ components:
       dataTo:
         - influx-db
         - statsd
+        
+         # kamon APM
+  - id: kamon-apm
+    name: Kamon APM
+    description: Kamon APM is an Application Performance Monitoring tool for applications running on the JVM. It works perfectly with Kamon Telemetry. It comes with built-in dashboards for Akka, Play Framework, JDBC and several JVM toolkits.
+    link: https://kamon.io/apm/
+    github:
+      - https://github.com/kamon-io/Kamon
+    twitter: kamonteam
+    logo: kamon
+    license:
+      - Apache License 2.0
+    categories:
+      - commercial-services
+    capabilities:
+      tech:
+        - java
+        - scala
+      aspects:
+        - tracing
+        - metrics [app]
+        - metrics [process]
+        - metrics [host]
+        
+            # kamon APM
+  - id: kamon-apm
+    name: Kamon APM
+    description: Kamon APM is an Application Performance Monitoring tool for applications running on the JVM. It works perfectly with Kamon Telemetry. It comes with built-in dashboards for Akka, Play Framework, JDBC and several JVM toolkits.
+    link: https://kamon.io/apm/
+    github:
+      - https://github.com/kamon-io/Kamon
+    twitter: kamonteam
+    logo: kamon
+    license:
+      - Apache License 2.0
+    categories:
+      - dashboarding
+    capabilities:
+      tech:
+        - java
+        - scala
+      aspects:
+        - tracing
+        - metrics [app]
+        - metrics [process]
+        - metrics [host]
+   
