@@ -1,0 +1,136 @@
+---
+components:
+
+    # Splunk
+  - id: splunk
+    name: Splunk
+    description: By combining Splunk Infrastructure Monitoring, APM, RUM, Log Observer, and On-Call, the Splunk Observability Suite offers a tightly integrated experience, powerful analytics, and unmatched speed and scale. Gain full-fidelity, end-to-end visibility of your apps, insights into root-causes of incidents and seamless troubleshooting for an elevated end-user experience.
+    link: https://splunk.com/
+    twitter: splunk
+    logo: splunk
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+    connections:
+      includesFrom:
+        - jaeger-format
+        - zipkin-format
+      dataTo:
+        - grafana
+      dataFrom:
+        - opencensus
+        - opentelemetry
+        - jaeger
+        - zipkin
+        - micrometer
+        - telegraf
+        - fluentd
+        - fluentbit
+        - logstash
+    isCommercial: true
+
+  # Splunk OTel distributions
+  - id: splunk-otel
+    name: Splunk OTel distributions
+    description: Splunk provides a set of OpenTelemetry distributions SDKs for different programming languages.
+    link: https://splunk.com/
+    github:
+      - signalfx/splunk-otel-java
+      - signalfx/splunk-otel-python
+    license:
+      - Apache License 2.0
+    twitter: splunk
+    logo: splunk
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - tracing
+      tech:
+        - javascript
+        - go
+        - java
+        - .net
+        - nodejs
+        - python
+        - c++
+        - objc
+        - php
+        - ruby
+        - android
+    connections:
+      dataFrom:
+        - opentracing
+        - opentelemetry
+
+  # SignalFx instrumentation tracing libraries
+  - id: signalfx-tracing
+    name: SignalFx Instrumentation Tracing Libraries
+    description: SignalFx provides a set of open-source automatic instrumentation tracing SDKs for different programming languages.
+    link: https://splunk.com/
+    github:
+      - signalfx/signalfx-dotnet-tracing
+      - signalfx/signalfx-go-tracing
+      - signalfx/signalfx-java-tracing
+      - signalfx/signalfx-nodejs-tracing
+      - signalfx/signalfx-php-tracing
+      - signalfx/signalfx-python-tracing
+      - signalfx/signalfx-ruby-tracing
+    license:
+      - Apache License 2.0
+    twitter: splunk
+    logo: splunk
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - tracing
+      tech:
+        - .net
+        - go
+        - java
+        - nodejs
+        - php
+        - python
+        - ruby
+    connections:
+      dataFrom:
+        - opentracing
+
+  # SignalFx instrumentation metrics libraries
+  - id: signalfx-tracing
+    name: SignalFx Instrumentation Metrics Libraries
+    description: SignalFx provides a set of open-source instrumentation metrics SDKs for different programming languages.
+    link: https://splunk.com/
+    github:
+      - signalfx/signalfx-dotnet
+      - signalfx/signalfx-go
+      - signalfx/signalfx-java
+      - signalfx/signalfx-nodejs
+      - signalfx/signalfx-php
+      - signalfx/signalfx-python
+      - signalfx/signalfx-ruby
+    license:
+      - Apache License 2.0
+    twitter: splunk
+    logo: splunk
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - metrics
+      tech:
+        - .net
+        - go
+        - java
+        - nodejs
+        - php
+        - python
+        - ruby
+    connections:
+      dataFrom:
+        - micrometer
