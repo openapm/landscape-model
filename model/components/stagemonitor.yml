@@ -5,7 +5,7 @@ components:
   - id: stagemonitor-agent
     name: stagemonitor
     description: Agent that sits inside your Java application and sends metrics and request traces to a central database. Stagemonitor monitors applications with the help of servlet filters and bytecode manipulation. 
-    link: http://www.stagemonitor.org/
+    link: https://www.stagemonitor.org/
     github:
       - stagemonitor/stagemonitor
     twitter: stagemonitor

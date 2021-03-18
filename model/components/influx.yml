@@ -5,7 +5,7 @@ components:
   - id: influx-db
     name: InfluxDB
     description: InfluxDB is an open-source time series database developed by <a href="https://www.influxdata.com/" target="_blank">InfluxData</a>.
-    link: https://www.influxdata.com/time-series-platform/influxdb/
+    link: https://www.influxdata.com/products/influxdb-overview/
     github:
       - influxdata/influxdb
     twitter: InfluxDB

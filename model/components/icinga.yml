@@ -5,7 +5,7 @@ components:
   - id: icinga2-server
     name: Icinga 2 Server
     description: Icinga monitors your network, servers and applications in a secure and reliable way.
-    link: https://www.icinga.com/products/icinga-2/
+    link: https://icinga.com/
     github:
       - icinga/icinga2
     twitter: icinga
@@ -34,7 +34,7 @@ components:
   - id: icinga2-agent
     name: Icinga 2 Agent
     description: Icinga 2 in Agent mode runs on your server to check local resources and report back to the master.
-    link: https://www.icinga.com/products/icinga-2/
+    link: https://icinga.com/
     github:
       - icinga/icinga2
     twitter: icinga
@@ -56,7 +56,7 @@ components:
   - id: icingaweb2
     name: Icinga Web 2
     description: Icinga Web 2 is the web interface to display in visualize details about everything happening in your Icinga monitoring environment.
-    link: https://www.icinga.com/products/icinga-web-2/
+    link: https://icinga.com/
     github:
       - icinga/icingaweb2
     twitter: icinga
@@ -83,7 +83,7 @@ components:
   - id: icingabeat
     name: Icingabeat
     description: Icingabeat is an Elastic Beat that fetches data from the Icinga 2 API and sends it either directly to Elasticsearch or Logstash.
-    link: https://www.icinga.com/docs/icingabeat/latest/
+    link: https://icinga.com/
     github:
       - icinga/icingabeat
     twitter: icinga
@@ -106,6 +106,7 @@ components:
     link: https://opsdis.com/released-an-icinga2-prometheus-exporter/
     github:
       - opsdis/icinga2-exporter
+    logo: icinga
     license:
       - GNU GPLv3
     categories:

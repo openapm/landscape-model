@@ -5,7 +5,7 @@ components:
   - id: cortex
     name: Cortex
     description: Cortex provides horizontally scalable, highly available, multi-tenant, long term storage for Prometheus.
-    link: https://github.com/cortexproject/cortex
+    link: https://cortexmetrics.io/
     github:
       - cortexproject/cortex
     twitter: weaveworks
