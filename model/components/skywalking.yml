@@ -5,7 +5,7 @@ components:
   - id: skywalking
     name: Skywalking
     description: Application performance monitor system based on distributed tracing
-    link: http://skywalking.apache.org/
+    link: https://skywalking.apache.org/
     github:
       - apache/incubator-skywalking
     twitter: AsfSkyWalking

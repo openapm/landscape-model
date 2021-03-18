@@ -5,7 +5,7 @@ components:
   - id: pinpoint-agent
     name: Pinpoint Agent
     description: Pinpoint is specialized on distributed system monitoring without changing a single line of code. Provides a solution to help analyze the overall structure of the system and how components within them are interconnected by tracing transactions across distributed applications. Agent is for instrumenting and monitoring Java 6+ applications and gathering host's metrics.
-    link: http://naver.github.io/pinpoint/
+    link: https://pinpoint-apm.github.io/pinpoint/
     github:
       - naver/pinpoint
     twitter: Pinpoint_APM

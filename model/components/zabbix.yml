@@ -1,0 +1,16 @@
+---
+components:
+
+  # Zabbix
+  - id: zabbix
+    name: Zabbix
+    description: Zabbix is an open-source software designed for real-time monitoring of millions of metrics collected from tens of thousands of servers, virtual machines and network devices.
+    link: https://www.zabbix.com/
+    github:
+      - zabbix/zabbix
+    license:
+      - GPLv2
+    twitter: zabbix
+    logo: zabbix
+    categories:
+      - dashboarding

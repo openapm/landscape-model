@@ -5,7 +5,7 @@ components:
   - id: fluentd
     name: Fluentd
     description: Fluentd is an open source data collector for unified logging layer. Fluentd allows you to unify data collection and consumption for a better use and understanding of data.
-    link: https://github.com/fluent/fluentd/
+    link: https://www.fluentd.org/
     twitter: fluentd
     github:
       - fluent/fluentd
