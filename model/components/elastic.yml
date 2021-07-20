@@ -165,6 +165,7 @@ components:
     categories:
       - visualization
       - dashboarding
+      - alerting
     connections:
       dataFrom:
         - elasticsearch
