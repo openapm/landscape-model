@@ -98,6 +98,7 @@ components:
         - timescaledb
         - grafana
         - victoriametrics
+        - elastic-beats
       includesFrom:
         - prometheus-exposition-format
     capabilities:
