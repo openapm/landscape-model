@@ -95,6 +95,32 @@ components:
         - fluentd
         - promtail
 
+  # Tempo tracing backend
+  - id: tempo
+    name: Tempo
+    description: Grafana Tempo is a high volume, minimal dependency distributed tracing backend.
+    link: https://github.com/grafana/tempo
+    github:
+      - grafana/tempo
+    twitter: grafana
+    logo: tempo
+    license:
+      - GNU AGPLv3
+      - Apache License 2.0
+    categories:
+      - collector
+    capabilities:
+      aspects:
+        - tracing
+    connections:
+      dataTo:
+        - grafana
+      dataFrom:
+        - opentracing
+        - opentelemetry
+        - jaeger-client
+        - zipkin
+
   # Grafana Cloud
   - id: grafana-cloud
     name: Grafana Cloud
