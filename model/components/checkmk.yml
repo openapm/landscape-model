@@ -38,5 +38,7 @@ components:
         - metrics [process]
         - logs
     connections:
+      dataTo:
+        - grafana
       dataFrom:
         - checkmk-agent
