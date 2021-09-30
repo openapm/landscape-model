@@ -44,9 +44,9 @@ components:
         - jaeger-format
         - zipkin-format
       dataTo:
-        - influx-telegraf
+        - influxdata-telegraf
         - haystack-agent
-        - influx-db
+        - influxdata-influxdb
 
   # opencensus Collector
   - id: opentelemetry-collector

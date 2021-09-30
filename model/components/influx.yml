@@ -2,7 +2,7 @@
 components:
 
   # influxDB
-  - id: influx-db
+  - id: influxdata-influxdb
     name: InfluxDB
     description: InfluxDB is an open-source time series database developed by <a href="https://www.influxdata.com/" target="_blank">InfluxData</a>.
     link: https://www.influxdata.com/time-series-platform/influxdb/
@@ -19,7 +19,7 @@ components:
         - metrics
 
   # telegraf
-  - id: influx-telegraf
+  - id: influxdata-telegraf
     name: Telegraf
     description: Telegraf is a plugin-driven collector for gathering & reporting metrics. As such it is the first piece of the <a href="https://www.influxdata.com/" target="_blank">InfluxData</a>'s TICK stack. Telegraf has plugins to retrieve retrieve metrics directly from the system it’s running on, pull metrics from third party APIs, or even listen for metrics via a statsd and Kafka consumer services. It also has output plugins to send metrics to a variety of other datastores, services, and message queues.
     link: https://www.influxdata.com/time-series-platform/telegraf/
@@ -42,15 +42,17 @@ components:
         - kibana
         - prometheus-exposition-format
         - statsd
-        - influx-kapacitor
+        - influxdata-kapacitor
         - zipkin-server
+        - kamon-telemetry
+        - opentelemetry-collector
       dataTo:
         - timescaledb
         - kafka
         - rabbitmq
         - elasticsearch
         - graphite
-        - influx-db
+        - influxdata-influxdb
         - open-tsdb
         - rsyslog
         - victoriametrics
@@ -61,7 +63,7 @@ components:
         - metrics
 
   # kapacitor
-  - id: influx-kapacitor
+  - id: influxdata-kapacitor
     name: Kapacitor
     description: Kapacitor is a real-time streaming data processing engine from <a href="https://www.influxdata.com/" target="_blank">InfluxData</a>. It can process both stream and batch data from InfluxDB. It lets you plug in your own custom logic or user-defined functions to process alerts with dynamic thresholds, match metrics for patterns, compute statistical anomalies, and perform specific actions based on these alerts like dynamic load rebalancing.
     link: https://www.influxdata.com/time-series-platform/kapacitor/
@@ -76,13 +78,13 @@ components:
       - data-processing
     connections:
       dataFrom:
-        - influx-db
+        - influxdata-influxdb
     capabilities:
       aspects:
         - metrics
   
   # chronograf
-  - id: influx-chronograf
+  - id: influxdata-chronograf
     name: Chronograf
     description: Chronograf is the user interface component of <a href="https://www.influxdata.com/" target="_blank">InfluxData</a>’s TICK Stack. It allows you to quickly see the data that you have stored in InfluxDB so you can build robust queries and alerts. It is simple to use and includes templates and libraries to allow you to rapidly build dashboards with real-time visualizations of your data.
     link: https://www.influxdata.com/time-series-platform/chronograf/
@@ -97,8 +99,8 @@ components:
       - dashboarding
     connections:
       dataFrom:
-        - influx-db
-        - influx-kapacitor
+        - influxdata-influxdb
+        - influxdata-kapacitor
     capabilities:
       aspects:
         - metrics
@@ -118,7 +120,7 @@ components:
         - fluentbit
         - fluentd
         - icinga2-server
-        - influx-telegraf
+        - influxdata-telegraf
         - inspectit-cmr
         - kieker-monitoring
         - netdata-agent
@@ -132,7 +134,7 @@ components:
         - opentelemetry
         - opentelemetry-collector
         - micrometer
-        - kamon
+        - kamon-telemetry
         - app-metrics
       dataTo:
         - grafana

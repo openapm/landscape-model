@@ -19,7 +19,7 @@ components:
       dataFrom:
         - graphite
         - elasticsearch
-        - influx-db
+        - influxdata-influxdb
         - open-tsdb
         - prometheus-server
         - mysql
@@ -110,11 +110,11 @@ components:
       dataFrom:
         - graphite
         - elasticsearch
-        - influx-db
+        - influxdata-influxdb
         - influx-cloud
         - open-tsdb
         - mysql
-        - influx-telegraf
+        - influxdata-telegraf
         - datadog
         - newrelic
         - appdynamics

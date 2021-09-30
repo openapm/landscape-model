@@ -21,7 +21,7 @@ components:
       dataTo:
         - elasticsearch
         - kafka
-        - influx-db
+        - influxdata-influxdb
         - fluentd
     capabilities:
       aspects:

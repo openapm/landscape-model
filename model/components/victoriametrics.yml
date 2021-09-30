@@ -36,7 +36,7 @@ components:
       dataFrom:
         - prometheus-exposition-format
         - statsd
-        - influx-telegraf
+        - influxdata-telegraf
         - open-tsdb
       dataTo:
         - victoriametrics
@@ -67,7 +67,7 @@ components:
         - victoriametrics
         - cortex
         - m3db
-        - prometheus
+        - prometheus-server
         - thanos
       dataTo:
         - victoriametrics

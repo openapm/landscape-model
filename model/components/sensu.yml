@@ -46,7 +46,7 @@ components:
         - rabbitmq
       dataTo:
         - redis
-        - influx-db
+        - influxdata-influxdb
         - graphite
         - grafana
 

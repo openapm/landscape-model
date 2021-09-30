@@ -24,7 +24,7 @@ components:
       dataTo:
         - mysql
         - postgres
-        - influx-db
+        - influxdata-influxdb
         - graphite
         - open-tsdb
         - elasticsearch
