@@ -27,7 +27,7 @@ components:
       dataTo:
         - elasticsearch
         - graphite
-        - influx-db
+        - influxdata-influxdb
         - stagemonitor-browserwidget
         - stagemonitor-alerter
       dataFrom:
@@ -91,6 +91,6 @@ components:
       dataTo:
         - elasticsearch
         - graphite
-        - influx-db
+        - influxdata-influxdb
         - stagemonitor-browserwidget
         - stagemonitor-alerter

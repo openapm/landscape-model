@@ -47,7 +47,7 @@ components:
         - metrics
     connections:
       dataTo:
-        - influx-db
+        - influxdata-influxdb
         - kafka
         - kieker-analysis
         - kieker-trace-diagnosis-gui

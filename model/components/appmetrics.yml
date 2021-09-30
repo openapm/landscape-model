@@ -28,7 +28,7 @@ components:
         - prometheus-exposition-format
       dataTo:
         - graphite
-        - influx-db
+        - influxdata-influxdb
         - elasticsearch
     capabilities:
       tech:

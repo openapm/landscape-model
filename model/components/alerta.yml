@@ -21,7 +21,7 @@ components:
       dataFrom:
         - elastalert
         - grafana
-        - influx-kapacitor
+        - influxdata-kapacitor
         - nagios-core
         - netdata-agent
         - prometheus-alerting
@@ -29,7 +29,7 @@ components:
         - sensu-server
       dataTo:
         - elastalert
-        - influx-db
+        - influxdata-influxdb
         - kibana
         - logstash
         - prometheus-alerting

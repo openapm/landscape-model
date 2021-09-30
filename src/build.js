@@ -32,7 +32,8 @@ let missingConnections = model['components'].reduce((a, component) => {
 
 
 if (missingConnections.length > 0) {
-    console.error('WARNING: There are unmatched connections components: ', missingConnections);
+    console.error('ERROR: There are unmatched connections components: ', missingConnections);
+    process.exit(1);
 }
 
 
@@ -68,3 +69,5 @@ if (componentsWithoutLicenses.length > 0) {
  * Merge model
  */
 merge.modelAndFlush();
+
+console.log('\x1b[42m%s\x1b[0m', 'Model has been successfully merged.');

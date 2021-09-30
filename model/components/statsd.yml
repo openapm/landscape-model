@@ -44,5 +44,5 @@ components:
         - mysql
         - graphite
         - open-tsdb
-        - influx-db
+        - influxdata-influxdb
         - victoriametrics

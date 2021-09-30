@@ -70,7 +70,7 @@ components:
       dataFrom:
         - inspectit-agent
       dataTo:
-        - influx-db
+        - influxdata-influxdb
     capabilities:
       aspects:
         - tracing

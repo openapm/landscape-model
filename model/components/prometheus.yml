@@ -91,7 +91,7 @@ components:
     connections:
       dataTo:
         - graphite
-        - influx-db
+        - influxdata-influxdb
         - m3db
         - open-tsdb
         - postgres
@@ -162,7 +162,7 @@ components:
         - blackbox
         - node-system-metrics
         - graphite
-        - influx-db
+        - influxdata-influxdb
       os:
         - linux
     connections:

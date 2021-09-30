@@ -50,33 +50,10 @@ components:
         - zipkin-format
         - jaeger-format
       dataTo:
-        - influx-db
+        - influxdata-influxdb
         - statsd
         
-         # kamon APM
-  - id: kamon-apm
-    name: Kamon APM
-    description: Kamon APM is an Application Performance Monitoring tool for applications running on the JVM. It works perfectly with Kamon Telemetry. It comes with built-in dashboards for Akka, Play Framework, JDBC and several JVM toolkits.
-    link: https://kamon.io/apm/
-    github:
-      - https://github.com/kamon-io/Kamon
-    twitter: kamonteam
-    logo: kamon
-    license:
-      - Apache License 2.0
-    categories:
-      - commercial-services
-    capabilities:
-      tech:
-        - java
-        - scala
-      aspects:
-        - tracing
-        - metrics [app]
-        - metrics [process]
-        - metrics [host]
-        
-            # kamon APM
+  # kamon APM
   - id: kamon-apm
     name: Kamon APM
     description: Kamon APM is an Application Performance Monitoring tool for applications running on the JVM. It works perfectly with Kamon Telemetry. It comes with built-in dashboards for Akka, Play Framework, JDBC and several JVM toolkits.
@@ -89,6 +66,7 @@ components:
       - Apache License 2.0
     categories:
       - dashboarding
+      - commercial-services
     capabilities:
       tech:
         - java

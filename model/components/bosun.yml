@@ -23,5 +23,5 @@ components:
         - open-tsdb
         - graphite
         - elasticsearch
-        - influx-db
+        - influxdata-influxdb
         - prometheus-server
