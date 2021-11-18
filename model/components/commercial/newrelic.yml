@@ -111,5 +111,5 @@ components:
         - prometheus-exposition-format
         - opencensus
         - opentelemetry
-        - kamon
-        - influx-telegraf
+        - kamon-telemetry
+        - influxdata-telegraf

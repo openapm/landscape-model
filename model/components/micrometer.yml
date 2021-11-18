@@ -28,6 +28,6 @@ components:
       dataTo:
         - netflix-atlas
         - graphite
-        - influx-db
+        - influxdata-influxdb
         - statsd
         - elasticsearch

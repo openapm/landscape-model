@@ -96,17 +96,17 @@ components:
         - skywalking
         - prometheus-client-libs
         - zipkin
-        - jaeger
+        - jaeger-client
+        - jaeger-collector
+        - jaeger-agent
         - opentelemetry-collector
         - micrometer
         - opencensus-collector
         - opentracing
       dataTo:
         - elasticsearch
-        - influxdb
+        - influxdata-influxdb
         - mysql
-        - h2
-        - tidb
     capabilities:
       aspects:
         - tracing
@@ -131,10 +131,8 @@ components:
       dataFrom:
         - skywalking-collector
         - elasticsearch
-        - influxdb
+        - influxdata-influxdb
         - mysql
-        - h2
-        - tidb
     capabilities:
       aspects:
         - tracing

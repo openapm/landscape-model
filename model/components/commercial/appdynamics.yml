@@ -2,7 +2,7 @@
 components:
 
     # AppDynamics
-  - id: AppDynamics
+  - id: appdynamics
     name: AppDynamics
     description: AppDynamics is the Application Intelligence company. With AppDynamics, enterprises have real-time insights into application performance, user performance and business performance so they can move faster in an increasingly sophisticated, software-driven world. AppDynamics’ integrated suite of applications is built on its innovative, enterprise-grade App iQ Platform that enables its customers to make faster decisions that enhance customer engagement and improve operational and business performance. AppDynamics is uniquely positioned to enable enterprises to accelerate their digital transformations by actively monitoring, analyzing and optimizing complex application environments at scale.
     link: https://www.appdynamics.com/

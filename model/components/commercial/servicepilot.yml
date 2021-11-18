@@ -1,0 +1,61 @@
+---
+components:
+
+  # ServicePilot
+  - id: servicepilot
+    name: ServicePilot
+    description: ServicePilot is a high-performance analytics platform that supports observability and full-stack monitoring -  metrics, traces and logs. You can collect data from many services and sources across your entire IT stack (ITIM, NPM, APM, DEM, SIEM) as well as view details of historical stored data.
+    link: https://www.servicepilot.com/en/doc/apm/
+    twitter: ServicePilot
+    logo: servicepilot
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+        - eum
+    connections:
+      dataTo:
+        - grafana
+        - influxdata-influxdb
+        - kafka
+      dataFrom:
+        - servicepilot-agent
+        - opentelemetry
+        - opentelemetry-collector
+        - datadog-language-agents
+        - datadog-language-sdks
+        - influxdata-influxdb
+        - influxdata-telegraf
+    isCommercial: true
+  
+  # ServicePilot collector
+  - id: servicepilot-agent
+    name: ServicePilot Agent
+    description: ServicePilot Agents are designed to collect and send monitoring data from various sources (ITIM, NPM, APM, DEM, SIEM) to  ServicePilot. Our agents have a low overhead and integrate easily.
+    link: https://www.servicepilot.com/en/doc/agents/
+    twitter: ServicePilot
+    logo: servicepilot
+    categories:
+      - collector
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+        - eum
+    connections:
+      includesFrom:
+        - zipkin-format
+      dataFrom:
+        - servicepilot-agent
+        - opentelemetry
+        - opentelemetry-collector
+        - datadog-language-agents
+        - datadog-language-sdks
+        - influxdata-influxdb
+        - influxdata-telegraf
+    isCommercial: true
+

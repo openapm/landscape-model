@@ -18,6 +18,6 @@
   "dependencies": {
     "glob": "^7.1.2",
     "js-yaml": "^3.13.1",
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^1.0.4"
   }
 }

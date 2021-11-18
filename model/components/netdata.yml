@@ -37,7 +37,7 @@ components:
         - prometheus-exposition-format
       dataTo:
         - kafka
-        - influx-db
+        - influxdata-influxdb
         - graphite
         - open-tsdb
         - prometheus-server
