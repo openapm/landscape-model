@@ -16,6 +16,8 @@ components:
         - metrics
         - logs
     connections:
+      includesFrom:
+        - opentelemetry-format
       dataTo:
         - grafana
       dataFrom:
@@ -38,13 +40,13 @@ components:
         - logs
     connections:
       includesFrom:
+        - opentelemetry-format
         - zipkin-format
         - jaeger-format
       dataFrom:
         - instana-sdks
         - instana-autotrace
         - opencensus
-        - opentelemetry
     isCommercial: true
 
   # Instana AutoTrace

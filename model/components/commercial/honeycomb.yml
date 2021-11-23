@@ -16,6 +16,8 @@ components:
         - metrics
         - logs
     connections:
+      includesFrom:
+        - opentelemetry-format
       dataTo:
         - grafana
       dataFrom:
@@ -45,10 +47,10 @@ components:
         - tracing
     connections:
       includesFrom:
+        - opentelemetry-format
         - zipkin-format
       dataFrom:
         - opencensus
-        - opentelemetry
 
   # Honeycomb SDKs
   - id: honeycomb-libhoney

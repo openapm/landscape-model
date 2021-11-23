@@ -17,6 +17,7 @@ components:
       includesFrom:
         - jaeger-format
         - zipkin-format
+        - opentelemetry-format
       dataTo:
         - grafana
       dataFrom:
@@ -24,8 +25,6 @@ components:
         - opencensus
         - opencensus-agent
         - opencensus-collector
-        - opentelemetry
-        - opentelemetry-collector
         - elastic-apm-agent
         - datadog-language-agents
         - datadog-language-sdks
