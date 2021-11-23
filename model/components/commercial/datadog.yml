@@ -44,12 +44,13 @@ components:
         - metrics
         - logs
     connections:
+      includesFrom:
+        - opentelemetry-format
       dataFrom:
         - prometheus-exposition-format
         - datadog-language-agents
         - datadog-language-sdks
         - opencensus
-        - opentelemetry
         - nagios-core
         - fluentd
 

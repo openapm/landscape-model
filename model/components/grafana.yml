@@ -94,6 +94,7 @@ components:
         - fluentbit
         - fluentd
         - promtail
+        - opentelemetry-collector
 
   # Tempo tracing backend
   - id: tempo
@@ -113,11 +114,12 @@ components:
       aspects:
         - tracing
     connections:
+      includesFrom:
+        - opentelemetry-format
       dataTo:
         - grafana
       dataFrom:
         - opentracing
-        - opentelemetry
         - jaeger-client
         - zipkin
 

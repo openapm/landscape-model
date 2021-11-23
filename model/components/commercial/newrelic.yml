@@ -16,6 +16,8 @@ components:
         - metrics
         - logs
     connections:
+      includesFrom:
+        - opentelemetry-format
       dataTo:
         - grafana
       dataFrom:
@@ -23,7 +25,6 @@ components:
         - newrelic-sdks
         - newrelic-prometheus-integration
         - opencensus
-        - opentelemetry
         - zipkin
         - micrometer
         - fluentd
