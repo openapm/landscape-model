@@ -4,7 +4,7 @@ components:
   - id: easeagent
     name: EaseAgent
     description: EaseAgent is a Javaagent that can be integrated with the mainstream monitoring system, providing standard data formats that are fully compatible with OpenZipkin and Prometheus. EaseAgent is also very easy to extend through the Plugin Mechanism which only a minimum of three interfaces are required to be implemented to complete a plugin development. 
-    link: http://www.stagemonitor.org/
+    link: https://github.com/megaease/easeagent
     github:
       - megaease/easeagent
     twitter: MegaEase
