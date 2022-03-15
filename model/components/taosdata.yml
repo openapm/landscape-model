@@ -1,0 +1,38 @@
+---
+components:
+  # TDengine
+  - id: tdengine
+    name: TDengine
+    description: TDengine is a high-performance, scalable time-series database with SQL support.
+    link: https://tdengine.com
+    github:
+      - taosdata/TDengine
+    twitter: TaosData
+    logo: tdengine
+    license:
+      - GNU AGPLv3
+    categories:
+      - storage
+    connections:
+      dataFrom:
+        - prometheus-exposition-format
+        - statsd
+        - influxdata-telegraf
+        - kafka
+        - collectd
+      dataTo:
+        - grafana
+    capabilities:
+      tech:
+        - nodejs
+        - java
+        - python
+        - .net
+        - go
+        - php
+        - c
+        - c++
+        - lua
+        - rust
+      aspects:
+        - metrics

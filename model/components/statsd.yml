@@ -46,3 +46,4 @@ components:
         - open-tsdb
         - influxdata-influxdb
         - victoriametrics
+        - tdengine
