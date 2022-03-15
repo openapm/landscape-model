@@ -27,6 +27,7 @@ components:
         - timescaledb
         - victoriametrics
         - appdynamics-collector
+        - tdengine
 
   # Metrictank
   - id: metrictank
@@ -146,6 +147,7 @@ components:
         - datadog
         - newrelic
         - appdynamics
+        - tdengine
     capabilities:
       aspects:
         - metrics
