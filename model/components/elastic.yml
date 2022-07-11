@@ -91,9 +91,9 @@ components:
     connections:
       includesFrom:
         - jaeger-format
+        - opentelemetry-format
       dataFrom:
         - opentracing
-        - opentelemetry
       dataTo:
         - elasticsearch
     capabilities:

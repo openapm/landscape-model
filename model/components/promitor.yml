@@ -1,0 +1,22 @@
+---
+components:
+
+  - id: promitor
+    name: Promitor
+    description: Promitor is an Azure Monitor scraper which makes the metrics available to a variety of metric systems such as Atlassian Statuspage, Prometheus and StatsD.
+    link: https://promitor.io/
+    github:
+      - tomkerkhove/promitor
+    twitter: promitorio
+    logo: promitor
+    license:
+      - MIT License (MIT)
+    categories:
+      - agent
+    capabilities:
+      aspects:
+        - metrics [process]
+    connections:
+      dataTo:
+        - prometheus-server
+        - statsd

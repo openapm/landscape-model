@@ -1,5 +1,23 @@
 ---
 components:
+  # jaeger tracing format
+  - id: opentelemetry-format
+    name: OpenTelemetry Format
+    description: OpenTelemetry is the continuation project from <a href="/landscape/instrumentation-lib/opentracing">OpenTracing</a> and <a href="/landscape/instrumentation-lib/opencensus">OpenCensus</a>. It provides a single set of APIs, libraries, agents, and collector services to capture distributed traces and metrics from your applications and serevices. There are different exporters available to provide data collected through OpenTelemetry to different observability backends.
+    link: https://opentelemetry.io/
+    github:
+      - open-telemetry/opentelemetry-specification
+    twitter: opentelemetry
+    logo: opentelemetry
+    license:
+      - Apache License 2.0
+    categories:
+      - format
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
 
   # opencensus instrumentation toolkit
   - id: opentelemetry
@@ -43,6 +61,7 @@ components:
         - prometheus-exposition-format
         - jaeger-format
         - zipkin-format
+        - opentelemetry-format
       dataTo:
         - influxdata-telegraf
         - haystack-agent
@@ -66,17 +85,28 @@ components:
       aspects:
         - tracing
         - metrics
+        - logs
     connections:
       includesFrom:
         - prometheus-exposition-format
         - jaeger-format
         - zipkin-format
+        - opentelemetry-format
       includesTo:
         - prometheus-exposition-format
         - jaeger-format
         - zipkin-format
+        - opentelemetry-format
       dataTo:
         - kafka
+        - loki
+        - cortex
       dataFrom:
-        - opentelemetry
+        - collectd
+        - kafka
+        - fluentbit
+        - fluentd
+        - redis
+        - rsyslog
+        - opencensus
 

@@ -20,6 +20,7 @@ components:
     connections:
       dataFrom:
         - prometheus-server
+        - opentelemetry-collector
       dataTo:
         - grafana
         - cassandra

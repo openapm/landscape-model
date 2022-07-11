@@ -115,6 +115,8 @@ components:
     categories:
       - commercial-services
     connections:
+      includesFrom:
+        - opentelemetry-format
       dataFrom:
         - alerta-server
         - fluentbit
@@ -131,8 +133,6 @@ components:
         - opencensus
         - opencensus-agent
         - opencensus-collector
-        - opentelemetry
-        - opentelemetry-collector
         - micrometer
         - kamon-telemetry
         - app-metrics
