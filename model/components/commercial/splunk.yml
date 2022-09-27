@@ -24,10 +24,11 @@ components:
       dataFrom:
         - opencensus
         - opentelemetry
-        - jaeger
+        - jaeger-collector
+        - jaeger-agent
         - zipkin
         - micrometer
-        - telegraf
+        - influxdata-telegraf
         - fluentd
         - fluentbit
         - logstash
