@@ -64,9 +64,8 @@ components:
         - ruby
         - android
     connections:
-      dataFrom:
-        - opentracing
-        - opentelemetry
+      includeTo:
+        - opentelemetry-format
 
   # SignalFx instrumentation tracing libraries
   - id: signalfx-tracing
