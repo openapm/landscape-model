@@ -66,6 +66,10 @@ components:
     connections:
       includeTo:
         - opentelemetry-format
+        - opentracing-format
+      dataTo:
+        - opencensus
+        - opentelemetry
 
   # SignalFx instrumentation tracing libraries
   - id: signalfx-tracing
@@ -98,11 +102,13 @@ components:
         - python
         - ruby
     connections:
-      dataFrom:
+       dataTo:
         - opentracing
+       includeTo:
+        - opentracing-format
 
   # SignalFx instrumentation metrics libraries
-  - id: signalfx-tracing
+  - id: signalfx-metrics
     name: SignalFx Instrumentation Metrics Libraries
     description: SignalFx provides a set of open-source instrumentation metrics SDKs for different programming languages.
     link: https://splunk.com/
