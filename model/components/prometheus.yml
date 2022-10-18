@@ -99,6 +99,7 @@ components:
         - grafana
         - victoriametrics
         - elastic-beats
+        - tdengine
       includesFrom:
         - prometheus-exposition-format
     capabilities:
