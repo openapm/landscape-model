@@ -22,6 +22,7 @@ components:
         - appdynamics-agent
         - appdynamics-sdks
         - opentracing
+        - opentelemetry
     isCommercial: true
 
       # AppDynamics Collector
@@ -56,7 +57,8 @@ components:
       dataFrom:
         - appdynamics-sdks
         - appdynamics-agent
-        - opentracing    
+        - opentracing
+        - opentelemetry
     isCommercial: true
 
   # AppDynamics APM Agent
@@ -80,9 +82,15 @@ components:
       tech:
         - java
         - .net
+        - .NET Core
+        - NGINX
         - php
         - python
         - nodejs
+        - Amazon Lambda java
+        - Amazon Lambda nodejs
+        - Amazon Lambda python
+        - Apache Web Server
         - SAP ABAP
         - IBM Integration Bus
         - Webserver
@@ -90,6 +98,7 @@ components:
     connections:
       dataFrom:
         - opentracing
+        - opentelemetry
     isCommercial: true
 
   # AppDynamics SDKs
@@ -114,5 +123,6 @@ components:
     connections:
       dataFrom:
         - opentracing
+        - opentelemetry
     isCommercial: true
 
