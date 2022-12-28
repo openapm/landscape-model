@@ -121,6 +121,7 @@ components:
         - grafana
       dataFrom:
         - opentracing
+        - opentelemetry
         - jaeger-client
         - zipkin
 
