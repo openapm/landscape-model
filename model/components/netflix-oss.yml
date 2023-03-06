@@ -50,7 +50,7 @@ components:
   # the vector
   - id: netflix-vector
     name: Netflix Vector
-    description: ector is an open source on-host performance monitoring framework which exposes hand picked high resolution system and application metrics to every engineer’s browser. Having the right metrics available on-demand and at a high resolution is key to understand how a system behaves and correctly troubleshoot performance issues.
+    description: Vector is an open source on-host performance monitoring framework which exposes hand picked high resolution system and application metrics to every engineer’s browser. Having the right metrics available on-demand and at a high resolution is key to understand how a system behaves and correctly troubleshoot performance issues.
     link: http://getvector.io
     github:
       - Netflix/vector

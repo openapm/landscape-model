@@ -10,7 +10,7 @@ components:
     twitter: promitorio
     logo: promitor
     license:
-      - MIT License (MIT)
+      - MIT License
     categories:
       - agent
     capabilities:

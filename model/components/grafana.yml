@@ -96,6 +96,7 @@ components:
         - fluentd
         - promtail
         - opentelemetry-collector
+        - vector
 
   # Tempo tracing backend
   - id: tempo

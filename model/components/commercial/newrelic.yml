@@ -30,6 +30,7 @@ components:
         - fluentd
         - fluentbit
         - logstash
+        - vector
     isCommercial: true
   
   # NewRelic Agent
