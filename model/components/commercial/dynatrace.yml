@@ -1,0 +1,162 @@
+---
+components:
+
+    # Dynatrace
+  - id: dynatrace
+    name: Dynatrace
+    description: Dynatrace is a software intelligence platform that provides full-stack observability across cloud, hybrid and on-premise environments. It delivers automated and intelligent insights into applications, infrastructure, and user experience in real-time, empowering organizations to optimize their digital operations and deliver exceptional customer experiences. Dynatrace uses AI and machine learning to automatically detect and diagnose issues, and provides actionable insights that enable teams to proactively optimize performance, reduce downtime, and speed up innovation.
+    link: https://dynatrace.com/
+    twitter: dynatrace
+    logo: dynatrace
+    categories:
+      - commercial-services
+      - alerting
+      - storage
+      - visualization
+      - dashboarding
+      - data-processing
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+    connections:
+      includesFrom:
+        - opentelemetry-format
+        - prometheus-exposition-format
+      dataTo:
+        - grafana
+      dataFrom:
+        - fluentbit
+        - fluentd
+        - collectd
+        - influx
+        - opentelemetry
+        - opentracing
+        - opencensus
+        - prometheus
+        - micrometer
+        - jaeger
+        - statsd
+        - zipkin
+    isCommercial: true
+  
+  # Dynatrace OneAgent
+  - id: dynatrace-one-agent
+    name: Dynatrace OneAgent
+    description: The Dynatrace OneAgent is a software agent that automatically discovers, instruments, and monitors all processes, technologies, and dependencies in real-time, providing full-stack observability across complex environments. It captures all relevant data from applications, infrastructure, and user experience, and delivers AI-powered insights and automated actions that help organizations optimize their digital operations and deliver exceptional customer experiences. The Dynatrace OneAgent supports a wide range of technologies, including cloud-native and legacy, and can be deployed on various platforms, including cloud, hybrid, and on-premise.
+    link: https://dynatrace.com/
+    twitter: dynatrace
+    logo: dynatrace
+    categories:
+      - collector
+      - agent
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+      tech:
+        - java
+        - c++
+        - go
+        - .net 
+        - nodejs
+        - php
+      os:
+        - windows
+        - linux
+        - unix
+        - zOS
+
+    connections:
+      includesFrom:
+        - opentelemetry-format
+      dataFrom:
+        - opencensus
+        - opentelemetry
+        - micrometer
+
+  # Dynatrace OneAgent SDK
+  - id: dynatrace-oneagent-sdk
+    name: Dynatrace OneAgent SDK
+    description: Dynatrace provides SDKs for a variety of programming languages, including Java, .NET, Node.js, Python, Go, PHP, and Ruby. These SDKs provide a range of functionalities, such as tracing distributed transactions, capturing user actions, and reporting custom metrics, making it easier for developers to build and monitor their applications in real-time.
+    link: https://dynatrace.com
+    github:
+      - Dynatrace/One-Agent-SDK
+    license:
+      - Apache License 2.0
+    twitter: dynatrace
+    logo: dynatrace
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+      tech:
+        - nodejs
+        - go
+        - python
+        - c++
+        - php
+        - java
+        - .net
+
+# Dynatrace ActiveGate
+  - id: dynatrace-activegate
+    name: Dynatrace ActiveGate
+    description: The Dynatrace ActiveGate is a lightweight software component that serves as a communication bridge between the Dynatrace platform and remote environments, providing secure and efficient monitoring capabilities for cloud, hybrid, and on-premise infrastructures.
+    link: https://dynatrace.com
+    twitter: dynatrace
+    logo: dynatrace
+    categories:
+      - collector
+      - transport
+      - data-processing
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+    connections:
+      includesFrom:
+        - opentelemetry-format
+        - prometheus-exposition-format
+      dataFrom:
+        - opencensus
+        - opentelemetry
+        - prometheus
+        - statsd
+        - fluentbit
+        - fluentd
+        - collectd
+        - influx
+        - opentracing
+        - opencensus
+        - micrometer
+        - statsd
+        - zipkin
+
+# Dynatrace Micrometer Registry
+  - id: dynatrace-micrometer-register
+    name: Dynatrace Micrometer Registry
+    description: The Dynatrace Micrometer registry is a Java-based library that allows organizations to send Micrometer metrics to the Dynatrace platform, enabling developers to leverage the Micrometer monitoring framework and benefit from the AI-powered insights and automated actions provided by Dynatrace.
+    link: https://dynatrace.com
+    github:
+      - micrometer-metrics/micrometer/tree/main/implementations/micrometer-registry-dynatrace
+    license:
+      - Apache License 2.0
+    twitter: dynatrace
+    logo: dynatrace
+    categories:
+      - instrumentation-lib
+    capabilities:
+      aspects:
+        - metrics
+      tech:
+        - java
+    connections:
+      dataFrom:
+        - micrometer
