@@ -30,13 +30,11 @@ components:
         - fluentbit
         - fluentd
         - collectd
-        - influx
         - opentelemetry
         - opentracing
         - opencensus
-        - prometheus
+        - prometheus-exporter
         - micrometer
-        - jaeger
         - statsd
         - zipkin
     isCommercial: true
@@ -127,17 +125,15 @@ components:
       dataFrom:
         - opencensus
         - opentelemetry
-        - prometheus
+        - prometheus-exporter
         - statsd
         - fluentbit
         - fluentd
         - collectd
-        - influx
         - opentracing
         - opencensus
         - micrometer
         - statsd
-        - zipkin
 
 # Dynatrace Micrometer Registry
   - id: dynatrace-micrometer-register
