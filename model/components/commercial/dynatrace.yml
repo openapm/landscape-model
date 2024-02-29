@@ -27,6 +27,7 @@ components:
       dataTo:
         - grafana
       dataFrom:
+        - dynatrace-activegate
         - fluentbit
         - fluentd
         - collectd
@@ -123,6 +124,9 @@ components:
         - opentelemetry-format
         - prometheus-exposition-format
       dataFrom:
+        - dynatrace-one-agent
+        - dynatrace-oneagent-sdk
+        - dynatrace-micrometer-register
         - opencensus
         - opentelemetry
         - prometheus-exporter
