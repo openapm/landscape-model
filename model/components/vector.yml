@@ -1,0 +1,44 @@
+---
+components:
+
+  # datadog vector
+  - id: vector
+    name: Vector
+    description: Vector is a high-performance observability data pipeline that puts organizations in control of their observability data. Collect, transform, and route all your logs, metrics, and traces to any vendors you want today and any other vendors you may want tomorrow. Vector enables dramatic cost reduction, novel data enrichment, and data security where you need it, not where is most convenient for your vendors. Open source and up to 10x faster than every alternative.
+    link: https://vector.dev/
+    twitter: vectordotdev
+    github:
+      - vectordotdev/vector
+    logo: vector
+    license:
+      - Mozilla Public License 2.0
+    categories:
+      - collector
+    connections:
+      includesFrom:
+        - prometheus-exposition-format
+      dataFrom:
+        - datadog-agent
+        - fluentd
+        - fluentbit
+        - kafka
+        - rsyslog
+        - logstash
+        - opentelemetry
+        - statsd
+      dataTo:
+        - datadog
+        - elasticsearch
+        - honeycomb
+        - kafka
+        - influxdata-influxdb
+        - fluentd
+        - loki
+        - newrelic
+        - redis
+        - splunk
+        - statsd
+    capabilities:
+      aspects:
+        - metrics
+        - logs

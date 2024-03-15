@@ -27,6 +27,7 @@ components:
         - honeycomb-honeytail
         - logstash
         - fluentd
+        - vector
     isCommercial: true
   
   # Honeycomb OT Proxy

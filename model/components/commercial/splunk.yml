@@ -32,6 +32,7 @@ components:
         - fluentd
         - fluentbit
         - logstash
+        - vector
     isCommercial: true
 
   # Splunk OTel distributions

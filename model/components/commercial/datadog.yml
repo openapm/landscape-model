@@ -23,6 +23,7 @@ components:
       dataFrom:
         - datadog-agent
         - fluentbit
+        - vector
     isCommercial: true
   
   # Datadog agent
