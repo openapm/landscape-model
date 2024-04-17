@@ -1,0 +1,29 @@
+---
+components:
+
+    # Kloudfuse
+  - id: kloudfuse
+    name: kloudfuse
+    description: Kloudfuse is a unified monitoring and observability platform covering metrics, traces and logs, events, etc. Kloudfuse supports all open source agents and data collection sources (prometheus, open telemetry, fluentbit, etc.) and also promql, logql and traceql.
+    link: https://www.kloudfuse.com/
+    github: []
+    twitter: kloudfuse
+    logo: kloudfuse
+    categories:
+      - commercial-services
+    capabilities:
+      aspects:
+        - tracing
+        - metrics
+        - logs
+        - events
+    connections:
+      dataTo:
+        - grafana
+      dataFrom:
+        - datadog-agent
+        - fluentbit
+        - opentelemetry
+        - prometheus
+        - opentracing
+    isCommercial: true
