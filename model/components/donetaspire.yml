@@ -1,0 +1,19 @@
+---
+components:
+
+  # Grafana
+  - id: dotnetaspire
+    name: Dotnet Aspire
+    description: Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
+    link: https://github.com/dotnet/aspire
+    github:
+      - dotnet/aspire
+    twitter: dotnetaspire
+    logo: dotnetaspire
+    license:
+      - Apache License 2.0
+    categories:
+      - dashboarding
+    connections:
+      dataFrom:
+        - opentelemetry
